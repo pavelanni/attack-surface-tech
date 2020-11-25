@@ -323,5 +323,5 @@ More:
 * https://twitter.com/citizenlab
 
 
-See technologies from <<chapter2.adoc,Chapter 2>>.
+See technologies from <<chapter2.adoc#chapter-2,Chapter 2>>.
 

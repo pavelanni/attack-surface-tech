@@ -1,5 +1,6 @@
 = Mashapedia: Technologies of "`Attack Surface`" by Cory Doctorow
 
+[[chapter-2]]
 == Chapter 2
 
 Fibonaccis::
