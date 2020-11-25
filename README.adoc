@@ -1,4 +1,4 @@
-= Technologies of "Attack Surface" by Cory Doctorow
+= Technologies of "`Attack Surface`" by Cory Doctorow
 
 I have read this book recently (of course, after reading the previous two, 
 "Little Brother" and "Homeland") and noticed that I am not very familiar with 
