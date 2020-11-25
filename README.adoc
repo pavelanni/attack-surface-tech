@@ -1,0 +1,14 @@
+= Technologies of "Attack Surface" by Cory Doctorow
+
+I have read this book recently (of course, after reading the previous two, 
+"Little Brother" and "Homeland") and noticed that I am not very familiar with 
+some technologies mentioned in the book. 
+So I googled and learned about them and decided to collect the links
+and short descriptions here in this repo. 
+
+Feel free to fork and edit/expand this document and then open a PR. 
+I appreciate all feedback and help.
+
+The document is written in Asciidoc (it's very similar to Markdown, but better ;-) ).
+If you need help with Asciidoc: https://asciidoctor.org/.
+ 
