@@ -132,3 +132,5 @@ More:
 * https://towardsdatascience.com/probability-concepts-explained-bayesian-inference-for-parameter-estimation-90e8930e5348
 
 
+
+See technologies from <<chapter3.adoc#chapter-3,Chapter 3>>.
