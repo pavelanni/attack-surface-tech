@@ -1,0 +1,182 @@
+= Mashapedia: Technologies of "`Attack Surface`" by Cory Doctorow
+
+[[chapter-6]]
+== Chapter 6
+
+Plausible deniability::
+Plausible deniability is the ability of people, typically senior officials in a formal or 
+informal chain of command, to deny knowledge of or responsibility for any damnable actions 
+committed by others in an organizational hierarchy because of a lack or absence of evidence 
+that can confirm their participation, even if they were personally involved in or at least 
+willfully ignorant of the actions. If illegal or otherwise-disreputable and unpopular 
+activities become public, high-ranking officials may deny any awareness of such acts to 
+insulate themselves and shift the blame onto the agents who carried out the acts, as they are
+confident that their doubters will be unable to prove otherwise. The lack of evidence to the 
+contrary ostensibly makes the denial plausible (credible), but sometimes, it makes the denial 
+only unactionable.
+More: 
+* https://en.wikipedia.org/wiki/Plausible_deniability
+* https://www.urbandictionary.com/define.php?term=plausible%20deniability
+* https://politicaldictionary.com/words/plausible-deniability/
+
+
+Safe Hex::
+The rules for safe computing.
+More:
+* https://www.techsupportalert.com/safe-hex-safe-computing-practices.htm
+
+Bad spelling in check-in messages::
+Obviously Masha still uses an old, centralized version control system 
+like _Subversion_, and not more modern, decentralized Git. 
+More:
+* https://superuser.com/questions/436347/git-process-could-anyone-please-explain-the-check-in-check-out-process/436362
+
+
+ParanoidLinux::
+There is a project with this name (https://sourceforge.net/projects/linuxparanoid/)
+but it doesn't seem to be active.
+Most likely what Masha means by ParanoidLinux is Tails (https://boingboing.net/2019/12/16/paranoid-linux-for-real.html). 
+
+
+[[chapter-7]]
+== Chapter 7
+
+Ulysses pact::
+Masha explains it very well. Apparently, there are "Ulysses pact" applications and
+other technologies to help you keep your promises.  
+More:
+* https://en.wikipedia.org/wiki/Ulysses_pact (look for "Technological context")
+* https://ulyssespact.com.au/
+* https://blog.trello.com/master-goals-ulysses-pact
+
+Adversarial perturbation::
+An "adversarial perturbation" is a change to a physical object that is deliberately 
+designed to fool a machine-learning system into mistaking it for something else.
+(from an article written by Cory Doctorow)
+More:
+* https://boingboing.net/2017/08/07/nam-shub-of-enki.html
+* https://boingboing.net/2017/03/29/countermeasures-are-a-thing.html
+* https://arxiv.org/pdf/1707.08945.pdf
+* https://arxiv.org/abs/2005.08087
+
+CV dazzle::
+A type of camouflage used to hamper facial recognition software, inspired by dazzle
+camouflage used by warships.
+More:
+* https://en.wikipedia.org/wiki/Computer_vision_dazzle
+https://en.wikipedia.org/wiki/Dazzle_camouflage
+* https://cvdazzle.com/
+
+Machine learning::
+Ange does a great job explaining machine learning as simple as possible.
+More:
+* https://en.wikipedia.org/wiki/Machine_learning
+
+Red team::
+A red team is a group that helps organizations to improve themselves by providing opposition 
+to the point of view of the organization that they are helping.
+More:
+* https://en.wikipedia.org/wiki/Red_team
+* https://csrc.nist.gov/glossary/term/Red_Team
+* https://www.redteamsecure.com/blog/what-is-red-teaming-and-why-do-i-need-it-2/
+
+
+USB stick with keypad::
+Probably Marcus uses something like this: https://www.amazon.com/Encrypted-Certified-Protection-Encryption-16G/dp/B07JNDW5H7/
+
+Uslon prison::
+Apparently it's an abbreviation from GULAG days, not a place: 
+USLON: "Upravlenie Severnykh Lagerey Osobogo Naznacheniya", Directorate of Northern Special-Significance Camps
+More: 
+* https://en.wikipedia.org/wiki/List_of_Gulag_camps
+
+Hyperbolic discounting::
+It is well explained by Ange in the book. 
+Hyperbolic discounting refers to the tendency for people to increasingly choose a
+smaller-sooner reward over a larger-later reward as the delay occurs sooner rather 
+than later in time.
+More:
+* http://www.behaviorlab.org/Papers/Hyperbolic.pdf
+* https://en.wikipedia.org/wiki/Hyperbolic_discounting
+
+Sukey::
+Sukey is an organisation which emerged in Britain on 28 January 2011, with the aim of 
+improving communications among participants in the student demonstrations. 
+Its immediate aim was to counteract the police tactics of kettling, by co-ordinating
+information electronically and transmitting it to the protesters, 
+allowing them to avoid the police kettle.
+More:
+* https://en.wikipedia.org/wiki/Sukey
+
+Kettling::
+A police tactic for controlling large crowds.
+More:
+* https://en.wikipedia.org/wiki/Kettling
+
+
+
+[[chapter-8]]
+== Chapter 8
+
+Hacking a self-driving car::
+So far there are only several reports of such hacks and none of them has turned violent yet.
+But still some possibilities are described in this paper:
+* https://physicsworld.com/a/how-to-hack-a-self-driving-car/
+
+COINTELPRO::
+COINTELPRO (syllabic abbreviation derived from COunter INTELligence PROgram) 
+(1956–present) is a series of covert and illegal[1][2] projects conducted by the 
+United States Federal Bureau of Investigation (FBI) aimed at 
+surveilling, infiltrating, discrediting, and disrupting American political 
+organizations.
+More:
+* https://en.wikipedia.org/wiki/COINTELPRO
+* https://vault.fbi.gov/cointel-pro
+* https://www.intelligence.senate.gov/sites/default/files/94755_II.pdf
+* https://www.freedomarchives.org/Documents/Finder/Black%20Liberation%20Disk/Black%20Power!/SugahData/Government/COINTELPRO.S.pdf
+* https://www.krusch.com/books/kennedy/Cointelpro_Papers.pdf
+
+Riseup::
+Masha receives an email from Kriztina from her address at `rieup.net`. 
+Riseup provides online communication tools for people and groups working on liberatory social
+change. 
+We are a project to create democratic alternatives and practice self-determination by 
+controlling our own secure means of communications.
+* https://riseup.net/
+
+Enigmail::
+In the email header from Kriztina there is a phrase:
++
+----
+Enigmail UNTRUSTED good signature from Kriztina <kriztinak@riseup.net>
+----
++
+That means she uses _Enigmail_ to encrypt and digitally sign her messages.
+Enigmail works with several mail clients includind Thunderbird and Evolution.
+The meaning of "Untrusted good signature" was explained on the Enigmail forum:
++
+----
+GOOD means that Enigmail verified that the mail content matches the
+signature. Nobody tampered with the message. It reached you unmodified
+and only the ones that have the SECRET key it is signed with are able
+to perform that particular signature.
+
+UNTRUSTED means that although the message matches the signature, GnuPG
+cannot check whether the key belongs to the OWNER of the email address.
+----
++
+More: 
+* https://enigmail.net/index.php/en/
+* https://www.enigmail.net/list_archive/2004-December/003266.html
+
+
+[[chapter-9]]
+== Chapter 9
+
+
+
+
+
+
+See technologies from <<chapter7.adoc#chapter-7,Chapter 7>>.
+
