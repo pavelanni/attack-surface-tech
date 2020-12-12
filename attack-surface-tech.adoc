@@ -1,4 +1,7 @@
 = Mashapedia: Technologies of "`Attack Surface`" by Cory Doctorow
+:toc: auto
+
+
 
 == Chapter 1
 
@@ -324,5 +327,690 @@ More:
 * https://twitter.com/citizenlab
 
 
-See technologies from <<chapter2.adoc#chapter-2,Chapter 2>>.
+[[chapter-2]]
+== Chapter 2
+
+Fibonaccis::
+Fibbonaci numbers, the sequence where each next number is a sum of the two previous.
+They have a lot of interesting features, they are found in nature, etc. 
+More:
+* https://www.mathsisfun.com/numbers/fibonacci-sequence.html
+* https://en.wikipedia.org/wiki/Fibonacci_number
+* https://www.youtube.com/watch?v=ahXIMUkSXX0
+
+
+LiveJournal::
+A social network platform created in 1999 that used to be popular before Facebook and Twitter.
+In 2007 it was sold to Russian media company SUP Media. Written in Perl.
+More:
+* https://en.wikipedia.org/wiki/LiveJournal
+* https://www.livejournal.com/
+
+Blogger::
+A blogging platform owned by Google. Created in 1999 by Pyra Labs. Written in Python.
+More:
+* https://en.wikipedia.org/wiki/Blogger_(service)
+* https://www.blogger.com/
+
+MySpace::
+A social network that used to be the largest social networking site in the world (between 2005 and 2009).
+More:
+* https://en.wikipedia.org/wiki/Myspace
+* https://myspace.com/
+
+XML (Extensible Markup Language)::
+A markup language used by many applications to store and exchange information and documents.
+More: 
+* https://en.wikipedia.org/wiki/XML
+* https://www.xml.com/pub/a/98/10/guide0.html
+
+ARGs (Alternate Reality Games)::
+Interactive games that are usually played in real world mixed with multimedia and online services.
+Usually they use stories that are created and controlled by game designers.
+More:
+* https://en.wikipedia.org/wiki/Alternate_reality_game
+* https://en.wikipedia.org/wiki/List_of_alternate_reality_games
+* https://www.argn.com/
+
+WAP (Wireless Application Protocol)::
+A protocol that was used by cell phones to access the Internet in the early 2000s.
+WAP browser is an application that can display text and pictures on the phone's screen.
+It was used before smartphones became widely available because it could work with
+really small screens and low transmission speeds of that time.
+More:
+* https://en.wikipedia.org/wiki/Wireless_Application_Protocol
+
+Microfiche::
+A sheet of flat film, 105x148 mm in size, that contains a set of microimages, usually of size 10x14 mm.
+It is used to store books, magazines, newspapers in a compact and durable form.
+More:
+* https://en.wikipedia.org/wiki/Microform#Microfiche
+
+Backdoor::
+A hidden method to access a computer or network device bypassing the normal authentication scheme,
+usually created as a part of the software running on that computer.
+More:
+* https://en.wikipedia.org/wiki/Backdoor_(computing)
+
+Reverse shell::
+A method to connect back to the attacking computer from the target computer.
+Because it is initiated from the target computer it can be a way to bypass
+a firewall or NAT service.
+More:
+* https://www.netsparker.com/blog/web-security/understanding-reverse-shells/
+* https://hackernoon.com/reverse-shell-cf154dfee6bd
+
+RFID (Radio-frequency identification)::
+A method of exchanging identifaction information over radio. 
+It includes RFID tags and RFID readers. 
+RFID tags can be passive (i.e. not containing any battery) and really cheap.
+They get the energy they need to operate from the reader that reads from them.
+More:
+* https://en.wikipedia.org/wiki/Radio-frequency_identification
+* https://www.rfidjournal.com/
+* https://resources.bishopfox.com/resources/tools/rfid-hacking/attack-tools/
+
+Usenet::
+A "prehistoric" social network that was created around 1980.
+The name comes from the term "users network". 
+It was used for discussions and asking questions. It has a hierarchial structure
+of topics called "newsgroups".
+Even before Internet became widely available it used UUCP (Unix-to-Unix Copy) program to
+exchange posts and updates over telephone lines.
+More:
+* https://en.wikipedia.org/wiki/Usenet
+* https://en.wikipedia.org/wiki/UUCP
+
+Caller ID spoofing::
+A method or tool that allows the caller to pretend that the call is coming from a different number.
+Masha uses it to read friends' voicemails pretending she is calling from _their_ numbers.
+Scammers use this method to pretend they are calling from the same area code -- that way
+there is more chances that you pick the call. 
+Sometimes scammers even pretend they are calling from the _actual_ 800-number which belongs to IRS.
+More:
+* https://en.wikipedia.org/wiki/Caller_ID_spoofing
+* https://www.fcc.gov/consumers/guides/spoofing-and-caller-id
+* https://blog.rapid7.com/2018/05/24/how-to-build-your-own-caller-id-spoofer-part-1/
+
+Data-collecting lightbulbs::
+Most likely Masha means this report: https://darkcubed.com/iot-security-technical.
+Short versions: 
+* https://blog.adafruit.com/2019/03/10/is-your-smart-bulb-collecting-data-iot-smartdevice/
+* https://www.cnet.com/news/smart-lightbulbs-could-be-exporting-your-personal-data-to-china/
+
+Garbage in, garbage out (GIGO)::
+This phrase was first used in November 1957 and is still quite popular among programmers
+and mathematicians. It's related to the terms FIFO (first in, first out) and
+LIFO (last in, first out) that describe the behavior of the queue and stack data structures, 
+respectively.
+More:
+* https://en.wikipedia.org/wiki/Garbage_in,_garbage_out
+* https://techterms.com/definition/gigo
+* https://en.wikipedia.org/wiki/FIFO_(computing_and_electronics)
+* https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
+
+Bayesian inference::
+A method of statistical inference in which Bayes' theorem is used to update the 
+probability for a hypothesis as more evidence or information becomes available.
+More:
+* https://en.wikipedia.org/wiki/Bayesian_inference
+* https://en.wikipedia.org/wiki/Bayes%27_theorem
+* https://seeing-theory.brown.edu/bayesian-inference/index.html (interactive, with pictures)
+* https://towardsdatascience.com/probability-concepts-explained-bayesian-inference-for-parameter-estimation-90e8930e5348
+
+
+
+[[chapter-3]]
+== Chapter 3
+
+[quote, Masha Maximow]
+____
+The smarter your device, the harder it would be for you to outsmart it.
+____
+
+
+ZOMFG::
+Usually spelled entirely in caps, this abbreviation originates from the typo 
+you get when you strike the shift key in order to type OMFG, but you miss 
+and hit the z instead. From here:
+* https://www.urbandictionary.com/define.php?term=zOMFG
+
+Infect your phone with WhatsApp message::
+* https://arstechnica.com/information-technology/2019/05/whatsapp-vulnerability-exploited-to-infect-phones-with-israeli-spyware/
+* https://www.2-spyware.com/remove-whatsapp-virus.html
+
+BusyBox::
+A lightweight software suite with a set of Linux/Unix commands that is
+used in embedded devices (list: https://busybox.net/products.html). 
+Can be downloaded and executed as a single binary (size ~1 MB).
+More:
+* https://busybox.net/
+* https://en.wikipedia.org/wiki/BusyBox
+
+
+BusyBox malware::
+Masha explains it pretty well: there are pieces of malware that can be
+executed on systems running BusyBox. 
+More:
+* https://www.csoonline.com/article/2848606/bash-malware-targets-embedded-devices-running-busybox.html
+* https://www.trendmicro.com/vinfo/us/threat-encyclopedia/search/busybox
+* https://www.incibe-cert.es/en/blog/attacking-busybox-small-gaulish-village
+* https://en.wikipedia.org/wiki/BASHLITE
+
+Stalkerware::
+Monitoring software or spyware that is used for stalking. 
+The term was coined when people started to widely use commercial spyware 
+to spy on their spouses or intimate partners.
+More:
+* https://en.wikipedia.org/wiki/Stalkerware
+* https://stopstalkerware.org/what-is-stalkerware/
+* https://securelist.com/the-state-of-stalkerware-in-2019/93634/
+
+
+Executive order 12333::
+Executive Order 12333, signed on December 4, 1981 by U.S. President Ronald Reagan,
+was an Executive Order intended to extend powers and responsibilities of U.S. 
+intelligence agencies and direct the leaders of U.S. federal agencies to 
+co-operate fully with CIA requests for information.
+More:
+* https://en.wikipedia.org/wiki/Executive_Order_12333
+* https://www.archives.gov/federal-register/codification/executive-order/12333.html
+
+
+[[chapter-4]]
+== Chapter 4
+
+MRAP::
+Mine-Resistant Ambush Protected is a term for United States military light
+tactical vehicles produced as part of the MRAP program that are designed
+specifically to withstand improvised explosive device (IED) attacks and ambushes.
+More:
+* https://en.wikipedia.org/wiki/MRAP
+* https://asc.army.mil/web/portfolio-item/cs-css-mine-resistant-ambush-protected-mrap-vehicle-mrap/
+
+Threat model::
+Threat modeling is a process by which potential threats, such as structural 
+vulnerabilities or the absence of appropriate safeguards, can be identified, 
+enumerated, and mitigations can be prioritized.
+More: 
+* https://en.wikipedia.org/wiki/Threat_model
+* https://securityintelligence.com/posts/what-is-threat-modeling-and-how-does-it-impact-application-security/
+* https://owasp.org/www-community/Application_Threat_Modeling
+
+Jersey barrier::
+A Jersey barrier, Jersey wall, or Jersey bump is a modular concrete or plastic barrier employed to separate lanes of traffic.
+More:
+* https://en.wikipedia.org/wiki/Jersey_barrier
+* https://otwsafety.com/how-jersey-barriers-got-their-name/ (fun facts about)
+
+RPG::
+_Not_ a Role-Playing Game (here). 
+A rocket-propelled grenade (often abbreviated RPG) is a shoulder-fired missile 
+weapon that launches rockets equipped with an explosive warhead. 
+Fun fact: 
+The term "rocket-propelled grenade" is a backronym; it stems from the Russian
+language РПГ which stands for ручной противотанковый гранатомёт (transliterated as
+"ruchnoy protivotankovy granatomyot", which has the initials "RPG"), meaning 
+"handheld anti-tank grenade launcher", the name given to early Russian designs.
+Typical range is around several hundred meters.
+More:
+* https://en.wikipedia.org/wiki/Rocket-propelled_grenade
+* https://en.wikipedia.org/wiki/RPG-7
+
+MRE::
+The Meal, Ready-to-Eat – commonly known as the MRE – is a self-contained, 
+individual field ration in lightweight packaging bought by the United States
+Department of Defense for its service members for use in combat or other field 
+conditions where organized food facilities are not available. 
+More:
+* https://en.wikipedia.org/wiki/Meal,_Ready-to-Eat
+* https://www.mreinfo.com/
+
+FOB::
+A Forward Operating Base (FOB) is any secured forward operational level military position, commonly a military base, that is used to support strategic goals and tactical objectives.
+More:
+* https://en.wikipedia.org/wiki/Forward_operating_base
+* https://military.wikia.org/wiki/Forward_Operating_Base_Grizzly (FOB Grizzly mentioned in the book)
+* https://en.wikipedia.org/wiki/Forward_Operating_Base_Grizzly
+
+PX::
+A type of retail store operating on United States military installations worldwide. 
+Originally akin to trading posts, they now resemble department stores or strip malls.
+PX is US Army terminology. US Air Force uses Base Exchange (BX), US Navy uses
+Navy Exchange (NEX), Marine Corps calls it Marine Corps Exchange (MCX).
+More:
+* https://military.wikia.org/wiki/Base_Exchange
+* https://en.wikipedia.org/wiki/Base_exchange
+
+Battlefield intelligence::
+Is described in the US Army document "Intelligence Preparation of the Battlefield". More:
+* https://home.army.mil/wood/application/files/8915/5751/8365/ATP_2-01.3_Intelligence_Preparation_of_the_Battlefield.pdf
+
+Unique identifiers of tire-pressure sensors::
+Tire-pressure sensors installed on most of the cars have unique ID numbers
+configured at the factory. More:
+* https://en.wikipedia.org/wiki/Direct_TPMS#Registration_of_direct_TPMS_IDs
+* https://blog.caristaapp.com/what-is-tpms-id-registration-2cfc452bb6d4
+* https://www.standardbrand.com/media/1646/st10235idl-may14_jtf_id-locator.pdf
+* https://obdstation.com/tpms-reset-tool/
+
+Everything after the slash::
+Masha says: "I itched to get their Google searches, but that was hard because
+Google had better security than every other service they visited -- strong SSL
+certificates that hid everything after the slash, 
+so all I could see from my vantage point was https://google.com/ -- and then... 
+nothing."
++
+This happens when you visit sites that use HTTPS (secure HTTP) and hence,
+use SSL/TLS certificates. 
+Even if somebody (in this case Masha) intercepts the traffic between you and 
+your provider, they will see only the domain name of the server you are accessing.
+Everything else in your URL (search queries, usernames, etc.) will be hidden.
+More:
+* https://security.stackexchange.com/questions/7705/does-ssl-tls-https-hide-the-urls-being-accessed
+* https://security.stackexchange.com/questions/4388/are-urls-viewed-during-https-transactions-to-one-or-more-websites-from-a-single
+* https://stackoverflow.com/questions/499591/are-https-urls-encrypted
+
+MAC address::
+Masha automatically corrects her boss when she says: "max address".
+MAC stands for "media access control" and MAC address means the low-level
+address assigned to a network card. 
+Sometimes MAC address is called "physical address" or "hardware address". 
+Usually it is represented as a series of hexadecimal numbers separated by
+colons, like this: `00:0a:95:9d:68:16`. 
+Usually MAC address identifies a physical device (computer or phone) 
+pretty well (as opposed to IP address that could be different in different networks).
+MAC address can be changed by the OS, but that only stays until the next reboot.
+More:
+* https://en.wikipedia.org/wiki/MAC_address
+* https://whatismyipaddress.com/mac-address
+* https://whatismyipaddress.com/change-mac
+https://www.howtogeek.com/192173/how-and-why-to-change-your-mac-address-on-windows-linux-and-mac/
+
+Hoberman sphere::
+An isokinetic structure patented by Chuck Hoberman that resembles a geodesic dome, but is capable of folding down to a fraction of its normal size by the scissor-like action of its joints.
+More:
+* https://en.wikipedia.org/wiki/Hoberman_sphere
+
+
+[[chapter-5]]
+== Chapter 5
+
+
+Cryptoparty::
+CryptoParty (Crypto-Party) is a grassroots global endeavour to introduce the basics of
+practical cryptography such as the Tor anonymity network, key signing parties, 
+disk encryption and virtual private networks to the general public. 
+The project primarily consists of a series of free public workshops.
+More:
+* https://www.cryptoparty.in/
+* https://github.com/cryptoparty/handbook
+* https://www.cryptoparty.in/learn/handbook (available in PDF, EPUB, MOBI, HTML)
+
+EFF's Surveillance Self-Defense Kit::
+Surveillance Self-Defense is a digital security guide that teaches you how to assess your
+personal risk from online spying. 
+It can help protect you from surveillance by those who might want to find out your secrets,
+from petty criminals to nation states. 
+More:
+* https://ssd.eff.org/en
+* https://en.wikipedia.org/wiki/Cyber_self-defense
+
+Advanced Persistent Threat::
+An advanced persistent threat (APT) is a stealthy threat actor, 
+typically a nation state or state-sponsored group, which gains unauthorized access 
+to a computer network and remains undetected for an extended period.
+More:
+* https://en.wikipedia.org/wiki/Advanced_persistent_threat
+* https://attack.mitre.org/groups/
+
+EXIF metadata::
+Metadata stored in JPEG files that may include technical information about the photo
+like exposure, etc. and also geolocation of the photo if this feature is available 
+(i.e. the photo is taken by a smartphone with GPS).
+More:
+* https://en.wikipedia.org/wiki/Exif
+* https://www.howtogeek.com/211427/how-to-see-exactly-where-a-photo-was-taken-and-keep-your-location-private/
+* https://alpinesecurity.com/blog/2-simple-ways-to-extract-gps-coordinates-from-pictures/
+
+SIM-shaped tentacle::
+Most likely Masha uses a SIM extension cable similar to this: https://www.microsatacables.com/micro-sim-card-to-sim-card-extension-cable-msim-1175-ext
+
+Malware attack on baseband radio::
+Baseband vulnerabilities give attackers the ability to monitor a phone’s communications,
+place calls, send premium SMS messages or cause large data transfers unbeknownst 
+to the owner of the phone.
+More:
+* https://www.usenix.org/system/files/conference/woot12/woot12-final24.pdf
+* https://ccdcoe.org/uploads/2018/10/Art-16-Attacking-the-Baseband-Modem-of-Breach-the-Users-Privacy-and-Network-Security.pdf
+* https://threatpost.com/baseband-zero-day-exposes-millions-of-mobile-phones-to-attack/124833/
+* https://attack.mitre.org/techniques/T1477/
+
+
+USG::
+USG is a USB firewall that can protect your computer from BadUSB.
+More:
+* https://hothardware.com/news/usg-dongle-firewall-device-is-like-a-condom-for-your-usb-ports
+* https://github.com/robertfisk/USG 
+* https://github.com/robertfisk/USG/wiki
+
+Android Developer's mode::
+Masha uses USB to connect Tanisha's phone to her laptop and manipulate software on her phone.
+She uses Android Developer's mode and USB debugging for that. More:
+* https://developer.android.com/studio/debug/dev-options
+* https://www.makeuseof.com/tag/what-is-usb-debugging-mode-on-android-makeuseof-explains/
+* https://developers.google.com/web/tools/chrome-devtools/remote-debugging
+
+Android rootkit::
+A rootkit is a collection of computer software, typically malicious, designed to enable 
+access to a computer or an area of its software that is not otherwise allowed (for example, 
+to an unauthorized user) and often masks its existence or the existence of other software.
+Rootkits exist for different operating systems, including Android. 
+Masha just discovered a rootkit on Tanisha's phone.
+More:
+* https://en.wikipedia.org/wiki/Rootkit
+* http://www.cs.tufts.edu/comp/116/archive/fall2013/azakaria.pdf
+* https://arstechnica.com/information-technology/2016/11/powerful-backdoorrootkit-found-preinstalled-on-3-million-android-phones/
+* https://www.androidpolice.com/2020/04/19/months-of-research-finally-crack-android-malware-that-could-even-survive-factory-resets/
+
+Pwned::
+Historically it's a misspelled word "owned" (part of "leetspeak") which is now used when somebody 
+compromised your device (phone, computer) or your data and now you are _pwned_
+by bad guys. 
+There is a site called "Have I been pwned?" which allows you to check if your
+personal data was leaked during one of the known data breaches. 
+More:
+* https://en.wikipedia.org/wiki/Leet#Owned_and_pwned
+* https://en.wikipedia.org/wiki/Have_I_Been_Pwned%3F
+* https://haveibeenpwned.com/
+* https://www.urbandictionary.com/define.php?term=pwned
+
+IED::
+Improvised explosive device. More:
+* https://en.wikipedia.org/wiki/Improvised_explosive_device
+
+Shift-tilt miniature::
+Tilt–shift photography (Masha incorrectly calls it "shift-tilt") is the use of camera
+movements that change the orientation or position of the lens with respect to the film 
+or image sensor on cameras.
++
+Sometimes the term is used when the large depth of field is simulated with digital 
+post-processing; the name may derive from a perspective control lens (or tilt–shift lens) 
+normally required when the effect is produced optically.
+More:
+* https://en.wikipedia.org/wiki/Tilt%E2%80%93shift_photography
+* https://www.masterclass.com/articles/how-to-shoot-tilt-shift-photography
+* https://www.smashingmagazine.com/2008/11/beautiful-examples-of-tilt-shift-photography/
+
+CALEA::
+A wiretapping bill, passed in 1994, as Masha explains it. More:
+* https://www.fcc.gov/public-safety-and-homeland-security/policy-and-licensing-division/general/communications-assistance
+* https://en.wikipedia.org/wiki/Communications_Assistance_for_Law_Enforcement_Act
+
+Google Glass::
+Smart glasses created by Google and first introduced in 2013. 
+Masha calls them "long-abandoned", but according to Wikipedia in 2017 and 2019
+Google announced Google Glass Enterprise Edition and Enterprise Edition 2 respectively.
+More:
+* https://en.wikipedia.org/wiki/Google_Glass
+
+Am I under arrest?::
+This and the following questions are part of the recommended procedure when interacting 
+with police.
+More: 
+* https://www.halt.org/am-i-being-detained-6-questions-you-should-ask-during-interactions-with-the-police/
+* https://www.browarddefender.org/page3.html
+* https://www.aclu.org/know-your-rights/stopped-by-police/
+
+
+[[chapter-6]]
+== Chapter 6
+
+Plausible deniability::
+Plausible deniability is the ability of people, typically senior officials in a formal or 
+informal chain of command, to deny knowledge of or responsibility for any damnable actions 
+committed by others in an organizational hierarchy because of a lack or absence of evidence 
+that can confirm their participation, even if they were personally involved in or at least 
+willfully ignorant of the actions. If illegal or otherwise-disreputable and unpopular 
+activities become public, high-ranking officials may deny any awareness of such acts to 
+insulate themselves and shift the blame onto the agents who carried out the acts, as they are
+confident that their doubters will be unable to prove otherwise. The lack of evidence to the 
+contrary ostensibly makes the denial plausible (credible), but sometimes, it makes the denial 
+only unactionable.
+More: 
+* https://en.wikipedia.org/wiki/Plausible_deniability
+* https://www.urbandictionary.com/define.php?term=plausible%20deniability
+* https://politicaldictionary.com/words/plausible-deniability/
+
+
+Safe Hex::
+The rules for safe computing.
+More:
+* https://www.techsupportalert.com/safe-hex-safe-computing-practices.htm
+
+Bad spelling in check-in messages::
+Obviously Masha still uses an old, centralized version control system 
+like _Subversion_, and not more modern, decentralized Git. 
+More:
+* https://superuser.com/questions/436347/git-process-could-anyone-please-explain-the-check-in-check-out-process/436362
+
+
+ParanoidLinux::
+There is a project with this name (https://sourceforge.net/projects/linuxparanoid/)
+but it doesn't seem to be active.
+Most likely what Masha means by ParanoidLinux is Tails (https://boingboing.net/2019/12/16/paranoid-linux-for-real.html). 
+
+
+[[chapter-7]]
+== Chapter 7
+
+Ulysses pact::
+Masha explains it very well. Apparently, there are "Ulysses pact" applications and
+other technologies to help you keep your promises.  
+More:
+* https://en.wikipedia.org/wiki/Ulysses_pact (look for "Technological context")
+* https://ulyssespact.com.au/
+* https://blog.trello.com/master-goals-ulysses-pact
+
+Adversarial perturbation::
+An "adversarial perturbation" is a change to a physical object that is deliberately 
+designed to fool a machine-learning system into mistaking it for something else.
+(from an article written by Cory Doctorow)
+More:
+* https://boingboing.net/2017/08/07/nam-shub-of-enki.html
+* https://boingboing.net/2017/03/29/countermeasures-are-a-thing.html
+* https://arxiv.org/pdf/1707.08945.pdf
+* https://arxiv.org/abs/2005.08087
+
+CV dazzle::
+A type of camouflage used to hamper facial recognition software, inspired by dazzle
+camouflage used by warships.
+More:
+* https://en.wikipedia.org/wiki/Computer_vision_dazzle
+https://en.wikipedia.org/wiki/Dazzle_camouflage
+* https://cvdazzle.com/
+
+Machine learning::
+Ange does a great job explaining machine learning as simple as possible.
+More:
+* https://en.wikipedia.org/wiki/Machine_learning
+
+Red team::
+A red team is a group that helps organizations to improve themselves by providing opposition 
+to the point of view of the organization that they are helping.
+More:
+* https://en.wikipedia.org/wiki/Red_team
+* https://csrc.nist.gov/glossary/term/Red_Team
+* https://www.redteamsecure.com/blog/what-is-red-teaming-and-why-do-i-need-it-2/
+
+
+USB stick with keypad::
+Probably Marcus uses something like this: https://www.amazon.com/Encrypted-Certified-Protection-Encryption-16G/dp/B07JNDW5H7/
+
+Uslon prison::
+Apparently it's an abbreviation from GULAG days, not a place: 
+USLON: "Upravlenie Severnykh Lagerey Osobogo Naznacheniya", Directorate of Northern Special-Significance Camps
+More: 
+* https://en.wikipedia.org/wiki/List_of_Gulag_camps
+
+Hyperbolic discounting::
+It is well explained by Ange in the book. 
+Hyperbolic discounting refers to the tendency for people to increasingly choose a
+smaller-sooner reward over a larger-later reward as the delay occurs sooner rather 
+than later in time.
+More:
+* http://www.behaviorlab.org/Papers/Hyperbolic.pdf
+* https://en.wikipedia.org/wiki/Hyperbolic_discounting
+
+Sukey::
+Sukey is an organisation which emerged in Britain on 28 January 2011, with the aim of 
+improving communications among participants in the student demonstrations. 
+Its immediate aim was to counteract the police tactics of kettling, by co-ordinating
+information electronically and transmitting it to the protesters, 
+allowing them to avoid the police kettle.
+More:
+* https://en.wikipedia.org/wiki/Sukey
+
+Kettling::
+A police tactic for controlling large crowds.
+More:
+* https://en.wikipedia.org/wiki/Kettling
+
+
+
+[[chapter-8]]
+== Chapter 8
+
+Hacking a self-driving car::
+So far there are only several reports of such hacks and none of them has turned violent yet.
+But still some possibilities are described in this paper:
+* https://physicsworld.com/a/how-to-hack-a-self-driving-car/
+
+COINTELPRO::
+COINTELPRO (syllabic abbreviation derived from COunter INTELligence PROgram) 
+(1956–present) is a series of covert and illegal[1][2] projects conducted by the 
+United States Federal Bureau of Investigation (FBI) aimed at 
+surveilling, infiltrating, discrediting, and disrupting American political 
+organizations.
+More:
+* https://en.wikipedia.org/wiki/COINTELPRO
+* https://vault.fbi.gov/cointel-pro
+* https://www.intelligence.senate.gov/sites/default/files/94755_II.pdf
+* https://www.freedomarchives.org/Documents/Finder/Black%20Liberation%20Disk/Black%20Power!/SugahData/Government/COINTELPRO.S.pdf
+* https://www.krusch.com/books/kennedy/Cointelpro_Papers.pdf
+
+Riseup::
+Masha receives an email from Kriztina from her address at `rieup.net`. 
+Riseup provides online communication tools for people and groups working on liberatory social
+change. 
+We are a project to create democratic alternatives and practice self-determination by 
+controlling our own secure means of communications.
+* https://riseup.net/
+
+Enigmail::
+In the email header from Kriztina there is a phrase:
++
+----
+Enigmail UNTRUSTED good signature from Kriztina <kriztinak@riseup.net>
+----
++
+That means she uses _Enigmail_ to encrypt and digitally sign her messages.
+Enigmail works with several mail clients includind Thunderbird and Evolution.
+The meaning of "Untrusted good signature" was explained on the Enigmail forum:
++
+----
+GOOD means that Enigmail verified that the mail content matches the
+signature. Nobody tampered with the message. It reached you unmodified
+and only the ones that have the SECRET key it is signed with are able
+to perform that particular signature.
+
+UNTRUSTED means that although the message matches the signature, GnuPG
+cannot check whether the key belongs to the OWNER of the email address.
+----
++
+More: 
+* https://enigmail.net/index.php/en/
+* https://www.enigmail.net/list_archive/2004-December/003266.html
+
+
+[[chapter-9]]
+== Chapter 9
+
+Surprisingly, not much tech in Chapter 9.
+
+
+[[chapter-10]]
+== Chapter 10
+
+Technical debt::
+Mahsa calls it "technology debt", but "technical debt" is more common.
+Masha explains it pretty well: sometimes you create a solution to quickly
+achieve your short-term goals, but in the long run this solution keeps
+you from doing it the "right way".
+The longer you postpone re-doing it properly, the bigger it grows and 
+the harder it is to "pay off" your technical debt.
+More:
+* https://en.wikipedia.org/wiki/Technical_debt
+* https://martinfowler.com/bliki/TechnicalDebt.html (Martin Fowler explains it well)
+* https://hackernoon.com/there-are-3-main-types-of-technical-debt-heres-how-to-manage-them-4a3328a4c50c
+
+
+[[chapter-11]]
+== Chapter 11
+
+Bot or Not::
+Masha says she played this "game" with Kriztina and her friends. 
+The point is to distinguish bots from real people in social networks.
+Apparently, it's not that easy, if you read the Twitter's blog post below.
+There are online tools that can help with that, but they very accurate.
+More:
+* https://blog.twitter.com/en_us/topics/company/2020/bot-or-not.html
+* https://botometer.osome.iu.edu/
+* https://botsentinel.com/
+* https://nakedsecurity.sophos.com/2020/06/10/bot-or-not-a-game-to-train-us-to-spot-chatbots-faking-it-as-humans/
+
+[quote, Masha Maximow]
+Your enemies don’t need people to disagree with you, they just need people not to care .
+
+
+[[chapter-12]]
+== Chapter 12
+
+Game theory::
+A branch of mathematics that studies different strategies in various types of games.
+Games here are played in different fileds such as economics, social studies, etc.
+More:
+* https://en.wikipedia.org/wiki/Game_theory
+* https://plato.stanford.edu/entries/game-theory/
+* http://www.dklevine.com/general/whatis.htm
+
+
+[[chapter-13]]
+== Chapter 13
+
+Very short chapter. Not much technology discussed here.
+
+
+[[chapter-14]]
+== Chapter 14
+
+Even shorter chapter. No technology here.
+
+
+[[epilogue]]
+== Epilogue
+
+Double-entry bookkeeping::
+A system of book keeping where every entry to an account requires a corresponding and 
+opposite entry to a different account. The double-entry has two equal and corresponding sides
+known as debit and credit.
+More:
+* https://en.wikipedia.org/wiki/Double-entry_bookkeeping
+
+[quote,Masha Maximow]
+Any weapon you don’t know how to use belongs to your enemy.
+
+
+
+
 

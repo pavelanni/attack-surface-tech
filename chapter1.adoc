@@ -1,0 +1,328 @@
+= Mashapedia: Technologies of "`Attack Surface`" by Cory Doctorow
+
+== Chapter 1
+
+Tor:: A network that enables anonymous communications. 
+By using the Tor Browser you can visit web sites without letting them know your location or your actual IP address. More about Tor (including questions "is it legal?"): 
+* https://www.torproject.org/
+* https://en.wikipedia.org/wiki/Tor_(anonymity_network)
+
+Facebook Tor Hidden Service::
+A site that allows access to Facebook through the Tor protocol. 
+According to Alec Muffett "Facebook's onion address provides a way to access Facebook through Tor 
+without losing the cryptographic protections provided by the Tor cloud. ... 
+it provides end-to-end communication, from your browser directly into a Facebook datacentre."
+The address is `facebookcorewwwi.onion` where `.onion` is the common top-level domain name 
+for sites in Tor network. You can enter this domain name in the Tor Browser's address field.
+It won't work in your normal (Chrome, Firefox, etc.) browser. More:
+* https://en.wikipedia.org/wiki/Facebookcorewwwi.onion
+* https://blog.torproject.org/facebook-hidden-services-and-https-certs
+* https://www.cheatsheet.com/technology/what-is-facebooks-tor-hidden-service-why-does-it-matter.html/ (this one has a simple description of what Tor is and how it works)
+
+Sectec:: A fictional networking device produced by Xoth. 
+_Not_ a CCTV camera produced by Shenshen Sectec Co. (http://www.sectec.com.cn/)
+
+0-day or zero-day:: A vulnerability that has not been fixed by the vendor or was fixed just recently
+which allows hackers to exploit it. More: 
+* https://en.wikipedia.org/wiki/Zero-day_(computing)
+* https://www.fireeye.com/current-threats/what-is-a-zero-day-exploit.html
+* https://searchsecurity.techtarget.com/definition/zero-day-vulnerability
+
+Exploit::
+A piece of software or a methodology (series of steps) that allows hackers to use
+a known vulnerability to get access to a target computer. More:
+* https://en.wikipedia.org/wiki/Exploit_(computer_security)
+* Exploit database: https://www.exploit-db.com/
+
+Tunnel out::
+To use an SSH tunnel to get secure access to a remote box. Usually you use SSH tunneling
+to bypass firewalls that prohibit certain Internet services. More:
+* https://en.wikipedia.org/wiki/Tunneling_protocol#Secure_Shell_tunneling
+* https://www.ssh.com/ssh/tunneling/example
+
+Bootloader::
+A piece of software which normally starts at the early stages of computer startup process,
+after executing the BIOS, but _before_ the operating system starts.
+Its purpose is to _load_ the operating system (hense the name).
+Bootloader integrity check is important to avoid a "boot attack":
+type of attack that replaces the original bootloader and installs a bootloader
+that can intercept passwords, including those used for hard drive encryption.
+More:
+* https://link.springer.com/chapter/10.1007/978-1-4302-6572-6_6 (very good explanation; you can read a chapter, or download the whole book there -- thanks, Springer!)
+* https://en.wikipedia.org/wiki/Booting#Modern_boot_loaders
+* https://engineering.fb.com/2016/01/29/security/hardware-and-firmware-attacks-defending-detecting-and-responding/
+* Evil maid attack: https://en.wikipedia.org/wiki/Evil_maid_attack
+* https://onlinelibrary.wiley.com/doi/full/10.1002/eng2.12032
+
+
+Semtex:: General-purpose plastic explosive.
+More: 
+* https://en.wikipedia.org/wiki/Semtex
+
+Hardware keylogger::
+A device used to log all keystrokes on a computer which is used to capture passwords.
+More:
+* https://en.wikipedia.org/wiki/Hardware_keylogger
+* https://en.wikipedia.org/wiki/Keystroke_logging
+
+
+Catching password from key sounds::
+Different keys on the keyboard produce slightly different sounds so the recorded acoustic pattern
+of you typing in your password can be used to guess it. That's why Masha does "medium-loud AAAAAH"
+when typing her password.
+More:
+* https://security.stackexchange.com/questions/23322/keyboard-sniffing-through-audio-recorded-typing-patterns
+* https://www.davidsalomon.name/CompSec/auxiliary/KybdEmanation.pdf
+* https://en.wikipedia.org/wiki/Keystroke_logging
+
+Faraday cage::
+An enclosure that blocks electromagnetic fields. 
+Could be a room, a cabinet, a bag.
+More:
+* https://en.wikipedia.org/wiki/Faraday_cage
+
+Tails::
+A security-focused Linux distribution that aims at preserving privacy and anonymity.
+It usually loads from a live DVD or USB and provides Linux environment that is based on Tor network.
+Your browsing information is not stored anywhere unless you specifically instruct it to do so.
+_Tails_ provides an emergency shutdown: when you pull the USB out of the slot, the system
+erases all computer memory and shuts itself down immediately.
+More:
+* https://en.wikipedia.org/wiki/Tails_(operating_system)
+* https://tails.boum.org/
+
+MIT Media Lab::
+A research lab at MIT famous for its inventions and projects in areas of human-computer interaction,
+artistic visualization, musical devices, sociable robots, etc.
+More: 
+* https://www.media.mit.edu/
+* https://en.wikipedia.org/wiki/MIT_Media_Lab
+
+USB Port Physical Lock::
+There are several variants of such a device that physically blocks access to the USB port.
+Some of them have keys, some should be physically destroyed to get access to the port.
+Examples:
+* https://www.padjack.com/padjack-versions/usb-port-lock/ (should be destroyed and resealed later)
+* https://connectivitycenter.com/product/smart-keeper-usb-port-lock-professional/ (used with a key)
+* https://lindy.com/en/technology/port-blockers/ (with a key)
+
+EL wire::
+Electroluminescent wire is a thin copper wire coated in a phosphor that produces light through electroluminescence when an alternating current is applied to it. More:
+* https://en.wikipedia.org/wiki/Electroluminescent_wire
+
+Lidar::
+"Light radar" -- a device that used laser light to scan the area and measure distances to 
+objects, walls, etc. It is also used as an acronym of "light detection and ranging" 
+and "laser imaging, detection, and ranging". 
+In the book Masha uses a drone to get "lidar outlines of all the human in the space".
+More:
+* https://en.wikipedia.org/wiki/Lidar
+* https://www.neonscience.org/resources/learning-hub/tutorials/lidar-basics
+
+Raspi Altair 8800::
+Altair 8800 is one of the first personal computers which was introduced in 1974.
+For many people it has sentimental value -- that's why some people design and sell 
+Altair emulators that use modern technologies such as Arduino and Raspberry Pi.
+More:
+* https://en.wikipedia.org/wiki/Altair_8800
+* https://www.adwaterandstir.com/product/altair-8800-emulator-kit/
+* https://github.com/dankar/altair8800
+* http://www.astrorat.com/altair8800/altair8800clonemeetrp.html
+
+Blinkenlights::
+Usually refers to the diagnostic lights on computer's front panels (in the old days).
+The term derives from the famous text dated as far back as 1955.
++
+----
+ACHTUNG!
+ALLES TURISTEN UND NONTEKNISCHEN LOOKENSPEEPERS!
+DAS KOMPUTERMASCHINE IST NICHT FÜR DER GEFINGERPOKEN UND MITTENGRABEN! ODERWISE IST EASY TO SCHNAPPEN DER SPRINGENWERK, BLOWENFUSEN UND POPPENCORKEN MIT SPITZENSPARKEN.
+IST NICHT FÜR GEWERKEN BEI DUMMKOPFEN. DER RUBBERNECKEN SIGHTSEEREN KEEPEN DAS COTTONPICKEN HÄNDER IN DAS POCKETS MUSS.
+ZO RELAXEN UND WATSCHEN DER BLINKENLICHTEN.
+----
+More:
+* https://en.wikipedia.org/wiki/Blinkenlights
+
+Paranoid Android::
+In the book it seems to be the Android-based OS for smartphones focused on security.
+The main feature of it is that you update it very often to make sure all known
+vulnerabilities are patched or at least there are no known exploits for them.
+Masha explains that you should always check the OS signatures to make sure
+you are actually installing the correct bits and not something created by 
+the government hackers conatining backdoors and logeers.
+Apparently there is such a project in real life, but it's not specifically 
+focused on security -- it just uses the cool name.
+More:
+* https://en.wikipedia.org/wiki/Paranoid_Android_(software)
+
+IMSI-catcher::
+A device that can _pretend_ to be a cell phone base station and make all phones in the nearest proximity
+to connect to it (because its signal stronger than the real cell towers that are farther away).
+That way it will be able to collect all information about the connected phones such as IMSI
+(international mobile subscriber identity), etc. Also it will be able to intercept phones' traffic,
+voice and data using "man-in-the-middle" attack.
+Devices can be purchased online, as well as anti-IMSI-catchers. 
+You can build one yourself, if you want (see the link below).
+More:
+* https://en.wikipedia.org/wiki/IMSI-catcher
+* https://www.paladion.net/blogs/how-to-build-an-imsi-catcher-to-intercept-gsm-traffic
+* https://www.vice.com/en/article/gy7qm9/how-i-made-imsi-catcher-cheap-amazon-github
+
+Dazzle mask::
+A mask that allows you to trick facial-recognition software into thinking you are not human.
+They may use reflective tapes, infrared lights, lenses, etc.
+More:
+* https://www.businessinsider.com/clothes-accessories-that-outsmart-facial-recognition-tech-2019-10
+* https://www.reflectacles.com/#home
+
+
+Pastebin::
+A storage site where people can post pieces of code and other text information.
+More:
+* https://en.wikipedia.org/wiki/Pastebin
+
+Regular expressions::
+A (smart) way to search specific patterns or strings in text files. 
+You can describe patterns like "one to three numbers followed by a dash followed by several capital letters, no more than 8." 
+More:
+* https://en.wikipedia.org/wiki/Regular_expression
+* https://regexr.com/
+* https://regexone.com/ (interactive tutorial)
+
+Anonymouth::
+Document anonymization tool written in Java. More:
+* https://github.com/psal/anonymouth
+* https://directory.fsf.org/wiki/Anonymouth
+
+Stylometry::
+A method to study linguistic style to find out who the author of the document is.
+More:
+* https://en.wikipedia.org/wiki/Stylometry
+* https://programminghistorian.org/en/lessons/introduction-to-stylometry-with-python
+
+PGP::
+Pretty Good Privacy, a cryptographic method used for encryption and digital signing documents, emails, etc.
+More:
+* https://en.wikipedia.org/wiki/Pretty_Good_Privacy
+* https://users.ece.cmu.edu/~adrian/630-f04/PGP-intro.html (how it works)
+* https://www.openpgp.org/
+* https://gnupg.org/
+
+Malware::
+Malicious software: software intentionally designed to cause damage to computer systems.
+More:
+* https://en.wikipedia.org/wiki/Malware
+
+NFC, Near-Field Communication::
+A set of communication protocols for communication between two electronic devices 
+over a distance of 4 cm. Used in various types of key cards, passes. etc.
+More: 
+* https://en.wikipedia.org/wiki/Near-field_communication
+* https://nfc-forum.org/
+
+Information Cascade::
+A pattern of information flow when you can see how information or decision coming from
+one person triggers the series of decisions or information passes from several other persons.
+More:
+* https://en.wikipedia.org/wiki/Information_cascade
+* https://arxiv.org/abs/2005.11041
+* https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch16.pdf (part of a book "Networks, Crowds, amd Markets" https://www.cs.cornell.edu/home/kleinber/networks-book/)
+* Information Cascade Experiments https://wmpeople.wm.edu/asset/index/lrande/cascadehandbook
+
+Anti-Stingray:: 
+Tools to protect oneself from IMSI-catchers.
+More:
+* https://privacysos.org/blog/how-to-defeat-fbi-or-police-stingray-surveillance/
+* https://www.firstpoint-mg.com/blog/top-7-imsi-catcher-detection-solutions-2020/
+* https://en.wikipedia.org/wiki/Stingray_phone_tracker
+* https://theintercept.com/2020/07/31/protests-surveillance-stingrays-dirtboxes-phone-tracking/
+
+
+Asterisk::
+An open source phone framework that can be used to build a Voice-over-IP or IP PBX system.
+Masha runs such a server on the cloud and uses it to route her calls.
+One of the examples: https://aws.amazon.com/marketplace/pp/Technology-Innovation-Lab-of-Texas-Asterisk-1770-A/B079Y7449R 
+More:
+* https://www.asterisk.org/
+* https://en.wikipedia.org/wiki/Asterisk_(PBX)
+* https://www.voip-info.org/asterisk/
+* https://techexpert.tips/asterisk/asterisk-installation-cloud-aws-ec2/ (tutorial)
+
+Signal::
+A communication application which is considered to be the most secure for end-to-end
+encryption. Trusted and used by Edward Snowden, Jack Dorsey, Bruce Schneier.
+It uses the open-source Signal protocol. 
+Works on iOS, Android, Linux, macOS, Windows
+More:
+* https://signal.org/en/
+* https://github.com/signalapp
+* https://en.wikipedia.org/wiki/Signal_Protocol
+
+Binary Transparency::
+A method that allows users to verify that the piece of software they use is exactly the same
+used by other users, i.e. it was not substituted by a compromised version.
+More:
+* https://wiki.mozilla.org/Security/Binary_Transparency
+* Contour - a practical system for binary transparency: https://smeiklej.com/files/cbt18.pdf
+* http://diyhpl.us/wiki/transcripts/building-on-bitcoin/2018/binary-transparency/
+* https://github.com/BrandonTang/binary-transparency
+
+Hashing::
+Masha explains it pretty well in the book. 
+More:
+* https://en.wikipedia.org/wiki/Hash_function
+* https://medium.com/tech-tales/what-is-hashing-6edba0ebfa67
+
+Public-private key cryptography::
+Again, Masha does a great job explaining the basics.
+More:
+* https://en.wikipedia.org/wiki/Public-key_cryptography
+* https://ssd.eff.org/en/module/deep-dive-end-end-encryption-how-do-public-key-encryption-systems-work
+* https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:online-data-security/xcae6f4a7ff015e7d:data-encryption-techniques/a/public-key-encryption
+
+BadUSB::
+It is a way to use the microcontroller embedded in a USB device to inject malware in your computer.
+The most dangerous thing about it is that all the work is done by that microcontroller,
+invisible to the target computer's CPU.
+More:
+* https://opensource.srlabs.de/projects/badusb
+* https://hackaday.com/2014/10/05/badusb-means-were-all-screwed/ (there are links to the paper and video
+explaining how it works)
+* https://srlabs.de/wp-content/uploads/2014/11/SRLabs-BadUSB-Pacsec-v2.pdf
+
+
+Baseband phone security::
+It was confirmed that the software that controls the baseband radio on smartphones can
+be compromised and can allow attackers to control other smartphone devices such as camera and microphone.
+More (some papers are a bit dated, but it's quite possible some vulnerabilities described in them
+still exist):
+* https://techcrunch.com/2019/11/08/android-baseband-flaws/
+* https://www.ccdcoe.org/uploads/2018/10/Art-16-Attacking-the-Baseband-Modem-of-Breach-the-Users-Privacy-and-Network-Security.pdf (2015)
+* https://smartech.gatech.edu/bitstream/handle/1853/43766/davis_andrew_t_201205_ro.pdf (2012)
+
+
+Man-in-the-middle attack::
+This is the category of attacks where the attacker injects _something_ in the transmission
+channel (voice, data, etc.) that can listen to the traffic and potentially alter the traffic.
+More:
+* https://en.wikipedia.org/wiki/Man-in-the-middle_attack
+* https://www.rapid7.com/fundamentals/man-in-the-middle-attacks/
+
+Openstreetmap::
+Wrongly called "Openstreetmaps" in the book. An open source alternative to Google Maps. 
+More:
+* https://www.openstreetmap.org/
+* https://en.wikipedia.org/wiki/OpenStreetMap
+* https://wiki.osmfoundation.org/wiki/Main_Page
+
+Citizen Lab::
+A laboratory based at University of Toronto which works on protecting human rights and privacy
+in cyberspace.
+More:
+* https://citizenlab.ca/
+* https://en.wikipedia.org/wiki/Citizen_Lab
+* https://twitter.com/citizenlab
+
+
+See technologies from <<chapter2.adoc#chapter-2,Chapter 2>>.
+
