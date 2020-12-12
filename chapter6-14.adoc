@@ -250,5 +250,4 @@ Any weapon you don’t know how to use belongs to your enemy.
 
 
 
-See technologies from <<chapter7.adoc#chapter-7,Chapter 7>>.
 
