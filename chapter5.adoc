@@ -131,5 +131,5 @@ More:
 
 
 
-See technologies from <<chapter6.adoc#chapter-6,Chapter 6>>.
+See technologies from <<chapter6-14.adoc#chapter-6,other chapters>>.
 
