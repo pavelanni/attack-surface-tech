@@ -256,6 +256,7 @@ Works on iOS, Android, Linux, macOS, Windows
 More:
 * https://signal.org/en/
 * https://github.com/signalapp
+* https://en.wikipedia.org/wiki/Signal_Protocol
 
 Binary Transparency::
 A method that allows users to verify that the piece of software they use is exactly the same

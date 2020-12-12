@@ -173,7 +173,79 @@ More:
 [[chapter-9]]
 == Chapter 9
 
+Surprisingly, not much tech in Chapter 9.
 
+
+[[chapter-10]]
+== Chapter 10
+
+Technical debt::
+Mahsa calls it "technology debt", but "technical debt" is more common.
+Masha explains it pretty well: sometimes you create a solution to quickly
+achieve your short-term goals, but in the long run this solution keeps
+you from doing it the "right way".
+The longer you postpone re-doing it properly, the bigger it grows and 
+the harder it is to "pay off" your technical debt.
+More:
+* https://en.wikipedia.org/wiki/Technical_debt
+* https://martinfowler.com/bliki/TechnicalDebt.html (Martin Fowler explains it well)
+* https://hackernoon.com/there-are-3-main-types-of-technical-debt-heres-how-to-manage-them-4a3328a4c50c
+
+
+[[chapter-11]]
+== Chapter 11
+
+Bot or Not::
+Masha says she played this "game" with Kriztina and her friends. 
+The point is to distinguish bots from real people in social networks.
+Apparently, it's not that easy, if you read the Twitter's blog post below.
+There are online tools that can help with that, but they very accurate.
+More:
+* https://blog.twitter.com/en_us/topics/company/2020/bot-or-not.html
+* https://botometer.osome.iu.edu/
+* https://botsentinel.com/
+* https://nakedsecurity.sophos.com/2020/06/10/bot-or-not-a-game-to-train-us-to-spot-chatbots-faking-it-as-humans/
+
+[quote, Masha Maximow]
+Your enemies don’t need people to disagree with you, they just need people not to care .
+
+
+[[chapter-12]]
+== Chapter 12
+
+Game theory::
+A branch of mathematics that studies different strategies in various types of games.
+Games here are played in different fileds such as economics, social studies, etc.
+More:
+* https://en.wikipedia.org/wiki/Game_theory
+* https://plato.stanford.edu/entries/game-theory/
+* http://www.dklevine.com/general/whatis.htm
+
+
+[[chapter-13]]
+== Chapter 13
+
+Very short chapter. Not much technology discussed here.
+
+
+[[chapter-14]]
+== Chapter 14
+
+Even shorter chapter. No technology here.
+
+
+[[epilogue]]
+== Epilogue
+
+Double-entry bookkeeping::
+A system of book keeping where every entry to an account requires a corresponding and 
+opposite entry to a different account. The double-entry has two equal and corresponding sides
+known as debit and credit.
+More:
+* https://en.wikipedia.org/wiki/Double-entry_bookkeeping
+
+[quote,Masha Maximow]
+Any weapon you don’t know how to use belongs to your enemy.
 
 
 
