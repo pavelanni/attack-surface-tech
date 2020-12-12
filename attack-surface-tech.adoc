@@ -1,7 +1,34 @@
-= Mashapedia: Technologies of "`Attack Surface`" by Cory Doctorow
+= Mashapedia: Technologies of _Attack Surface_ by Cory Doctorow
 :toc: auto
 
+== Introduction
 
+I am a big fan of Cory Doctorow (link:https://twitter.com/doctorow[@doctorow]). 
+Not only his books like _Little Brother_, _Homeland_, and now _Attack Surface_
+discuss important topics like online privacy and the role of technology in today's world,
+but also they educate the readers by telling them stories about modern tech solutions and tools.
+Doctorow usually doesn`'t give you a lot of explanations, assuming that you can
+find all the necessary information if you want to.
+
+When I started reading _Attack Surface_ I was amazed by the amount of tech terms Doctorow 
+was using here and there. For some terms my thoughts were: "`Okay, I know what '`Tor`' means, 
+but does everybody else who is reading this book now?`". For other terms I had to google
+them myself: "`What is IMSI-catcher?`" 
+
+I thought it might be a good idea to collect all tech terms that _might_ be new to the readers
+and give a quick explanation for each of them. 
+Also a link or two to more detailed pages would be helpful.
+
+This is my collection of _Attack Surface_ terms. 
+Most of the time I give links to Wikipedia, sometimes to other resources.
+
+If you want to add or expand some terms explanation or add more interesting links,
+feel free to fork my Github repo (https://github.com/pavelanni/attack-surface-tech) and open a PR. 
+I'll be happy to include your additions to this list.
+
+* Cory Doctorow's page: https://craphound.com/
+* _Attack Surface_ page: https://craphound.com/category/attacksurface/
+* _Little Brother_ and _Homeland_ (two previous books of this trilogy): https://craphound.com/category/littlebrother/ and https://craphound.com/category/homeland/
 
 == Chapter 1
 
@@ -44,9 +71,9 @@ to bypass firewalls that prohibit certain Internet services. More:
 * https://www.ssh.com/ssh/tunneling/example
 
 Bootloader::
-A piece of software which normally starts at the early stages of computer startup process,
+A piece of software which normally starts at the early stages of computer start-up process,
 after executing the BIOS, but _before_ the operating system starts.
-Its purpose is to _load_ the operating system (hense the name).
+Its purpose is to _load_ the operating system (hence the name).
 Bootloader integrity check is important to avoid a "boot attack":
 type of attack that replaces the original bootloader and installs a bootloader
 that can intercept passwords, including those used for hard drive encryption.
@@ -71,7 +98,7 @@ More:
 
 Catching password from key sounds::
 Different keys on the keyboard produce slightly different sounds so the recorded acoustic pattern
-of you typing in your password can be used to guess it. That's why Masha does "medium-loud AAAAAH"
+of you typing in your password can be used to guess it. That`'s why Masha does "medium-loud AAAAAH"
 when typing her password.
 More:
 * https://security.stackexchange.com/questions/23322/keyboard-sniffing-through-audio-recorded-typing-patterns
@@ -152,7 +179,7 @@ The main feature of it is that you update it very often to make sure all known
 vulnerabilities are patched or at least there are no known exploits for them.
 Masha explains that you should always check the OS signatures to make sure
 you are actually installing the correct bits and not something created by 
-the government hackers conatining backdoors and logeers.
+the government hackers containing backdoors and loggers.
 Apparently there is such a project in real life, but it's not specifically 
 focused on security -- it just uses the cool name.
 More:
@@ -229,7 +256,7 @@ one person triggers the series of decisions or information passes from several o
 More:
 * https://en.wikipedia.org/wiki/Information_cascade
 * https://arxiv.org/abs/2005.11041
-* https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch16.pdf (part of a book "Networks, Crowds, amd Markets" https://www.cs.cornell.edu/home/kleinber/networks-book/)
+* https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch16.pdf (part of a book "Networks, Crowds, and Markets" https://www.cs.cornell.edu/home/kleinber/networks-book/)
 * Information Cascade Experiments https://wmpeople.wm.edu/asset/index/lrande/cascadehandbook
 
 Anti-Stingray:: 
@@ -331,7 +358,7 @@ More:
 == Chapter 2
 
 Fibonaccis::
-Fibbonaci numbers, the sequence where each next number is a sum of the two previous.
+Fibonacci numbers, the sequence where each next number is a sum of the two previous.
 They have a lot of interesting features, they are found in nature, etc. 
 More:
 * https://www.mathsisfun.com/numbers/fibonacci-sequence.html
@@ -401,7 +428,7 @@ More:
 * https://hackernoon.com/reverse-shell-cf154dfee6bd
 
 RFID (Radio-frequency identification)::
-A method of exchanging identifaction information over radio. 
+A method of exchanging identification information over radio. 
 It includes RFID tags and RFID readers. 
 RFID tags can be passive (i.e. not containing any battery) and really cheap.
 They get the energy they need to operate from the reader that reads from them.
@@ -413,7 +440,7 @@ More:
 Usenet::
 A "prehistoric" social network that was created around 1980.
 The name comes from the term "users network". 
-It was used for discussions and asking questions. It has a hierarchial structure
+It was used for discussions and asking questions. It has a hierarchical structure
 of topics called "newsgroups".
 Even before Internet became widely available it used UUCP (Unix-to-Unix Copy) program to
 exchange posts and updates over telephone lines.
@@ -432,7 +459,7 @@ More:
 * https://www.fcc.gov/consumers/guides/spoofing-and-caller-id
 * https://blog.rapid7.com/2018/05/24/how-to-build-your-own-caller-id-spoofer-part-1/
 
-Data-collecting lightbulbs::
+Data-collecting light bulbs::
 Most likely Masha means this report: https://darkcubed.com/iot-security-technical.
 Short versions: 
 * https://blog.adafruit.com/2019/03/10/is-your-smart-bulb-collecting-data-iot-smartdevice/
@@ -638,7 +665,7 @@ More:
 
 
 Cryptoparty::
-CryptoParty (Crypto-Party) is a grassroots global endeavour to introduce the basics of
+CryptoParty (Crypto-Party) is a grassroots global endeavor to introduce the basics of
 practical cryptography such as the Tor anonymity network, key signing parties, 
 disk encryption and virtual private networks to the general public. 
 The project primarily consists of a series of free public workshops.
@@ -863,9 +890,9 @@ More:
 * https://en.wikipedia.org/wiki/Hyperbolic_discounting
 
 Sukey::
-Sukey is an organisation which emerged in Britain on 28 January 2011, with the aim of 
+Sukey is an organization which emerged in Britain on 28 January 2011, with the aim of 
 improving communications among participants in the student demonstrations. 
-Its immediate aim was to counteract the police tactics of kettling, by co-ordinating
+Its immediate aim was to counteract the police tactics of kettling, by coordinating
 information electronically and transmitting it to the protesters, 
 allowing them to avoid the police kettle.
 More:
@@ -915,7 +942,7 @@ Enigmail UNTRUSTED good signature from Kriztina <kriztinak@riseup.net>
 ----
 +
 That means she uses _Enigmail_ to encrypt and digitally sign her messages.
-Enigmail works with several mail clients includind Thunderbird and Evolution.
+Enigmail works with several mail clients including Thunderbird and Evolution.
 The meaning of "Untrusted good signature" was explained on the Enigmail forum:
 +
 ----
@@ -943,7 +970,7 @@ Surprisingly, not much tech in Chapter 9.
 == Chapter 10
 
 Technical debt::
-Mahsa calls it "technology debt", but "technical debt" is more common.
+Masha calls it "technology debt", but "technical debt" is more common.
 Masha explains it pretty well: sometimes you create a solution to quickly
 achieve your short-term goals, but in the long run this solution keeps
 you from doing it the "right way".
@@ -978,7 +1005,7 @@ Your enemies don’t need people to disagree with you, they just need people not
 
 Game theory::
 A branch of mathematics that studies different strategies in various types of games.
-Games here are played in different fileds such as economics, social studies, etc.
+Games here are played in different fields such as economics, social studies, etc.
 More:
 * https://en.wikipedia.org/wiki/Game_theory
 * https://plato.stanford.edu/entries/game-theory/
