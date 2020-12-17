@@ -5,443 +5,128 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
-<title>Mashapedia: Technologies of &#8220;Attack Surface&#8221; by Cory Doctorow</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<title>Mashapedia: Technologies of Attack Surface by Cory Doctorow</title>
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
-/* Uncomment @import statement to use as custom stylesheet */
-/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
-article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}
-audio,video{display:inline-block}
-audio:not([controls]){display:none;height:0}
-html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
-a{background:none}
-a:focus{outline:thin dotted}
-a:active,a:hover{outline:0}
-h1{font-size:2em;margin:.67em 0}
-abbr[title]{border-bottom:1px dotted}
-b,strong{font-weight:bold}
-dfn{font-style:italic}
-hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
-mark{background:#ff0;color:#000}
-code,kbd,pre,samp{font-family:monospace;font-size:1em}
-pre{white-space:pre-wrap}
-q{quotes:"\201C" "\201D" "\2018" "\2019"}
-small{font-size:80%}
-sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
-sup{top:-.5em}
-sub{bottom:-.25em}
-img{border:0}
-svg:not(:root){overflow:hidden}
-figure{margin:0}
-fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
-legend{border:0;padding:0}
-button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
-button,input{line-height:normal}
-button,select{text-transform:none}
-button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
-button[disabled],html input[disabled]{cursor:default}
-input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
-button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
-textarea{overflow:auto;vertical-align:top}
-table{border-collapse:collapse;border-spacing:0}
-*,*::before,*::after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
-html,body{font-size:100%}
-body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
-a:hover{cursor:pointer}
-img,object,embed{max-width:100%;height:auto}
-object,embed{height:100%}
-img{-ms-interpolation-mode:bicubic}
-.left{float:left!important}
-.right{float:right!important}
-.text-left{text-align:left!important}
-.text-right{text-align:right!important}
-.text-center{text-align:center!important}
-.text-justify{text-align:justify!important}
-.hide{display:none}
-img,object,svg{display:inline-block;vertical-align:middle}
-textarea{height:auto;min-height:50px}
-select{width:100%}
-.center{margin-left:auto;margin-right:auto}
-.stretch{width:100%}
-.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
-div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
-a{color:#2156a5;text-decoration:underline;line-height:inherit}
-a:hover,a:focus{color:#1d4b8f}
-a img{border:0}
-p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
-p aside{font-size:.875em;line-height:1.35;font-style:italic}
-h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
-h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
-h1{font-size:2.125em}
-h2{font-size:1.6875em}
-h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
-h4,h5{font-size:1.125em}
-h6{font-size:1em}
-hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
-em,i{font-style:italic;line-height:inherit}
-strong,b{font-weight:bold;line-height:inherit}
-small{font-size:60%;line-height:inherit}
-code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
-ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
-ul,ol{margin-left:1.5em}
-ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
-ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
-ul.square{list-style-type:square}
-ul.circle{list-style-type:circle}
-ul.disc{list-style-type:disc}
-ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
-dl dt{margin-bottom:.3125em;font-weight:bold}
-dl dd{margin-bottom:1.25em}
-abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-bottom:1px dotted #ddd;cursor:help}
-abbr{text-transform:none}
-blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
-blockquote cite{display:block;font-size:.9375em;color:rgba(0,0,0,.6)}
-blockquote cite::before{content:"\2014 \0020"}
-blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
-blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
-@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
-h1{font-size:2.75em}
-h2{font-size:2.3125em}
-h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
-h4{font-size:1.4375em}}
-table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
-table thead,table tfoot{background:#f7f8f7}
-table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
-table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
-table tr.even,table tr.alt{background:#f8f8f7}
-table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
-h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
-h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
-.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
-.clearfix::after,.float-group::after{clear:both}
-:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
-:not(pre)>code.nobreak{word-wrap:normal}
-:not(pre)>code.nowrap{white-space:nowrap}
-pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
-pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
-pre>code{display:block}
-pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
-em em{font-style:normal}
-strong strong{font-weight:400}
-.keyseq{color:rgba(51,51,51,.8)}
-kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
-.keyseq kbd:first-child{margin-left:0}
-.keyseq kbd:last-child{margin-right:0}
-.menuseq,.menuref{color:#000}
-.menuseq b:not(.caret),.menuref{font-weight:inherit}
-.menuseq{word-spacing:-.02em}
-.menuseq b.caret{font-size:1.25em;line-height:.8}
-.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
-b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
-b.button::before{content:"[";padding:0 3px 0 2px}
-b.button::after{content:"]";padding:0 2px 0 3px}
-p a>code:hover{color:rgba(0,0,0,.9)}
-#header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
-#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
-#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
-#content{margin-top:1.25em}
-#content::before{content:none}
-#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
-#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
-#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
-#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
-#header .details span:first-child{margin-left:-.125em}
-#header .details span.email a{color:rgba(0,0,0,.85)}
-#header .details br{display:none}
-#header .details br+span::before{content:"\00a0\2013\00a0"}
-#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
-#header .details br+span#revremark::before{content:"\00a0|\00a0"}
-#header #revnumber{text-transform:capitalize}
-#header #revnumber::after{content:"\00a0"}
-#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
-#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
-#toc>ul{margin-left:.125em}
-#toc ul.sectlevel0>li>a{font-style:italic}
-#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
-#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
-#toc li{line-height:1.3334;margin-top:.3334em}
-#toc a{text-decoration:none}
-#toc a:active{text-decoration:underline}
-#toctitle{color:#7a2518;font-size:1.2em}
-@media screen and (min-width:768px){#toctitle{font-size:1.375em}
-body.toc2{padding-left:15em;padding-right:0}
-#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
-#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
-#toc.toc2>ul{font-size:.9em;margin-bottom:0}
-#toc.toc2 ul ul{margin-left:0;padding-left:1em}
-#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
-body.toc2.toc-right{padding-left:0;padding-right:15em}
-body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
-@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
-#toc.toc2{width:20em}
-#toc.toc2 #toctitle{font-size:1.375em}
-#toc.toc2>ul{font-size:.95em}
-#toc.toc2 ul ul{padding-left:1.25em}
-body.toc2.toc-right{padding-left:0;padding-right:20em}}
-#content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
-#content #toc>:first-child{margin-top:0}
-#content #toc>:last-child{margin-bottom:0}
-#footer{max-width:100%;background:rgba(0,0,0,.8);padding:1.25em}
-#footer-text{color:rgba(255,255,255,.8);line-height:1.44}
-#content{margin-bottom:.625em}
-.sect1{padding-bottom:.625em}
-@media screen and (min-width:768px){#content{margin-bottom:1.25em}
-.sect1{padding-bottom:1.25em}}
-.sect1:last-child{padding-bottom:0}
-.sect1+.sect1{border-top:1px solid #e7e7e9}
-#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
-#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
-#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
-#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
-#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
-details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
-details>summary:first-of-type{cursor:pointer;display:list-item;outline:none;margin-bottom:.75em}
-.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
-table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
-.paragraph.lead>p,#preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
-table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:inherit}
-.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
-.admonitionblock>table td.icon{text-align:center;width:80px}
-.admonitionblock>table td.icon img{max-width:none}
-.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
-.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6)}
-.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
-.exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
-.exampleblock>.content>:first-child{margin-top:0}
-.exampleblock>.content>:last-child{margin-bottom:0}
-.sidebarblock{border-style:solid;border-width:1px;border-color:#dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;-webkit-border-radius:4px;border-radius:4px}
-.sidebarblock>:first-child{margin-top:0}
-.sidebarblock>:last-child{margin-bottom:0}
-.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
-.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
-.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;overflow-x:auto;padding:1em;font-size:.8125em}
-@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
-@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
-.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class="highlight"],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
-.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
-.listingblock>.content{position:relative}
-.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
-.listingblock:hover code[data-lang]::before{display:block}
-.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
-.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
-.listingblock pre.highlightjs{padding:0}
-.listingblock pre.highlightjs>code{padding:1em;-webkit-border-radius:4px;border-radius:4px}
-.listingblock pre.prettyprint{border-width:0}
-.prettyprint{background:#f7f7f8}
-pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
-pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
-pre.prettyprint li code[data-lang]::before{opacity:1}
-pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
-table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
-table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
-table.linenotable td.code{padding-left:.75em}
-table.linenotable td.linenos{border-right:1px solid currentColor;opacity:.35;padding-right:.5em}
-pre.pygments .lineno{border-right:1px solid currentColor;opacity:.35;display:inline-block;margin-right:.75em}
-pre.pygments .lineno::before{content:"";margin-right:-.125em}
-.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
-.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
-.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
-.quoteblock blockquote{margin:0;padding:0;border:0}
-.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
-.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
-.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
-.verseblock{margin:0 1em 1.25em}
-.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
-.verseblock pre strong{font-weight:400}
-.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
-.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
-.quoteblock .attribution br,.verseblock .attribution br{display:none}
-.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
-.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
-.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
-.quoteblock.abstract{margin:0 1em 1.25em;display:block}
-.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
-.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
-.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
-.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
-.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
-table.tableblock{max-width:100%;border-collapse:separate}
-p.tableblock:last-child{margin-bottom:0}
-td.tableblock>.content>:last-child{margin-bottom:-1.25em}
-td.tableblock>.content>:last-child.sidebarblock{margin-bottom:0}
-table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
-table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0}
-table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
-table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
-table.grid-rows>thead>tr>.tableblock,table.grid-rows>tbody>tr>.tableblock{border-width:0 0 1px}
-table.grid-rows>tfoot>tr>.tableblock{border-width:1px 0 0}
-table.grid-all>*>tr>.tableblock:last-child,table.grid-cols>*>tr>.tableblock:last-child{border-right-width:0}
-table.grid-all>tbody>tr:last-child>.tableblock,table.grid-all>thead:last-child>tr>.tableblock,table.grid-rows>tbody>tr:last-child>.tableblock,table.grid-rows>thead:last-child>tr>.tableblock{border-bottom-width:0}
-table.frame-all{border-width:1px}
-table.frame-sides{border-width:0 1px}
-table.frame-topbot,table.frame-ends{border-width:1px 0}
-table.stripes-all tr,table.stripes-odd tr:nth-of-type(odd),table.stripes-even tr:nth-of-type(even),table.stripes-hover tr:hover{background:#f8f8f7}
-th.halign-left,td.halign-left{text-align:left}
-th.halign-right,td.halign-right{text-align:right}
-th.halign-center,td.halign-center{text-align:center}
-th.valign-top,td.valign-top{vertical-align:top}
-th.valign-bottom,td.valign-bottom{vertical-align:bottom}
-th.valign-middle,td.valign-middle{vertical-align:middle}
-table thead th,table tfoot th{font-weight:bold}
-tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
-tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
-p.tableblock>code:only-child{background:none;padding:0}
-p.tableblock{font-size:1em}
-ol{margin-left:1.75em}
-ul li ol{margin-left:1.5em}
-dl dd{margin-left:1.125em}
-dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
-ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
-ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
-ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
-ul.unstyled,ol.unstyled{margin-left:0}
-ul.checklist{margin-left:.625em}
-ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
-ul.checklist li>p:first-child>input[type="checkbox"]:first-child{margin-right:.25em}
-ul.inline{display:-ms-flexbox;display:-webkit-box;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
-ul.inline>li{margin-left:1.25em}
-.unstyled dl dt{font-weight:400;font-style:normal}
-ol.arabic{list-style-type:decimal}
-ol.decimal{list-style-type:decimal-leading-zero}
-ol.loweralpha{list-style-type:lower-alpha}
-ol.upperalpha{list-style-type:upper-alpha}
-ol.lowerroman{list-style-type:lower-roman}
-ol.upperroman{list-style-type:upper-roman}
-ol.lowergreek{list-style-type:lower-greek}
-.hdlist>table,.colist>table{border:0;background:none}
-.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
-td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
-td.hdlist1{font-weight:bold;padding-bottom:1.25em}
-.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
-.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
-.colist td:not([class]):first-child img{max-width:none}
-.colist td:not([class]):last-child{padding:.25em 0}
-.thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
-.imageblock.left{margin:.25em .625em 1.25em 0}
-.imageblock.right{margin:.25em 0 1.25em .625em}
-.imageblock>.title{margin-bottom:0}
-.imageblock.thumb,.imageblock.th{border-width:6px}
-.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
-.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
-.image.left{margin-right:.625em}
-.image.right{margin-left:.625em}
-a.image{text-decoration:none;display:inline-block}
-a.image object{pointer-events:none}
-sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
-sup.footnote a,sup.footnoteref a{text-decoration:none}
-sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
-#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
-#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
-#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
-#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
-#footnotes .footnote:last-of-type{margin-bottom:0}
-#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
-.gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
-.gist .file-data>table td.line-data{width:99%}
-div.unbreakable{page-break-inside:avoid}
-.big{font-size:larger}
-.small{font-size:smaller}
-.underline{text-decoration:underline}
-.overline{text-decoration:overline}
-.line-through{text-decoration:line-through}
-.aqua{color:#00bfbf}
-.aqua-background{background:#00fafa}
-.black{color:#000}
-.black-background{background:#000}
-.blue{color:#0000bf}
-.blue-background{background:#0000fa}
-.fuchsia{color:#bf00bf}
-.fuchsia-background{background:#fa00fa}
-.gray{color:#606060}
-.gray-background{background:#7d7d7d}
-.green{color:#006000}
-.green-background{background:#007d00}
-.lime{color:#00bf00}
-.lime-background{background:#00fa00}
-.maroon{color:#600000}
-.maroon-background{background:#7d0000}
-.navy{color:#000060}
-.navy-background{background:#00007d}
-.olive{color:#606000}
-.olive-background{background:#7d7d00}
-.purple{color:#600060}
-.purple-background{background:#7d007d}
-.red{color:#bf0000}
-.red-background{background:#fa0000}
-.silver{color:#909090}
-.silver-background{background:#bcbcbc}
-.teal{color:#006060}
-.teal-background{background:#007d7d}
-.white{color:#bfbfbf}
-.white-background{background:#fafafa}
-.yellow{color:#bfbf00}
-.yellow-background{background:#fafa00}
-span.icon>.fa{cursor:default}
-a span.icon>.fa{cursor:inherit}
-.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
-.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
-.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
-.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
-.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
-.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
-.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
-.conum[data-value] *{color:#fff!important}
-.conum[data-value]+b{display:none}
-.conum[data-value]::after{content:attr(data-value)}
-pre .conum[data-value]{position:relative;top:-.125em}
-b.conum *{color:inherit!important}
-.conum:not([data-value]):empty{display:none}
-dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
-h1,h2,p,td.content,span.alt{letter-spacing:-.01em}
-p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
-p,blockquote,dt,td.content,span.alt{font-size:1.0625rem}
-p{margin-bottom:1.25rem}
-.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
-.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
-.print-only{display:none!important}
-@page{margin:1.25cm .75cm}
-@media print{*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
-html{font-size:80%}
-a{color:inherit!important;text-decoration:underline!important}
-a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
-a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
-abbr[title]::after{content:" (" attr(title) ")"}
-pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
-thead{display:table-header-group}
-svg{max-width:100%}
-p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
-h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
-#toc,.sidebarblock,.exampleblock>.content{background:none!important}
-#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
-body.book #header{text-align:center}
-body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
-body.book #header .details{border:0!important;display:block;padding:0!important}
-body.book #header .details span:first-child{margin-left:0!important}
-body.book #header .details br{display:block}
-body.book #header .details br+span::before{content:none!important}
-body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
-body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
-.listingblock code[data-lang]::before{display:block}
-#footer{padding:0 .9375em}
-.hide-on-print{display:none!important}
-.print-only{display:block!important}
-.hide-for-print{display:none!important}
-.show-for-print{display:inherit!important}}
-@media print,amzn-kf8{#header>h1:first-child{margin-top:1.25rem}
-.sect1{padding:0!important}
-.sect1+.sect1{border:0}
-#footer{background:none}
-#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
-@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+
+@import url(//fonts.googleapis.com/css?family=Noto+Sans);
+@import url(https://cdn.jsdelivr.net/gh/asciidoctor/asciidoctor@2.0/data/stylesheets/asciidoctor-default.css); /* Default asciidoc style framework - important */
+
+/* CUSTOMISATIONS */
+/* Change the values in root for quick customisation. If you want even more fine grain... venture further. */
+:root{
+--maincolor:#121212;
+--primarycolor:#FFFFFF;
+--secondarycolor:#03a9f4;
+--tertiarycolor:#4db6ac;
+--sidebarbackground:#121212;
+--linkcolor:#f44336;
+--linkcoloralternate:#ff9800;
+--precolor:#008800;
+--white:#FFFFFF;
+}
+
+/* Text styles */
+
+body{font-family: "Noto Sans",sans-serif;background-color: var(--maincolor);color:var(--white);}
+
+h1{color:var(--primarycolor) !important;font-family:"Noto Sans",sans-serif;}
+h2,h3,h4,h5,h6{color:var(--secondarycolor) !important;font-family:"Noto Sans",sans-serif;}
+.title{color:var(--white) !important;font-family:"Noto Sans",sans-serif;font-style: normal; font-weight: normal;}
+p{font-family: "Noto Sans",sans-serif ! important}
+#toc.toc2 a:link{color:var(--linkcolor);}
+blockquote{color:var(--tertiarycolor) !important}
+.quoteblock{color:var(--white)}
+code{color:var(--linkcoloralternate);background-color: var(--sidebarbackground) !important}
+pre{color:var(--precolor);background-color: var(--sidebarbackground) !important}
+
+
+/* Table styles */
+th{background-color: var(--maincolor);color:var(--white) !important;}
+td{background-color: var(--maincolor);color: var(--linkcoloralternate) !important}
+
+
+#toc.toc2{background-color:var(--sidebarbackground);}
+#toctitle{color:var(--white);}
+
+/* Responsiveness fixes */
+video {
+  max-width: 100%;
+}
+
+@media all and (max-width: 600px) {
+  table {
+    width: 55vw!important;
+    font-size: 3vw;
+  }
+}
+
+.exampleblock > .content {
+  background-color: var(--maincolor);
+}
+
+a {
+  color: var(--secondarycolor);
+}
+
+.admonitionblock td.icon .icon-tip::before {
+  text-shadow: none;
+  color: var(--white);
+}
+.admonitionblock td.icon .icon-note::before {
+  color: var(--tertiarycolor);
+}
+.admonitionblock td.icon .icon-important::before {
+  color: var(--linkcolor);
+}
+/*.admonitionblock td.icon .icon-caution::before {
+  color: var(--linkcoloralternate);
+}*/
+.admonitionblock td.icon .icon-warning::before {
+  color: var(--primarycolor);
+}
+
+#preamble > .sectionbody > .paragraph:first-of-type p {
+  color: var(--white);
+}
+
+.quoteblock blockquote::before {
+  color: var(--primarycolor);
+}
+.quoteblock .attribution cite, .verseblock .attribution cite {
+  color: var(--white);
+}
+.verseblock pre {
+  color: var(--white);
+}
+.quoteblock blockquote, .quoteblock blockquote p {
+  color: var(--white);
+}
+
+.sidebarblock {
+  background: var(--sidebarbackground);
+}
+.literalblock pre, .listingblock pre:not(.highlight), .listingblock pre[class="highlight"], .listingblock pre[class^="highlight "], .listingblock pre.CodeRay, .listingblock pre.prettyprint {
+  background: var(--sidebarbackground);
+  color: var(--white);
+}
+
+#header .details {
+  color: var(--white);
+}
+#header .details span.email a {
+  color: var(--linkcoloralternate);
+}
+
 </style>
 </head>
-<body class="article">
+<body class="article toc2 toc-left">
 <div id="header">
-<h1>Mashapedia: Technologies of &#8220;Attack Surface&#8221; by Cory Doctorow</h1>
-<div id="toc" class="toc">
+<h1>Mashapedia: Technologies of <em>Attack Surface</em> by Cory Doctorow</h1>
+<div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
+<li><a href="#_introduction">Introduction</a></li>
 <li><a href="#_chapter_1">Chapter 1</a></li>
 <li><a href="#chapter-2">Chapter 2</a></li>
 <li><a href="#chapter-3">Chapter 3</a></li>
@@ -457,10 +142,57 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#chapter-13">Chapter 13</a></li>
 <li><a href="#chapter-14">Chapter 14</a></li>
 <li><a href="#epilogue">Epilogue</a></li>
+<li><a href="#_alphabetical">Alphabetical</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
+<div class="sect1">
+<h2 id="_introduction">Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>I am a big fan of Cory Doctorow (<a href="https://twitter.com/doctorow">@doctorow</a>).
+Not only his books <em>Little Brother</em>, <em>Homeland</em>, and now <em>Attack Surface</em>
+discuss important topics like online privacy and the role of technology in today&#8217;s world,
+but also they educate the readers by telling them stories about modern tech solutions and tools.
+Doctorow usually doesn&#8217;t give you a lot of explanations, assuming that you can
+find all the necessary information if you want to.</p>
+</div>
+<div class="paragraph">
+<p>When I started reading <em>Attack Surface</em> I was amazed by the amount of tech terms Doctorow
+was using here and there. For some terms my thoughts were: &#8220;Okay, I know what &#8216;Tor&#8217; means,
+but does everybody else who is reading this book now?&#8221;. For other terms I had to google
+them myself: &#8220;What is IMSI-catcher?&#8221;</p>
+</div>
+<div class="paragraph">
+<p>I thought it might be a good idea to collect all tech terms that <em>might</em> be new to the readers
+and give a quick explanation for each of them.
+Also a link or two to more detailed pages would be helpful.</p>
+</div>
+<div class="paragraph">
+<p>This is my collection of <em>Attack Surface</em> terms.
+Most of the time I give links to Wikipedia, sometimes to other resources.</p>
+</div>
+<div class="paragraph">
+<p>If you want to add, correct, or expand some terms or add more interesting links,
+feel free to open issues in my Github repo (<a href="https://github.com/pavelanni/attack-surface-tech" class="bare">https://github.com/pavelanni/attack-surface-tech</a>) or fork it and and open a PR.
+I&#8217;ll be happy to include your additions to this list.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Cory Doctorow&#8217;s page: <a href="https://craphound.com/" class="bare">https://craphound.com/</a></p>
+</li>
+<li>
+<p><em>Attack Surface</em> page: <a href="https://craphound.com/category/attacksurface/" class="bare">https://craphound.com/category/attacksurface/</a></p>
+</li>
+<li>
+<p><em>Little Brother</em> and <em>Homeland</em> (two previous books of this trilogy): <a href="https://craphound.com/category/littlebrother/" class="bare">https://craphound.com/category/littlebrother/</a> and <a href="https://craphound.com/category/homeland/" class="bare">https://craphound.com/category/homeland/</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_chapter_1">Chapter 1</h2>
 <div class="sectionbody">
@@ -559,9 +291,9 @@ to bypass firewalls that prohibit certain Internet services. More:</p>
 </dd>
 <dt class="hdlist1">Bootloader</dt>
 <dd>
-<p>A piece of software which normally starts at the early stages of computer startup process,
+<p>A piece of software which normally starts at the early stages of computer start-up process,
 after executing the BIOS, but <em>before</em> the operating system starts.
-Its purpose is to <em>load</em> the operating system (hense the name).
+Its purpose is to <em>load</em> the operating system (hence the name).
 Bootloader integrity check is important to avoid a "boot attack":
 type of attack that replaces the original bootloader and installs a bootloader
 that can intercept passwords, including those used for hard drive encryption.
@@ -783,7 +515,7 @@ The main feature of it is that you update it very often to make sure all known
 vulnerabilities are patched or at least there are no known exploits for them.
 Masha explains that you should always check the OS signatures to make sure
 you are actually installing the correct bits and not something created by
-the government hackers conatining backdoors and logeers.
+the government hackers containing backdoors and loggers.
 Apparently there is such a project in real life, but it&#8217;s not specifically
 focused on security&#8201;&#8212;&#8201;it just uses the cool name.
 More:</p>
@@ -958,7 +690,7 @@ More:</p>
 <p><a href="https://arxiv.org/abs/2005.11041" class="bare">https://arxiv.org/abs/2005.11041</a></p>
 </li>
 <li>
-<p><a href="https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch16.pdf" class="bare">https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch16.pdf</a> (part of a book "Networks, Crowds, amd Markets" <a href="https://www.cs.cornell.edu/home/kleinber/networks-book/" class="bare">https://www.cs.cornell.edu/home/kleinber/networks-book/</a>)</p>
+<p><a href="https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch16.pdf" class="bare">https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch16.pdf</a> (part of a book "Networks, Crowds, and Markets" <a href="https://www.cs.cornell.edu/home/kleinber/networks-book/" class="bare">https://www.cs.cornell.edu/home/kleinber/networks-book/</a>)</p>
 </li>
 <li>
 <p>Information Cascade Experiments <a href="https://wmpeople.wm.edu/asset/index/lrande/cascadehandbook" class="bare">https://wmpeople.wm.edu/asset/index/lrande/cascadehandbook</a></p>
@@ -1191,7 +923,7 @@ More:</p>
 <dl>
 <dt class="hdlist1">Fibonaccis</dt>
 <dd>
-<p>Fibbonaci numbers, the sequence where each next number is a sum of the two previous.
+<p>Fibonacci numbers, the sequence where each next number is a sum of the two previous.
 They have a lot of interesting features, they are found in nature, etc.
 More:</p>
 <div class="ulist">
@@ -1348,7 +1080,7 @@ More:</p>
 </dd>
 <dt class="hdlist1">RFID (Radio-frequency identification)</dt>
 <dd>
-<p>A method of exchanging identifaction information over radio.
+<p>A method of exchanging identification information over radio.
 It includes RFID tags and RFID readers.
 RFID tags can be passive (i.e. not containing any battery) and really cheap.
 They get the energy they need to operate from the reader that reads from them.
@@ -1371,7 +1103,7 @@ More:</p>
 <dd>
 <p>A "prehistoric" social network that was created around 1980.
 The name comes from the term "users network".
-It was used for discussions and asking questions. It has a hierarchial structure
+It was used for discussions and asking questions. It has a hierarchical structure
 of topics called "newsgroups".
 Even before Internet became widely available it used UUCP (Unix-to-Unix Copy) program to
 exchange posts and updates over telephone lines.
@@ -1409,7 +1141,7 @@ More:</p>
 </ul>
 </div>
 </dd>
-<dt class="hdlist1">Data-collecting lightbulbs</dt>
+<dt class="hdlist1">Data-collecting light bulbs</dt>
 <dd>
 <p>Most likely Masha means this report: <a href="https://darkcubed.com/iot-security-technical" class="bare">https://darkcubed.com/iot-security-technical</a>.
 Short versions:</p>
@@ -1831,7 +1563,7 @@ More:</p>
 <dl>
 <dt class="hdlist1">Cryptoparty</dt>
 <dd>
-<p>CryptoParty (Crypto-Party) is a grassroots global endeavour to introduce the basics of
+<p>CryptoParty (Crypto-Party) is a grassroots global endeavor to introduce the basics of
 practical cryptography such as the Tor anonymity network, key signing parties,
 disk encryption and virtual private networks to the general public.
 The project primarily consists of a series of free public workshops.
@@ -2294,9 +2026,9 @@ More:</p>
 </dd>
 <dt class="hdlist1">Sukey</dt>
 <dd>
-<p>Sukey is an organisation which emerged in Britain on 28 January 2011, with the aim of
+<p>Sukey is an organization which emerged in Britain on 28 January 2011, with the aim of
 improving communications among participants in the student demonstrations.
-Its immediate aim was to counteract the police tactics of kettling, by co-ordinating
+Its immediate aim was to counteract the police tactics of kettling, by coordinating
 information electronically and transmitting it to the protesters,
 allowing them to avoid the police kettle.
 More:</p>
@@ -2371,7 +2103,7 @@ More:</p>
 </dd>
 <dt class="hdlist1">Riseup</dt>
 <dd>
-<p>Masha receives an email from Kriztina from her address at <code>rieup.net</code>.
+<p>Masha receives an email from Kriztina from her address at <code>riseup.net</code>.
 Riseup provides online communication tools for people and groups working on liberatory social
 change.
 We are a project to create democratic alternatives and practice self-determination by
@@ -2394,7 +2126,7 @@ controlling our own secure means of communications.</p>
 </div>
 <div class="paragraph">
 <p>That means she uses <em>Enigmail</em> to encrypt and digitally sign her messages.
-Enigmail works with several mail clients includind Thunderbird and Evolution.
+Enigmail works with several mail clients including Thunderbird and Evolution.
 The meaning of "Untrusted good signature" was explained on the Enigmail forum:</p>
 </div>
 <div class="listingblock">
@@ -2409,9 +2141,17 @@ cannot check whether the key belongs to the OWNER of the email address.</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>More:
-* <a href="https://enigmail.net/index.php/en/" class="bare">https://enigmail.net/index.php/en/</a>
-* <a href="https://www.enigmail.net/list_archive/2004-December/003266.html" class="bare">https://www.enigmail.net/list_archive/2004-December/003266.html</a></p>
+<p>More:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://enigmail.net/index.php/en/" class="bare">https://enigmail.net/index.php/en/</a></p>
+</li>
+<li>
+<p><a href="https://www.enigmail.net/list_archive/2004-December/003266.html" class="bare">https://www.enigmail.net/list_archive/2004-December/003266.html</a></p>
+</li>
+</ul>
 </div>
 </dd>
 </dl>
@@ -2433,7 +2173,7 @@ cannot check whether the key belongs to the OWNER of the email address.</pre>
 <dl>
 <dt class="hdlist1">Technical debt</dt>
 <dd>
-<p>Mahsa calls it "technology debt", but "technical debt" is more common.
+<p>Masha calls it "technology debt", but "technical debt" is more common.
 Masha explains it pretty well: sometimes you create a solution to quickly
 achieve your short-term goals, but in the long run this solution keeps
 you from doing it the "right way".
@@ -2507,7 +2247,7 @@ Your enemies don’t need people to disagree with you, they just need people not
 <dt class="hdlist1">Game theory</dt>
 <dd>
 <p>A branch of mathematics that studies different strategies in various types of games.
-Games here are played in different fileds such as economics, social studies, etc.
+Games here are played in different fields such as economics, social studies, etc.
 More:</p>
 <div class="ulist">
 <ul>
@@ -2574,10 +2314,1990 @@ Any weapon you don’t know how to use belongs to your enemy.
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_alphabetical">Alphabetical</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">0-day or zero-day</dt>
+<dd>
+<p>which allows hackers to exploit it. More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Zero-day_(computing" class="bare">https://en.wikipedia.org/wiki/Zero-day_(computing</a>)</p>
+</li>
+<li>
+<p><a href="https://www.fireeye.com/current-threats/what-is-a-zero-day-exploit.html" class="bare">https://www.fireeye.com/current-threats/what-is-a-zero-day-exploit.html</a></p>
+</li>
+<li>
+<p><a href="https://searchsecurity.techtarget.com/definition/zero-day-vulnerability" class="bare">https://searchsecurity.techtarget.com/definition/zero-day-vulnerability</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">ARGs (Alternate Reality Games)</dt>
+<dd>
+<p>Interactive games that are usually played in real world mixed with multimedia and online services.
+Usually they use stories that are created and controlled by game designers.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Alternate_reality_game" class="bare">https://en.wikipedia.org/wiki/Alternate_reality_game</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/List_of_alternate_reality_games" class="bare">https://en.wikipedia.org/wiki/List_of_alternate_reality_games</a></p>
+</li>
+<li>
+<p><a href="https://www.argn.com/" class="bare">https://www.argn.com/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Advanced Persistent Threat</dt>
+<dd>
+<p>An advanced persistent threat (APT) is a stealthy threat actor,
+typically a nation state or state-sponsored group, which gains unauthorized access
+to a computer network and remains undetected for an extended period.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Advanced_persistent_threat" class="bare">https://en.wikipedia.org/wiki/Advanced_persistent_threat</a></p>
+</li>
+<li>
+<p><a href="https://attack.mitre.org/groups/" class="bare">https://attack.mitre.org/groups/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Adversarial perturbation</dt>
+<dd>
+<p>An "adversarial perturbation" is a change to a physical object that is deliberately
+designed to fool a machine-learning system into mistaking it for something else.
+(from an article written by Cory Doctorow)
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://boingboing.net/2017/08/07/nam-shub-of-enki.html" class="bare">https://boingboing.net/2017/08/07/nam-shub-of-enki.html</a></p>
+</li>
+<li>
+<p><a href="https://boingboing.net/2017/03/29/countermeasures-are-a-thing.html" class="bare">https://boingboing.net/2017/03/29/countermeasures-are-a-thing.html</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/1707.08945.pdf" class="bare">https://arxiv.org/pdf/1707.08945.pdf</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/2005.08087" class="bare">https://arxiv.org/abs/2005.08087</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Am I under arrest?</dt>
+<dd>
+<p>This and the following questions are part of the recommended procedure when interacting
+with police.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.halt.org/am-i-being-detained-6-questions-you-should-ask-during-interactions-with-the-police/" class="bare">https://www.halt.org/am-i-being-detained-6-questions-you-should-ask-during-interactions-with-the-police/</a></p>
+</li>
+<li>
+<p><a href="https://www.browarddefender.org/page3.html" class="bare">https://www.browarddefender.org/page3.html</a></p>
+</li>
+<li>
+<p><a href="https://www.aclu.org/know-your-rights/stopped-by-police/" class="bare">https://www.aclu.org/know-your-rights/stopped-by-police/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Android Developer&#8217;s mode</dt>
+<dd>
+<p>Masha uses USB to connect Tanisha&#8217;s phone to her laptop and manipulate software on her phone.
+She uses Android Developer&#8217;s mode and USB debugging for that. More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://developer.android.com/studio/debug/dev-options" class="bare">https://developer.android.com/studio/debug/dev-options</a></p>
+</li>
+<li>
+<p><a href="https://www.makeuseof.com/tag/what-is-usb-debugging-mode-on-android-makeuseof-explains/" class="bare">https://www.makeuseof.com/tag/what-is-usb-debugging-mode-on-android-makeuseof-explains/</a></p>
+</li>
+<li>
+<p><a href="https://developers.google.com/web/tools/chrome-devtools/remote-debugging" class="bare">https://developers.google.com/web/tools/chrome-devtools/remote-debugging</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Android rootkit</dt>
+<dd>
+<p>A rootkit is a collection of computer software, typically malicious, designed to enable
+access to a computer or an area of its software that is not otherwise allowed (for example,
+to an unauthorized user) and often masks its existence or the existence of other software.
+Rootkits exist for different operating systems, including Android.
+Masha just discovered a rootkit on Tanisha&#8217;s phone.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Rootkit" class="bare">https://en.wikipedia.org/wiki/Rootkit</a></p>
+</li>
+<li>
+<p><a href="http://www.cs.tufts.edu/comp/116/archive/fall2013/azakaria.pdf" class="bare">http://www.cs.tufts.edu/comp/116/archive/fall2013/azakaria.pdf</a></p>
+</li>
+<li>
+<p><a href="https://arstechnica.com/information-technology/2016/11/powerful-backdoorrootkit-found-preinstalled-on-3-million-android-phones/" class="bare">https://arstechnica.com/information-technology/2016/11/powerful-backdoorrootkit-found-preinstalled-on-3-million-android-phones/</a></p>
+</li>
+<li>
+<p><a href="https://www.androidpolice.com/2020/04/19/months-of-research-finally-crack-android-malware-that-could-even-survive-factory-resets/" class="bare">https://www.androidpolice.com/2020/04/19/months-of-research-finally-crack-android-malware-that-could-even-survive-factory-resets/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Anonymouth</dt>
+<dd>
+<p>Document anonymization tool written in Java. More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/psal/anonymouth" class="bare">https://github.com/psal/anonymouth</a></p>
+</li>
+<li>
+<p><a href="https://directory.fsf.org/wiki/Anonymouth" class="bare">https://directory.fsf.org/wiki/Anonymouth</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Anti-Stingray</dt>
+<dd>
+<p>Tools to protect oneself from IMSI-catchers.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://privacysos.org/blog/how-to-defeat-fbi-or-police-stingray-surveillance/" class="bare">https://privacysos.org/blog/how-to-defeat-fbi-or-police-stingray-surveillance/</a></p>
+</li>
+<li>
+<p><a href="https://www.firstpoint-mg.com/blog/top-7-imsi-catcher-detection-solutions-2020/" class="bare">https://www.firstpoint-mg.com/blog/top-7-imsi-catcher-detection-solutions-2020/</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Stingray_phone_tracker" class="bare">https://en.wikipedia.org/wiki/Stingray_phone_tracker</a></p>
+</li>
+<li>
+<p><a href="https://theintercept.com/2020/07/31/protests-surveillance-stingrays-dirtboxes-phone-tracking/" class="bare">https://theintercept.com/2020/07/31/protests-surveillance-stingrays-dirtboxes-phone-tracking/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Asterisk</dt>
+<dd>
+<p>An open source phone framework that can be used to build a Voice-over-IP or IP PBX system.
+Masha runs such a server on the cloud and uses it to route her calls.
+One of the examples: <a href="https://aws.amazon.com/marketplace/pp/Technology-Innovation-Lab-of-Texas-Asterisk-1770-A/B079Y7449R" class="bare">https://aws.amazon.com/marketplace/pp/Technology-Innovation-Lab-of-Texas-Asterisk-1770-A/B079Y7449R</a>
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.asterisk.org/" class="bare">https://www.asterisk.org/</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Asterisk_(PBX" class="bare">https://en.wikipedia.org/wiki/Asterisk_(PBX</a>)</p>
+</li>
+<li>
+<p><a href="https://www.voip-info.org/asterisk/" class="bare">https://www.voip-info.org/asterisk/</a></p>
+</li>
+<li>
+<p><a href="https://techexpert.tips/asterisk/asterisk-installation-cloud-aws-ec2/" class="bare">https://techexpert.tips/asterisk/asterisk-installation-cloud-aws-ec2/</a> (tutorial)</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Backdoor</dt>
+<dd>
+<p>A hidden method to access a computer or network device bypassing the normal authentication scheme,
+usually created as a part of the software running on that computer.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Backdoor_(computing" class="bare">https://en.wikipedia.org/wiki/Backdoor_(computing</a>)</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Bad spelling in check-in messages</dt>
+<dd>
+<p>Obviously Masha still uses an old, centralized version control system
+like <em>Subversion</em>, and not more modern, decentralized Git.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://superuser.com/questions/436347/git-process-could-anyone-please-explain-the-check-in-check-out-process/436362" class="bare">https://superuser.com/questions/436347/git-process-could-anyone-please-explain-the-check-in-check-out-process/436362</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">BadUSB</dt>
+<dd>
+<p>It is a way to use the microcontroller embedded in a USB device to inject malware in your computer.
+The most dangerous thing about it is that all the work is done by that microcontroller,
+invisible to the target computer&#8217;s CPU.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://opensource.srlabs.de/projects/badusb" class="bare">https://opensource.srlabs.de/projects/badusb</a></p>
+</li>
+<li>
+<p><a href="https://hackaday.com/2014/10/05/badusb-means-were-all-screwed/" class="bare">https://hackaday.com/2014/10/05/badusb-means-were-all-screwed/</a> (there are links to the paper and video
+explaining how it works)</p>
+</li>
+<li>
+<p><a href="https://srlabs.de/wp-content/uploads/2014/11/SRLabs-BadUSB-Pacsec-v2.pdf" class="bare">https://srlabs.de/wp-content/uploads/2014/11/SRLabs-BadUSB-Pacsec-v2.pdf</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Baseband phone security</dt>
+<dd>
+<p>It was confirmed that the software that controls the baseband radio on smartphones can
+be compromised and can allow attackers to control other smartphone devices such as camera and microphone.
+More (some papers are a bit dated, but it&#8217;s quite possible some vulnerabilities described in them
+still exist):</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://techcrunch.com/2019/11/08/android-baseband-flaws/" class="bare">https://techcrunch.com/2019/11/08/android-baseband-flaws/</a></p>
+</li>
+<li>
+<p><a href="https://www.ccdcoe.org/uploads/2018/10/Art-16-Attacking-the-Baseband-Modem-of-Breach-the-Users-Privacy-and-Network-Security.pdf" class="bare">https://www.ccdcoe.org/uploads/2018/10/Art-16-Attacking-the-Baseband-Modem-of-Breach-the-Users-Privacy-and-Network-Security.pdf</a> (2015)</p>
+</li>
+<li>
+<p><a href="https://smartech.gatech.edu/bitstream/handle/1853/43766/davis_andrew_t_201205_ro.pdf" class="bare">https://smartech.gatech.edu/bitstream/handle/1853/43766/davis_andrew_t_201205_ro.pdf</a> (2012)</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Battlefield intelligence</dt>
+<dd>
+<p>Is described in the US Army document "Intelligence Preparation of the Battlefield". More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://home.army.mil/wood/application/files/8915/5751/8365/ATP_2-01.3_Intelligence_Preparation_of_the_Battlefield.pdf" class="bare">https://home.army.mil/wood/application/files/8915/5751/8365/ATP_2-01.3_Intelligence_Preparation_of_the_Battlefield.pdf</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Bayesian inference</dt>
+<dd>
+<p>A method of statistical inference in which Bayes' theorem is used to update the
+probability for a hypothesis as more evidence or information becomes available.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Bayesian_inference" class="bare">https://en.wikipedia.org/wiki/Bayesian_inference</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Bayes%27_theorem" class="bare">https://en.wikipedia.org/wiki/Bayes%27_theorem</a></p>
+</li>
+<li>
+<p><a href="https://seeing-theory.brown.edu/bayesian-inference/index.html" class="bare">https://seeing-theory.brown.edu/bayesian-inference/index.html</a> (interactive, with pictures)</p>
+</li>
+<li>
+<p><a href="https://towardsdatascience.com/probability-concepts-explained-bayesian-inference-for-parameter-estimation-90e8930e5348" class="bare">https://towardsdatascience.com/probability-concepts-explained-bayesian-inference-for-parameter-estimation-90e8930e5348</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Binary Transparency</dt>
+<dd>
+<p>A method that allows users to verify that the piece of software they use is exactly the same
+used by other users, i.e. it was not substituted by a compromised version.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.mozilla.org/Security/Binary_Transparency" class="bare">https://wiki.mozilla.org/Security/Binary_Transparency</a></p>
+</li>
+<li>
+<p>Contour - a practical system for binary transparency: <a href="https://smeiklej.com/files/cbt18.pdf" class="bare">https://smeiklej.com/files/cbt18.pdf</a></p>
+</li>
+<li>
+<p><a href="http://diyhpl.us/wiki/transcripts/building-on-bitcoin/2018/binary-transparency/" class="bare">http://diyhpl.us/wiki/transcripts/building-on-bitcoin/2018/binary-transparency/</a></p>
+</li>
+<li>
+<p><a href="https://github.com/BrandonTang/binary-transparency" class="bare">https://github.com/BrandonTang/binary-transparency</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Blinkenlights</dt>
+<dd>
+<p>Usually refers to the diagnostic lights on computer&#8217;s front panels (in the old days).
+The term derives from the famous text dated as far back as 1955.</p>
+<div class="listingblock">
+<div class="content">
+<pre>ACHTUNG!
+ALLES TURISTEN UND NONTEKNISCHEN LOOKENSPEEPERS!
+DAS KOMPUTERMASCHINE IST NICHT FÜR DER GEFINGERPOKEN UND MITTENGRABEN! ODERWISE IST EASY TO SCHNAPPEN DER SPRINGENWERK, BLOWENFUSEN UND POPPENCORKEN MIT SPITZENSPARKEN.
+IST NICHT FÜR GEWERKEN BEI DUMMKOPFEN. DER RUBBERNECKEN SIGHTSEEREN KEEPEN DAS COTTONPICKEN HÄNDER IN DAS POCKETS MUSS.
+ZO RELAXEN UND WATSCHEN DER BLINKENLICHTEN.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>More:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Blinkenlights" class="bare">https://en.wikipedia.org/wiki/Blinkenlights</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Blogger</dt>
+<dd>
+<p>A blogging platform owned by Google. Created in 1999 by Pyra Labs. Written in Python.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Blogger_(service" class="bare">https://en.wikipedia.org/wiki/Blogger_(service</a>)</p>
+</li>
+<li>
+<p><a href="https://www.blogger.com/" class="bare">https://www.blogger.com/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Bootloader</dt>
+<dd>
+<p>A piece of software which normally starts at the early stages of computer start-up process,
+after executing the BIOS, but <em>before</em> the operating system starts.
+Its purpose is to <em>load</em> the operating system (hence the name).
+Bootloader integrity check is important to avoid a "boot attack":
+type of attack that replaces the original bootloader and installs a bootloader
+that can intercept passwords, including those used for hard drive encryption.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://link.springer.com/chapter/10.1007/978-1-4302-6572-6_6" class="bare">https://link.springer.com/chapter/10.1007/978-1-4302-6572-6_6</a> (very good explanation; you can read a chapter, or download the whole book there&#8201;&#8212;&#8201;thanks, Springer!)</p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Booting#Modern_boot_loaders" class="bare">https://en.wikipedia.org/wiki/Booting#Modern_boot_loaders</a></p>
+</li>
+<li>
+<p><a href="https://engineering.fb.com/2016/01/29/security/hardware-and-firmware-attacks-defending-detecting-and-responding/" class="bare">https://engineering.fb.com/2016/01/29/security/hardware-and-firmware-attacks-defending-detecting-and-responding/</a></p>
+</li>
+<li>
+<p>Evil maid attack: <a href="https://en.wikipedia.org/wiki/Evil_maid_attack" class="bare">https://en.wikipedia.org/wiki/Evil_maid_attack</a></p>
+</li>
+<li>
+<p><a href="https://onlinelibrary.wiley.com/doi/full/10.1002/eng2.12032" class="bare">https://onlinelibrary.wiley.com/doi/full/10.1002/eng2.12032</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Bot or Not</dt>
+<dd>
+<p>Masha says she played this "game" with Kriztina and her friends.
+The point is to distinguish bots from real people in social networks.
+Apparently, it&#8217;s not that easy, if you read the Twitter&#8217;s blog post below.
+There are online tools that can help with that, but they very accurate.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://blog.twitter.com/en_us/topics/company/2020/bot-or-not.html" class="bare">https://blog.twitter.com/en_us/topics/company/2020/bot-or-not.html</a></p>
+</li>
+<li>
+<p><a href="https://botometer.osome.iu.edu/" class="bare">https://botometer.osome.iu.edu/</a></p>
+</li>
+<li>
+<p><a href="https://botsentinel.com/" class="bare">https://botsentinel.com/</a></p>
+</li>
+<li>
+<p><a href="https://nakedsecurity.sophos.com/2020/06/10/bot-or-not-a-game-to-train-us-to-spot-chatbots-faking-it-as-humans/" class="bare">https://nakedsecurity.sophos.com/2020/06/10/bot-or-not-a-game-to-train-us-to-spot-chatbots-faking-it-as-humans/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">BusyBox</dt>
+<dd>
+<p>A lightweight software suite with a set of Linux/Unix commands that is
+used in embedded devices (list: <a href="https://busybox.net/products.html" class="bare">https://busybox.net/products.html</a>).
+Can be downloaded and executed as a single binary (size ~1 MB).
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://busybox.net/" class="bare">https://busybox.net/</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/BusyBox" class="bare">https://en.wikipedia.org/wiki/BusyBox</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">BusyBox malware</dt>
+<dd>
+<p>Masha explains it pretty well: there are pieces of malware that can be
+executed on systems running BusyBox.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.csoonline.com/article/2848606/bash-malware-targets-embedded-devices-running-busybox.html" class="bare">https://www.csoonline.com/article/2848606/bash-malware-targets-embedded-devices-running-busybox.html</a></p>
+</li>
+<li>
+<p><a href="https://www.trendmicro.com/vinfo/us/threat-encyclopedia/search/busybox" class="bare">https://www.trendmicro.com/vinfo/us/threat-encyclopedia/search/busybox</a></p>
+</li>
+<li>
+<p><a href="https://www.incibe-cert.es/en/blog/attacking-busybox-small-gaulish-village" class="bare">https://www.incibe-cert.es/en/blog/attacking-busybox-small-gaulish-village</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/BASHLITE" class="bare">https://en.wikipedia.org/wiki/BASHLITE</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">CALEA</dt>
+<dd>
+<p>A wiretapping bill, passed in 1994, as Masha explains it. More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.fcc.gov/public-safety-and-homeland-security/policy-and-licensing-division/general/communications-assistance" class="bare">https://www.fcc.gov/public-safety-and-homeland-security/policy-and-licensing-division/general/communications-assistance</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Communications_Assistance_for_Law_Enforcement_Act" class="bare">https://en.wikipedia.org/wiki/Communications_Assistance_for_Law_Enforcement_Act</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">COINTELPRO</dt>
+<dd>
+<p>COINTELPRO (syllabic abbreviation derived from COunter INTELligence PROgram)
+(1956–present) is a series of covert and illegal[1][2] projects conducted by the
+United States Federal Bureau of Investigation (FBI) aimed at
+surveilling, infiltrating, discrediting, and disrupting American political
+organizations.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/COINTELPRO" class="bare">https://en.wikipedia.org/wiki/COINTELPRO</a></p>
+</li>
+<li>
+<p><a href="https://vault.fbi.gov/cointel-pro" class="bare">https://vault.fbi.gov/cointel-pro</a></p>
+</li>
+<li>
+<p><a href="https://www.intelligence.senate.gov/sites/default/files/94755_II.pdf" class="bare">https://www.intelligence.senate.gov/sites/default/files/94755_II.pdf</a></p>
+</li>
+<li>
+<p><a href="https://www.freedomarchives.org/Documents/Finder/Black%20Liberation%20Disk/Black%20Power!/SugahData/Government/COINTELPRO.S.pdf" class="bare">https://www.freedomarchives.org/Documents/Finder/Black%20Liberation%20Disk/Black%20Power!/SugahData/Government/COINTELPRO.S.pdf</a></p>
+</li>
+<li>
+<p><a href="https://www.krusch.com/books/kennedy/Cointelpro_Papers.pdf" class="bare">https://www.krusch.com/books/kennedy/Cointelpro_Papers.pdf</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">CV dazzle</dt>
+<dd>
+<p>A type of camouflage used to hamper facial recognition software, inspired by dazzle
+camouflage used by warships.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Computer_vision_dazzle" class="bare">https://en.wikipedia.org/wiki/Computer_vision_dazzle</a>
+<a href="https://en.wikipedia.org/wiki/Dazzle_camouflage" class="bare">https://en.wikipedia.org/wiki/Dazzle_camouflage</a></p>
+</li>
+<li>
+<p><a href="https://cvdazzle.com/" class="bare">https://cvdazzle.com/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Caller ID spoofing</dt>
+<dd>
+<p>A method or tool that allows the caller to pretend that the call is coming from a different number.
+Masha uses it to read friends' voicemails pretending she is calling from <em>their</em> numbers.
+Scammers use this method to pretend they are calling from the same area code&#8201;&#8212;&#8201;that way
+there is more chances that you pick the call.
+Sometimes scammers even pretend they are calling from the <em>actual</em> 800-number which belongs to IRS.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Caller_ID_spoofing" class="bare">https://en.wikipedia.org/wiki/Caller_ID_spoofing</a></p>
+</li>
+<li>
+<p><a href="https://www.fcc.gov/consumers/guides/spoofing-and-caller-id" class="bare">https://www.fcc.gov/consumers/guides/spoofing-and-caller-id</a></p>
+</li>
+<li>
+<p><a href="https://blog.rapid7.com/2018/05/24/how-to-build-your-own-caller-id-spoofer-part-1/" class="bare">https://blog.rapid7.com/2018/05/24/how-to-build-your-own-caller-id-spoofer-part-1/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Catching password from key sounds</dt>
+<dd>
+<p>Different keys on the keyboard produce slightly different sounds so the recorded acoustic pattern
+of you typing in your password can be used to guess it. That&#8217;s why Masha does "medium-loud AAAAAH"
+when typing her password.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://security.stackexchange.com/questions/23322/keyboard-sniffing-through-audio-recorded-typing-patterns" class="bare">https://security.stackexchange.com/questions/23322/keyboard-sniffing-through-audio-recorded-typing-patterns</a></p>
+</li>
+<li>
+<p><a href="https://www.davidsalomon.name/CompSec/auxiliary/KybdEmanation.pdf" class="bare">https://www.davidsalomon.name/CompSec/auxiliary/KybdEmanation.pdf</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Keystroke_logging" class="bare">https://en.wikipedia.org/wiki/Keystroke_logging</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Citizen Lab</dt>
+<dd>
+<p>A laboratory based at University of Toronto which works on protecting human rights and privacy
+in cyberspace.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://citizenlab.ca/" class="bare">https://citizenlab.ca/</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Citizen_Lab" class="bare">https://en.wikipedia.org/wiki/Citizen_Lab</a></p>
+</li>
+<li>
+<p><a href="https://twitter.com/citizenlab" class="bare">https://twitter.com/citizenlab</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Cryptoparty</dt>
+<dd>
+<p>CryptoParty (Crypto-Party) is a grassroots global endeavor to introduce the basics of
+practical cryptography such as the Tor anonymity network, key signing parties,
+disk encryption and virtual private networks to the general public.
+The project primarily consists of a series of free public workshops.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.cryptoparty.in/" class="bare">https://www.cryptoparty.in/</a></p>
+</li>
+<li>
+<p><a href="https://github.com/cryptoparty/handbook" class="bare">https://github.com/cryptoparty/handbook</a></p>
+</li>
+<li>
+<p><a href="https://www.cryptoparty.in/learn/handbook" class="bare">https://www.cryptoparty.in/learn/handbook</a> (available in PDF, EPUB, MOBI, HTML)</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Data-collecting light bulbs</dt>
+<dd>
+<p>Most likely Masha means this report: <a href="https://darkcubed.com/iot-security-technical" class="bare">https://darkcubed.com/iot-security-technical</a>.
+Short versions:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://blog.adafruit.com/2019/03/10/is-your-smart-bulb-collecting-data-iot-smartdevice/" class="bare">https://blog.adafruit.com/2019/03/10/is-your-smart-bulb-collecting-data-iot-smartdevice/</a></p>
+</li>
+<li>
+<p><a href="https://www.cnet.com/news/smart-lightbulbs-could-be-exporting-your-personal-data-to-china/" class="bare">https://www.cnet.com/news/smart-lightbulbs-could-be-exporting-your-personal-data-to-china/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Dazzle mask</dt>
+<dd>
+<p>A mask that allows you to trick facial-recognition software into thinking you are not human.
+They may use reflective tapes, infrared lights, lenses, etc.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.businessinsider.com/clothes-accessories-that-outsmart-facial-recognition-tech-2019-10" class="bare">https://www.businessinsider.com/clothes-accessories-that-outsmart-facial-recognition-tech-2019-10</a></p>
+</li>
+<li>
+<p><a href="https://www.reflectacles.com/#home" class="bare">https://www.reflectacles.com/#home</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Double-entry bookkeeping</dt>
+<dd>
+<p>A system of book keeping where every entry to an account requires a corresponding and
+opposite entry to a different account. The double-entry has two equal and corresponding sides
+known as debit and credit.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Double-entry_bookkeeping" class="bare">https://en.wikipedia.org/wiki/Double-entry_bookkeeping</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">EFF&#8217;s Surveillance Self-Defense Kit</dt>
+<dd>
+<p>Surveillance Self-Defense is a digital security guide that teaches you how to assess your
+personal risk from online spying.
+It can help protect you from surveillance by those who might want to find out your secrets,
+from petty criminals to nation states.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://ssd.eff.org/en" class="bare">https://ssd.eff.org/en</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Cyber_self-defense" class="bare">https://en.wikipedia.org/wiki/Cyber_self-defense</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">EL wire</dt>
+<dd>
+<p>Electroluminescent wire is a thin copper wire coated in a phosphor that produces light through electroluminescence when an alternating current is applied to it. More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Electroluminescent_wire" class="bare">https://en.wikipedia.org/wiki/Electroluminescent_wire</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">EXIF metadata</dt>
+<dd>
+<p>Metadata stored in JPEG files that may include technical information about the photo
+like exposure, etc. and also geolocation of the photo if this feature is available
+(i.e. the photo is taken by a smartphone with GPS).
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Exif" class="bare">https://en.wikipedia.org/wiki/Exif</a></p>
+</li>
+<li>
+<p><a href="https://www.howtogeek.com/211427/how-to-see-exactly-where-a-photo-was-taken-and-keep-your-location-private/" class="bare">https://www.howtogeek.com/211427/how-to-see-exactly-where-a-photo-was-taken-and-keep-your-location-private/</a></p>
+</li>
+<li>
+<p><a href="https://alpinesecurity.com/blog/2-simple-ways-to-extract-gps-coordinates-from-pictures/" class="bare">https://alpinesecurity.com/blog/2-simple-ways-to-extract-gps-coordinates-from-pictures/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Enigmail</dt>
+<dd>
+<p>In the email header from Kriztina there is a phrase:</p>
+<div class="listingblock">
+<div class="content">
+<pre>Enigmail UNTRUSTED good signature from Kriztina &lt;kriztinak@riseup.net&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That means she uses <em>Enigmail</em> to encrypt and digitally sign her messages.
+Enigmail works with several mail clients including Thunderbird and Evolution.
+The meaning of "Untrusted good signature" was explained on the Enigmail forum:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>GOOD means that Enigmail verified that the mail content matches the
+signature. Nobody tampered with the message. It reached you unmodified
+and only the ones that have the SECRET key it is signed with are able
+to perform that particular signature.
+
+UNTRUSTED means that although the message matches the signature, GnuPG
+cannot check whether the key belongs to the OWNER of the email address.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>More:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://enigmail.net/index.php/en/" class="bare">https://enigmail.net/index.php/en/</a></p>
+</li>
+<li>
+<p><a href="https://www.enigmail.net/list_archive/2004-December/003266.html" class="bare">https://www.enigmail.net/list_archive/2004-December/003266.html</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Everything after the slash</dt>
+<dd>
+<p>Masha says: "I itched to get their Google searches, but that was hard because
+Google had better security than every other service they visited&#8201;&#8212;&#8201;strong SSL
+certificates that hid everything after the slash,
+so all I could see from my vantage point was <a href="https://google.com/&#8201;&#8212;&#8201;and" class="bare">https://google.com/&#8201;&#8212;&#8201;and</a> then&#8230;&#8203;
+nothing."</p>
+<div class="paragraph">
+<p>This happens when you visit sites that use HTTPS (secure HTTP) and hence,
+use SSL/TLS certificates.
+Even if somebody (in this case Masha) intercepts the traffic between you and
+your provider, they will see only the domain name of the server you are accessing.
+Everything else in your URL (search queries, usernames, etc.) will be hidden.</p>
+</div>
+<div class="paragraph">
+<p>More:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://security.stackexchange.com/questions/7705/does-ssl-tls-https-hide-the-urls-being-accessed" class="bare">https://security.stackexchange.com/questions/7705/does-ssl-tls-https-hide-the-urls-being-accessed</a></p>
+</li>
+<li>
+<p><a href="https://security.stackexchange.com/questions/4388/are-urls-viewed-during-https-transactions-to-one-or-more-websites-from-a-single" class="bare">https://security.stackexchange.com/questions/4388/are-urls-viewed-during-https-transactions-to-one-or-more-websites-from-a-single</a></p>
+</li>
+<li>
+<p><a href="https://stackoverflow.com/questions/499591/are-https-urls-encrypted" class="bare">https://stackoverflow.com/questions/499591/are-https-urls-encrypted</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Executive order 12333</dt>
+<dd>
+<p>Executive Order 12333, signed on December 4, 1981 by U.S. President Ronald Reagan,
+was an Executive Order intended to extend powers and responsibilities of U.S.
+intelligence agencies and direct the leaders of U.S. federal agencies to
+co-operate fully with CIA requests for information.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Executive_Order_12333" class="bare">https://en.wikipedia.org/wiki/Executive_Order_12333</a></p>
+</li>
+<li>
+<p><a href="https://www.archives.gov/federal-register/codification/executive-order/12333.html" class="bare">https://www.archives.gov/federal-register/codification/executive-order/12333.html</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Exploit</dt>
+<dd>
+<p>A piece of software or a methodology (series of steps) that allows hackers to use
+a known vulnerability to get access to a target computer. More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Exploit_(computer_security" class="bare">https://en.wikipedia.org/wiki/Exploit_(computer_security</a>)</p>
+</li>
+<li>
+<p>Exploit database: <a href="https://www.exploit-db.com/" class="bare">https://www.exploit-db.com/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">FOB</dt>
+<dd>
+<p>A Forward Operating Base (FOB) is any secured forward operational level military position, commonly a military base, that is used to support strategic goals and tactical objectives.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Forward_operating_base" class="bare">https://en.wikipedia.org/wiki/Forward_operating_base</a></p>
+</li>
+<li>
+<p><a href="https://military.wikia.org/wiki/Forward_Operating_Base_Grizzly" class="bare">https://military.wikia.org/wiki/Forward_Operating_Base_Grizzly</a> (FOB Grizzly mentioned in the book)</p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Forward_Operating_Base_Grizzly" class="bare">https://en.wikipedia.org/wiki/Forward_Operating_Base_Grizzly</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Facebook Tor Hidden Service</dt>
+<dd>
+<p>A site that allows access to Facebook through the Tor protocol.
+According to Alec Muffett "Facebook&#8217;s onion address provides a way to access Facebook through Tor
+without losing the cryptographic protections provided by the Tor cloud. &#8230;&#8203;
+it provides end-to-end communication, from your browser directly into a Facebook datacentre."
+The address is <code>facebookcorewwwi.onion</code> where <code>.onion</code> is the common top-level domain name
+for sites in Tor network. You can enter this domain name in the Tor Browser&#8217;s address field.
+It won&#8217;t work in your normal (Chrome, Firefox, etc.) browser. More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Facebookcorewwwi.onion" class="bare">https://en.wikipedia.org/wiki/Facebookcorewwwi.onion</a></p>
+</li>
+<li>
+<p><a href="https://blog.torproject.org/facebook-hidden-services-and-https-certs" class="bare">https://blog.torproject.org/facebook-hidden-services-and-https-certs</a></p>
+</li>
+<li>
+<p><a href="https://www.cheatsheet.com/technology/what-is-facebooks-tor-hidden-service-why-does-it-matter.html/" class="bare">https://www.cheatsheet.com/technology/what-is-facebooks-tor-hidden-service-why-does-it-matter.html/</a> (this one has a simple description of what Tor is and how it works)</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Faraday cage</dt>
+<dd>
+<p>An enclosure that blocks electromagnetic fields.
+Could be a room, a cabinet, a bag.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Faraday_cage" class="bare">https://en.wikipedia.org/wiki/Faraday_cage</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Fibonaccis</dt>
+<dd>
+<p>Fibonacci numbers, the sequence where each next number is a sum of the two previous.
+They have a lot of interesting features, they are found in nature, etc.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.mathsisfun.com/numbers/fibonacci-sequence.html" class="bare">https://www.mathsisfun.com/numbers/fibonacci-sequence.html</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Fibonacci_number" class="bare">https://en.wikipedia.org/wiki/Fibonacci_number</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=ahXIMUkSXX0" class="bare">https://www.youtube.com/watch?v=ahXIMUkSXX0</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Game theory</dt>
+<dd>
+<p>A branch of mathematics that studies different strategies in various types of games.
+Games here are played in different fields such as economics, social studies, etc.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Game_theory" class="bare">https://en.wikipedia.org/wiki/Game_theory</a></p>
+</li>
+<li>
+<p><a href="https://plato.stanford.edu/entries/game-theory/" class="bare">https://plato.stanford.edu/entries/game-theory/</a></p>
+</li>
+<li>
+<p><a href="http://www.dklevine.com/general/whatis.htm" class="bare">http://www.dklevine.com/general/whatis.htm</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Garbage in, garbage out (GIGO)</dt>
+<dd>
+<p>This phrase was first used in November 1957 and is still quite popular among programmers
+and mathematicians. It&#8217;s related to the terms FIFO (first in, first out) and
+LIFO (last in, first out) that describe the behavior of the queue and stack data structures,
+respectively.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Garbage_in,_garbage_out" class="bare">https://en.wikipedia.org/wiki/Garbage_in,_garbage_out</a></p>
+</li>
+<li>
+<p><a href="https://techterms.com/definition/gigo" class="bare">https://techterms.com/definition/gigo</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/FIFO_(computing_and_electronics" class="bare">https://en.wikipedia.org/wiki/FIFO_(computing_and_electronics</a>)</p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Stack_(abstract_data_type" class="bare">https://en.wikipedia.org/wiki/Stack_(abstract_data_type</a>)</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Google Glass</dt>
+<dd>
+<p>Smart glasses created by Google and first introduced in 2013.
+Masha calls them "long-abandoned", but according to Wikipedia in 2017 and 2019
+Google announced Google Glass Enterprise Edition and Enterprise Edition 2 respectively.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Google_Glass" class="bare">https://en.wikipedia.org/wiki/Google_Glass</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Hacking a self-driving car</dt>
+<dd>
+<p>So far there are only several reports of such hacks and none of them has turned violent yet.
+But still some possibilities are described in this paper:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://physicsworld.com/a/how-to-hack-a-self-driving-car/" class="bare">https://physicsworld.com/a/how-to-hack-a-self-driving-car/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Hardware keylogger</dt>
+<dd>
+<p>A device used to log all keystrokes on a computer which is used to capture passwords.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Hardware_keylogger" class="bare">https://en.wikipedia.org/wiki/Hardware_keylogger</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Keystroke_logging" class="bare">https://en.wikipedia.org/wiki/Keystroke_logging</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Hashing</dt>
+<dd>
+<p>Masha explains it pretty well in the book.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Hash_function" class="bare">https://en.wikipedia.org/wiki/Hash_function</a></p>
+</li>
+<li>
+<p><a href="https://medium.com/tech-tales/what-is-hashing-6edba0ebfa67" class="bare">https://medium.com/tech-tales/what-is-hashing-6edba0ebfa67</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Hoberman sphere</dt>
+<dd>
+<p>An isokinetic structure patented by Chuck Hoberman that resembles a geodesic dome, but is capable of folding down to a fraction of its normal size by the scissor-like action of its joints.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Hoberman_sphere" class="bare">https://en.wikipedia.org/wiki/Hoberman_sphere</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Hyperbolic discounting</dt>
+<dd>
+<p>It is well explained by Ange in the book.
+Hyperbolic discounting refers to the tendency for people to increasingly choose a
+smaller-sooner reward over a larger-later reward as the delay occurs sooner rather
+than later in time.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.behaviorlab.org/Papers/Hyperbolic.pdf" class="bare">http://www.behaviorlab.org/Papers/Hyperbolic.pdf</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Hyperbolic_discounting" class="bare">https://en.wikipedia.org/wiki/Hyperbolic_discounting</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">IED</dt>
+<dd>
+<p>Improvised explosive device. More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Improvised_explosive_device" class="bare">https://en.wikipedia.org/wiki/Improvised_explosive_device</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">IMSI-catcher</dt>
+<dd>
+<p>A device that can <em>pretend</em> to be a cell phone base station and make all phones in the nearest proximity
+to connect to it (because its signal stronger than the real cell towers that are farther away).
+That way it will be able to collect all information about the connected phones such as IMSI
+(international mobile subscriber identity), etc. Also it will be able to intercept phones' traffic,
+voice and data using "man-in-the-middle" attack.
+Devices can be purchased online, as well as anti-IMSI-catchers.
+You can build one yourself, if you want (see the link below).
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/IMSI-catcher" class="bare">https://en.wikipedia.org/wiki/IMSI-catcher</a></p>
+</li>
+<li>
+<p><a href="https://www.paladion.net/blogs/how-to-build-an-imsi-catcher-to-intercept-gsm-traffic" class="bare">https://www.paladion.net/blogs/how-to-build-an-imsi-catcher-to-intercept-gsm-traffic</a></p>
+</li>
+<li>
+<p><a href="https://www.vice.com/en/article/gy7qm9/how-i-made-imsi-catcher-cheap-amazon-github" class="bare">https://www.vice.com/en/article/gy7qm9/how-i-made-imsi-catcher-cheap-amazon-github</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Infect your phone with WhatsApp message</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://arstechnica.com/information-technology/2019/05/whatsapp-vulnerability-exploited-to-infect-phones-with-israeli-spyware/" class="bare">https://arstechnica.com/information-technology/2019/05/whatsapp-vulnerability-exploited-to-infect-phones-with-israeli-spyware/</a></p>
+</li>
+<li>
+<p><a href="https://www.2-spyware.com/remove-whatsapp-virus.html" class="bare">https://www.2-spyware.com/remove-whatsapp-virus.html</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Information Cascade</dt>
+<dd>
+<p>A pattern of information flow when you can see how information or decision coming from
+one person triggers the series of decisions or information passes from several other persons.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Information_cascade" class="bare">https://en.wikipedia.org/wiki/Information_cascade</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/2005.11041" class="bare">https://arxiv.org/abs/2005.11041</a></p>
+</li>
+<li>
+<p><a href="https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch16.pdf" class="bare">https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch16.pdf</a> (part of a book "Networks, Crowds, and Markets" <a href="https://www.cs.cornell.edu/home/kleinber/networks-book/" class="bare">https://www.cs.cornell.edu/home/kleinber/networks-book/</a>)</p>
+</li>
+<li>
+<p>Information Cascade Experiments <a href="https://wmpeople.wm.edu/asset/index/lrande/cascadehandbook" class="bare">https://wmpeople.wm.edu/asset/index/lrande/cascadehandbook</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Jersey barrier</dt>
+<dd>
+<p>A Jersey barrier, Jersey wall, or Jersey bump is a modular concrete or plastic barrier employed to separate lanes of traffic.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Jersey_barrier" class="bare">https://en.wikipedia.org/wiki/Jersey_barrier</a></p>
+</li>
+<li>
+<p><a href="https://otwsafety.com/how-jersey-barriers-got-their-name/" class="bare">https://otwsafety.com/how-jersey-barriers-got-their-name/</a> (fun facts about)</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Kettling</dt>
+<dd>
+<p>A police tactic for controlling large crowds.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Kettling" class="bare">https://en.wikipedia.org/wiki/Kettling</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Lidar</dt>
+<dd>
+<p>"Light radar"&#8201;&#8212;&#8201;a device that used laser light to scan the area and measure distances to
+objects, walls, etc. It is also used as an acronym of "light detection and ranging"
+and "laser imaging, detection, and ranging".
+In the book Masha uses a drone to get "lidar outlines of all the human in the space".
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Lidar" class="bare">https://en.wikipedia.org/wiki/Lidar</a></p>
+</li>
+<li>
+<p><a href="https://www.neonscience.org/resources/learning-hub/tutorials/lidar-basics" class="bare">https://www.neonscience.org/resources/learning-hub/tutorials/lidar-basics</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">LiveJournal</dt>
+<dd>
+<p>A social network platform created in 1999 that used to be popular before Facebook and Twitter.
+In 2007 it was sold to Russian media company SUP Media. Written in Perl.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/LiveJournal" class="bare">https://en.wikipedia.org/wiki/LiveJournal</a></p>
+</li>
+<li>
+<p><a href="https://www.livejournal.com/" class="bare">https://www.livejournal.com/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">MAC address</dt>
+<dd>
+<p>Masha automatically corrects her boss when she says: "max address".
+MAC stands for "media access control" and MAC address means the low-level
+address assigned to a network card.
+Sometimes MAC address is called "physical address" or "hardware address".
+Usually it is represented as a series of hexadecimal numbers separated by
+colons, like this: <code>00:0a:95:9d:68:16</code>.
+Usually MAC address identifies a physical device (computer or phone)
+pretty well (as opposed to IP address that could be different in different networks).
+MAC address can be changed by the OS, but that only stays until the next reboot.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/MAC_address" class="bare">https://en.wikipedia.org/wiki/MAC_address</a></p>
+</li>
+<li>
+<p><a href="https://whatismyipaddress.com/mac-address" class="bare">https://whatismyipaddress.com/mac-address</a></p>
+</li>
+<li>
+<p><a href="https://whatismyipaddress.com/change-mac" class="bare">https://whatismyipaddress.com/change-mac</a>
+<a href="https://www.howtogeek.com/192173/how-and-why-to-change-your-mac-address-on-windows-linux-and-mac/" class="bare">https://www.howtogeek.com/192173/how-and-why-to-change-your-mac-address-on-windows-linux-and-mac/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">MIT Media Lab</dt>
+<dd>
+<p>A research lab at MIT famous for its inventions and projects in areas of human-computer interaction,
+artistic visualization, musical devices, sociable robots, etc.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.media.mit.edu/" class="bare">https://www.media.mit.edu/</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/MIT_Media_Lab" class="bare">https://en.wikipedia.org/wiki/MIT_Media_Lab</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">MRAP</dt>
+<dd>
+<p>Mine-Resistant Ambush Protected is a term for United States military light
+tactical vehicles produced as part of the MRAP program that are designed
+specifically to withstand improvised explosive device (IED) attacks and ambushes.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/MRAP" class="bare">https://en.wikipedia.org/wiki/MRAP</a></p>
+</li>
+<li>
+<p><a href="https://asc.army.mil/web/portfolio-item/cs-css-mine-resistant-ambush-protected-mrap-vehicle-mrap/" class="bare">https://asc.army.mil/web/portfolio-item/cs-css-mine-resistant-ambush-protected-mrap-vehicle-mrap/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">MRE</dt>
+<dd>
+<p>The Meal, Ready-to-Eat – commonly known as the MRE – is a self-contained,
+individual field ration in lightweight packaging bought by the United States
+Department of Defense for its service members for use in combat or other field
+conditions where organized food facilities are not available.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Meal,_Ready-to-Eat" class="bare">https://en.wikipedia.org/wiki/Meal,_Ready-to-Eat</a></p>
+</li>
+<li>
+<p><a href="https://www.mreinfo.com/" class="bare">https://www.mreinfo.com/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Machine learning</dt>
+<dd>
+<p>Ange does a great job explaining machine learning as simple as possible.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Machine_learning" class="bare">https://en.wikipedia.org/wiki/Machine_learning</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Malware</dt>
+<dd>
+<p>Malicious software: software intentionally designed to cause damage to computer systems.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Malware" class="bare">https://en.wikipedia.org/wiki/Malware</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Malware attack on baseband radio</dt>
+<dd>
+<p>Baseband vulnerabilities give attackers the ability to monitor a phone’s communications,
+place calls, send premium SMS messages or cause large data transfers unbeknownst
+to the owner of the phone.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.usenix.org/system/files/conference/woot12/woot12-final24.pdf" class="bare">https://www.usenix.org/system/files/conference/woot12/woot12-final24.pdf</a></p>
+</li>
+<li>
+<p><a href="https://ccdcoe.org/uploads/2018/10/Art-16-Attacking-the-Baseband-Modem-of-Breach-the-Users-Privacy-and-Network-Security.pdf" class="bare">https://ccdcoe.org/uploads/2018/10/Art-16-Attacking-the-Baseband-Modem-of-Breach-the-Users-Privacy-and-Network-Security.pdf</a></p>
+</li>
+<li>
+<p><a href="https://threatpost.com/baseband-zero-day-exposes-millions-of-mobile-phones-to-attack/124833/" class="bare">https://threatpost.com/baseband-zero-day-exposes-millions-of-mobile-phones-to-attack/124833/</a></p>
+</li>
+<li>
+<p><a href="https://attack.mitre.org/techniques/T1477/" class="bare">https://attack.mitre.org/techniques/T1477/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Man-in-the-middle attack</dt>
+<dd>
+<p>This is the category of attacks where the attacker injects <em>something</em> in the transmission
+channel (voice, data, etc.) that can listen to the traffic and potentially alter the traffic.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack" class="bare">https://en.wikipedia.org/wiki/Man-in-the-middle_attack</a></p>
+</li>
+<li>
+<p><a href="https://www.rapid7.com/fundamentals/man-in-the-middle-attacks/" class="bare">https://www.rapid7.com/fundamentals/man-in-the-middle-attacks/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Microfiche</dt>
+<dd>
+<p>A sheet of flat film, 105x148 mm in size, that contains a set of microimages, usually of size 10x14 mm.
+It is used to store books, magazines, newspapers in a compact and durable form.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Microform#Microfiche" class="bare">https://en.wikipedia.org/wiki/Microform#Microfiche</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">MySpace</dt>
+<dd>
+<p>A social network that used to be the largest social networking site in the world (between 2005 and 2009).
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Myspace" class="bare">https://en.wikipedia.org/wiki/Myspace</a></p>
+</li>
+<li>
+<p><a href="https://myspace.com/" class="bare">https://myspace.com/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">NFC, Near-Field Communication</dt>
+<dd>
+<p>A set of communication protocols for communication between two electronic devices
+over a distance of 4 cm. Used in various types of key cards, passes. etc.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Near-field_communication" class="bare">https://en.wikipedia.org/wiki/Near-field_communication</a></p>
+</li>
+<li>
+<p><a href="https://nfc-forum.org/" class="bare">https://nfc-forum.org/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Openstreetmap</dt>
+<dd>
+<p>Wrongly called "Openstreetmaps" in the book. An open source alternative to Google Maps.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.openstreetmap.org/" class="bare">https://www.openstreetmap.org/</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/OpenStreetMap" class="bare">https://en.wikipedia.org/wiki/OpenStreetMap</a></p>
+</li>
+<li>
+<p><a href="https://wiki.osmfoundation.org/wiki/Main_Page" class="bare">https://wiki.osmfoundation.org/wiki/Main_Page</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">PGP</dt>
+<dd>
+<p>Pretty Good Privacy, a cryptographic method used for encryption and digital signing documents, emails, etc.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Pretty_Good_Privacy" class="bare">https://en.wikipedia.org/wiki/Pretty_Good_Privacy</a></p>
+</li>
+<li>
+<p><a href="https://users.ece.cmu.edu/~adrian/630-f04/PGP-intro.html" class="bare">https://users.ece.cmu.edu/~adrian/630-f04/PGP-intro.html</a> (how it works)</p>
+</li>
+<li>
+<p><a href="https://www.openpgp.org/" class="bare">https://www.openpgp.org/</a></p>
+</li>
+<li>
+<p><a href="https://gnupg.org/" class="bare">https://gnupg.org/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">PX</dt>
+<dd>
+<p>A type of retail store operating on United States military installations worldwide.
+Originally akin to trading posts, they now resemble department stores or strip malls.
+PX is US Army terminology. US Air Force uses Base Exchange (BX), US Navy uses
+Navy Exchange (NEX), Marine Corps calls it Marine Corps Exchange (MCX).
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://military.wikia.org/wiki/Base_Exchange" class="bare">https://military.wikia.org/wiki/Base_Exchange</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Base_exchange" class="bare">https://en.wikipedia.org/wiki/Base_exchange</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Paranoid Android</dt>
+<dd>
+<p>In the book it seems to be the Android-based OS for smartphones focused on security.
+The main feature of it is that you update it very often to make sure all known
+vulnerabilities are patched or at least there are no known exploits for them.
+Masha explains that you should always check the OS signatures to make sure
+you are actually installing the correct bits and not something created by
+the government hackers containing backdoors and loggers.
+Apparently there is such a project in real life, but it&#8217;s not specifically
+focused on security&#8201;&#8212;&#8201;it just uses the cool name.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Paranoid_Android_(software" class="bare">https://en.wikipedia.org/wiki/Paranoid_Android_(software</a>)</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">ParanoidLinux</dt>
+<dd>
+<p>There is a project with this name (<a href="https://sourceforge.net/projects/linuxparanoid/" class="bare">https://sourceforge.net/projects/linuxparanoid/</a>)
+but it doesn&#8217;t seem to be active.
+Most likely what Masha means by ParanoidLinux is Tails (<a href="https://boingboing.net/2019/12/16/paranoid-linux-for-real.html" class="bare">https://boingboing.net/2019/12/16/paranoid-linux-for-real.html</a>).</p>
+</dd>
+<dt class="hdlist1">Pastebin</dt>
+<dd>
+<p>A storage site where people can post pieces of code and other text information.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Pastebin" class="bare">https://en.wikipedia.org/wiki/Pastebin</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Plausible deniability</dt>
+<dd>
+<p>Plausible deniability is the ability of people, typically senior officials in a formal or
+informal chain of command, to deny knowledge of or responsibility for any damnable actions
+committed by others in an organizational hierarchy because of a lack or absence of evidence
+that can confirm their participation, even if they were personally involved in or at least
+willfully ignorant of the actions. If illegal or otherwise-disreputable and unpopular
+activities become public, high-ranking officials may deny any awareness of such acts to
+insulate themselves and shift the blame onto the agents who carried out the acts, as they are
+confident that their doubters will be unable to prove otherwise. The lack of evidence to the
+contrary ostensibly makes the denial plausible (credible), but sometimes, it makes the denial
+only unactionable.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Plausible_deniability" class="bare">https://en.wikipedia.org/wiki/Plausible_deniability</a></p>
+</li>
+<li>
+<p><a href="https://www.urbandictionary.com/define.php?term=plausible%20deniability" class="bare">https://www.urbandictionary.com/define.php?term=plausible%20deniability</a></p>
+</li>
+<li>
+<p><a href="https://politicaldictionary.com/words/plausible-deniability/" class="bare">https://politicaldictionary.com/words/plausible-deniability/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Public-private key cryptography</dt>
+<dd>
+<p>Again, Masha does a great job explaining the basics.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Public-key_cryptography" class="bare">https://en.wikipedia.org/wiki/Public-key_cryptography</a></p>
+</li>
+<li>
+<p><a href="https://ssd.eff.org/en/module/deep-dive-end-end-encryption-how-do-public-key-encryption-systems-work" class="bare">https://ssd.eff.org/en/module/deep-dive-end-end-encryption-how-do-public-key-encryption-systems-work</a></p>
+</li>
+<li>
+<p><a href="https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:online-data-security/xcae6f4a7ff015e7d:data-encryption-techniques/a/public-key-encryption" class="bare">https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:online-data-security/xcae6f4a7ff015e7d:data-encryption-techniques/a/public-key-encryption</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Pwned</dt>
+<dd>
+<p>Historically it&#8217;s a misspelled word "owned" (part of "leetspeak") which is now used when somebody
+compromised your device (phone, computer) or your data and now you are <em>pwned</em>
+by bad guys.
+There is a site called "Have I been pwned?" which allows you to check if your
+personal data was leaked during one of the known data breaches.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Leet#Owned_and_pwned" class="bare">https://en.wikipedia.org/wiki/Leet#Owned_and_pwned</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Have_I_Been_Pwned%3F" class="bare">https://en.wikipedia.org/wiki/Have_I_Been_Pwned%3F</a></p>
+</li>
+<li>
+<p><a href="https://haveibeenpwned.com/" class="bare">https://haveibeenpwned.com/</a></p>
+</li>
+<li>
+<p><a href="https://www.urbandictionary.com/define.php?term=pwned" class="bare">https://www.urbandictionary.com/define.php?term=pwned</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">RFID (Radio-frequency identification)</dt>
+<dd>
+<p>A method of exchanging identification information over radio.
+It includes RFID tags and RFID readers.
+RFID tags can be passive (i.e. not containing any battery) and really cheap.
+They get the energy they need to operate from the reader that reads from them.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Radio-frequency_identification" class="bare">https://en.wikipedia.org/wiki/Radio-frequency_identification</a></p>
+</li>
+<li>
+<p><a href="https://www.rfidjournal.com/" class="bare">https://www.rfidjournal.com/</a></p>
+</li>
+<li>
+<p><a href="https://resources.bishopfox.com/resources/tools/rfid-hacking/attack-tools/" class="bare">https://resources.bishopfox.com/resources/tools/rfid-hacking/attack-tools/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">RPG</dt>
+<dd>
+<p><em>Not</em> a Role-Playing Game (here).
+A rocket-propelled grenade (often abbreviated RPG) is a shoulder-fired missile
+weapon that launches rockets equipped with an explosive warhead.
+Fun fact:
+The term "rocket-propelled grenade" is a backronym; it stems from the Russian
+language РПГ which stands for ручной противотанковый гранатомёт (transliterated as
+"ruchnoy protivotankovy granatomyot", which has the initials "RPG"), meaning
+"handheld anti-tank grenade launcher", the name given to early Russian designs.
+Typical range is around several hundred meters.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Rocket-propelled_grenade" class="bare">https://en.wikipedia.org/wiki/Rocket-propelled_grenade</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/RPG-7" class="bare">https://en.wikipedia.org/wiki/RPG-7</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Raspi Altair 8800</dt>
+<dd>
+<p>Altair 8800 is one of the first personal computers which was introduced in 1974.
+For many people it has sentimental value&#8201;&#8212;&#8201;that&#8217;s why some people design and sell
+Altair emulators that use modern technologies such as Arduino and Raspberry Pi.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Altair_8800" class="bare">https://en.wikipedia.org/wiki/Altair_8800</a></p>
+</li>
+<li>
+<p><a href="https://www.adwaterandstir.com/product/altair-8800-emulator-kit/" class="bare">https://www.adwaterandstir.com/product/altair-8800-emulator-kit/</a></p>
+</li>
+<li>
+<p><a href="https://github.com/dankar/altair8800" class="bare">https://github.com/dankar/altair8800</a></p>
+</li>
+<li>
+<p><a href="http://www.astrorat.com/altair8800/altair8800clonemeetrp.html" class="bare">http://www.astrorat.com/altair8800/altair8800clonemeetrp.html</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Red team</dt>
+<dd>
+<p>A red team is a group that helps organizations to improve themselves by providing opposition
+to the point of view of the organization that they are helping.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Red_team" class="bare">https://en.wikipedia.org/wiki/Red_team</a></p>
+</li>
+<li>
+<p><a href="https://csrc.nist.gov/glossary/term/Red_Team" class="bare">https://csrc.nist.gov/glossary/term/Red_Team</a></p>
+</li>
+<li>
+<p><a href="https://www.redteamsecure.com/blog/what-is-red-teaming-and-why-do-i-need-it-2/" class="bare">https://www.redteamsecure.com/blog/what-is-red-teaming-and-why-do-i-need-it-2/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Regular expressions</dt>
+<dd>
+<p>A (smart) way to search specific patterns or strings in text files.
+You can describe patterns like "one to three numbers followed by a dash followed by several capital letters, no more than 8."
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Regular_expression" class="bare">https://en.wikipedia.org/wiki/Regular_expression</a></p>
+</li>
+<li>
+<p><a href="https://regexr.com/" class="bare">https://regexr.com/</a></p>
+</li>
+<li>
+<p><a href="https://regexone.com/" class="bare">https://regexone.com/</a> (interactive tutorial)</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Reverse shell</dt>
+<dd>
+<p>A method to connect back to the attacking computer from the target computer.
+Because it is initiated from the target computer it can be a way to bypass
+a firewall or NAT service.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.netsparker.com/blog/web-security/understanding-reverse-shells/" class="bare">https://www.netsparker.com/blog/web-security/understanding-reverse-shells/</a></p>
+</li>
+<li>
+<p><a href="https://hackernoon.com/reverse-shell-cf154dfee6bd" class="bare">https://hackernoon.com/reverse-shell-cf154dfee6bd</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Riseup</dt>
+<dd>
+<p>Masha receives an email from Kriztina from her address at <code>riseup.net</code>.
+Riseup provides online communication tools for people and groups working on liberatory social
+change.
+We are a project to create democratic alternatives and practice self-determination by
+controlling our own secure means of communications.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://riseup.net/" class="bare">https://riseup.net/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">SIM-shaped tentacle</dt>
+<dd>
+<p>Most likely Masha uses a SIM extension cable similar to this: <a href="https://www.microsatacables.com/micro-sim-card-to-sim-card-extension-cable-msim-1175-ext" class="bare">https://www.microsatacables.com/micro-sim-card-to-sim-card-extension-cable-msim-1175-ext</a></p>
+</dd>
+<dt class="hdlist1">Safe Hex</dt>
+<dd>
+<p>The rules for safe computing.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.techsupportalert.com/safe-hex-safe-computing-practices.htm" class="bare">https://www.techsupportalert.com/safe-hex-safe-computing-practices.htm</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Sectec</dt>
+<dd>
+<p><em>Not</em> a CCTV camera produced by Shenshen Sectec Co. (<a href="http://www.sectec.com.cn/" class="bare">http://www.sectec.com.cn/</a>)</p>
+</dd>
+<dt class="hdlist1">Semtex</dt>
+<dd>
+<p>More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Semtex" class="bare">https://en.wikipedia.org/wiki/Semtex</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Shift-tilt miniature</dt>
+<dd>
+<p>Tilt–shift photography (Masha incorrectly calls it "shift-tilt") is the use of camera
+movements that change the orientation or position of the lens with respect to the film
+or image sensor on cameras.</p>
+<div class="paragraph">
+<p>Sometimes the term is used when the large depth of field is simulated with digital
+post-processing; the name may derive from a perspective control lens (or tilt–shift lens)
+normally required when the effect is produced optically.
+More:
+* <a href="https://en.wikipedia.org/wiki/Tilt%E2%80%93shift_photography" class="bare">https://en.wikipedia.org/wiki/Tilt%E2%80%93shift_photography</a>
+* <a href="https://www.masterclass.com/articles/how-to-shoot-tilt-shift-photography" class="bare">https://www.masterclass.com/articles/how-to-shoot-tilt-shift-photography</a>
+* <a href="https://www.smashingmagazine.com/2008/11/beautiful-examples-of-tilt-shift-photography/" class="bare">https://www.smashingmagazine.com/2008/11/beautiful-examples-of-tilt-shift-photography/</a></p>
+</div>
+</dd>
+<dt class="hdlist1">Signal</dt>
+<dd>
+<p>A communication application which is considered to be the most secure for end-to-end
+encryption. Trusted and used by Edward Snowden, Jack Dorsey, Bruce Schneier.
+It uses the open-source Signal protocol.
+Works on iOS, Android, Linux, macOS, Windows
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://signal.org/en/" class="bare">https://signal.org/en/</a></p>
+</li>
+<li>
+<p><a href="https://github.com/signalapp" class="bare">https://github.com/signalapp</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Signal_Protocol" class="bare">https://en.wikipedia.org/wiki/Signal_Protocol</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Stalkerware</dt>
+<dd>
+<p>Monitoring software or spyware that is used for stalking.
+The term was coined when people started to widely use commercial spyware
+to spy on their spouses or intimate partners.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Stalkerware" class="bare">https://en.wikipedia.org/wiki/Stalkerware</a></p>
+</li>
+<li>
+<p><a href="https://stopstalkerware.org/what-is-stalkerware/" class="bare">https://stopstalkerware.org/what-is-stalkerware/</a></p>
+</li>
+<li>
+<p><a href="https://securelist.com/the-state-of-stalkerware-in-2019/93634/" class="bare">https://securelist.com/the-state-of-stalkerware-in-2019/93634/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Stylometry</dt>
+<dd>
+<p>A method to study linguistic style to find out who the author of the document is.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Stylometry" class="bare">https://en.wikipedia.org/wiki/Stylometry</a></p>
+</li>
+<li>
+<p><a href="https://programminghistorian.org/en/lessons/introduction-to-stylometry-with-python" class="bare">https://programminghistorian.org/en/lessons/introduction-to-stylometry-with-python</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Sukey</dt>
+<dd>
+<p>Sukey is an organization which emerged in Britain on 28 January 2011, with the aim of
+improving communications among participants in the student demonstrations.
+Its immediate aim was to counteract the police tactics of kettling, by coordinating
+information electronically and transmitting it to the protesters,
+allowing them to avoid the police kettle.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Sukey" class="bare">https://en.wikipedia.org/wiki/Sukey</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Tails</dt>
+<dd>
+<p>A security-focused Linux distribution that aims at preserving privacy and anonymity.
+It usually loads from a live DVD or USB and provides Linux environment that is based on Tor network.
+Your browsing information is not stored anywhere unless you specifically instruct it to do so.
+<em>Tails</em> provides an emergency shutdown: when you pull the USB out of the slot, the system
+erases all computer memory and shuts itself down immediately.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Tails_(operating_system" class="bare">https://en.wikipedia.org/wiki/Tails_(operating_system</a>)</p>
+</li>
+<li>
+<p><a href="https://tails.boum.org/" class="bare">https://tails.boum.org/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Technical debt</dt>
+<dd>
+<p>Masha calls it "technology debt", but "technical debt" is more common.
+Masha explains it pretty well: sometimes you create a solution to quickly
+achieve your short-term goals, but in the long run this solution keeps
+you from doing it the "right way".
+The longer you postpone re-doing it properly, the bigger it grows and
+the harder it is to "pay off" your technical debt.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Technical_debt" class="bare">https://en.wikipedia.org/wiki/Technical_debt</a></p>
+</li>
+<li>
+<p><a href="https://martinfowler.com/bliki/TechnicalDebt.html" class="bare">https://martinfowler.com/bliki/TechnicalDebt.html</a> (Martin Fowler explains it well)</p>
+</li>
+<li>
+<p><a href="https://hackernoon.com/there-are-3-main-types-of-technical-debt-heres-how-to-manage-them-4a3328a4c50c" class="bare">https://hackernoon.com/there-are-3-main-types-of-technical-debt-heres-how-to-manage-them-4a3328a4c50c</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Threat model</dt>
+<dd>
+<p>Threat modeling is a process by which potential threats, such as structural
+vulnerabilities or the absence of appropriate safeguards, can be identified,
+enumerated, and mitigations can be prioritized.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Threat_model" class="bare">https://en.wikipedia.org/wiki/Threat_model</a></p>
+</li>
+<li>
+<p><a href="https://securityintelligence.com/posts/what-is-threat-modeling-and-how-does-it-impact-application-security/" class="bare">https://securityintelligence.com/posts/what-is-threat-modeling-and-how-does-it-impact-application-security/</a></p>
+</li>
+<li>
+<p><a href="https://owasp.org/www-community/Application_Threat_Modeling" class="bare">https://owasp.org/www-community/Application_Threat_Modeling</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Tor</dt>
+<dd>
+<p>By using the Tor Browser you can visit web sites without letting them know your location or your actual IP address. More about Tor (including questions "is it legal?"):</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.torproject.org/" class="bare">https://www.torproject.org/</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Tor_(anonymity_network" class="bare">https://en.wikipedia.org/wiki/Tor_(anonymity_network</a>)</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Tunnel out</dt>
+<dd>
+<p>To use an SSH tunnel to get secure access to a remote box. Usually you use SSH tunneling
+to bypass firewalls that prohibit certain Internet services. More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Tunneling_protocol#Secure_Shell_tunneling" class="bare">https://en.wikipedia.org/wiki/Tunneling_protocol#Secure_Shell_tunneling</a></p>
+</li>
+<li>
+<p><a href="https://www.ssh.com/ssh/tunneling/example" class="bare">https://www.ssh.com/ssh/tunneling/example</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">USB Port Physical Lock</dt>
+<dd>
+<p>There are several variants of such a device that physically blocks access to the USB port.
+Some of them have keys, some should be physically destroyed to get access to the port.
+Examples:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.padjack.com/padjack-versions/usb-port-lock/" class="bare">https://www.padjack.com/padjack-versions/usb-port-lock/</a> (should be destroyed and resealed later)</p>
+</li>
+<li>
+<p><a href="https://connectivitycenter.com/product/smart-keeper-usb-port-lock-professional/" class="bare">https://connectivitycenter.com/product/smart-keeper-usb-port-lock-professional/</a> (used with a key)</p>
+</li>
+<li>
+<p><a href="https://lindy.com/en/technology/port-blockers/" class="bare">https://lindy.com/en/technology/port-blockers/</a> (with a key)</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">USB stick with keypad</dt>
+<dd>
+<p>Probably Marcus uses something like this: <a href="https://www.amazon.com/Encrypted-Certified-Protection-Encryption-16G/dp/B07JNDW5H7/" class="bare">https://www.amazon.com/Encrypted-Certified-Protection-Encryption-16G/dp/B07JNDW5H7/</a></p>
+</dd>
+<dt class="hdlist1">USG</dt>
+<dd>
+<p>USG is a USB firewall that can protect your computer from BadUSB.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://hothardware.com/news/usg-dongle-firewall-device-is-like-a-condom-for-your-usb-ports" class="bare">https://hothardware.com/news/usg-dongle-firewall-device-is-like-a-condom-for-your-usb-ports</a></p>
+</li>
+<li>
+<p><a href="https://github.com/robertfisk/USG" class="bare">https://github.com/robertfisk/USG</a></p>
+</li>
+<li>
+<p><a href="https://github.com/robertfisk/USG/wiki" class="bare">https://github.com/robertfisk/USG/wiki</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Ulysses pact</dt>
+<dd>
+<p>Masha explains it very well. Apparently, there are "Ulysses pact" applications and
+other technologies to help you keep your promises.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Ulysses_pact" class="bare">https://en.wikipedia.org/wiki/Ulysses_pact</a> (look for "Technological context")</p>
+</li>
+<li>
+<p><a href="https://ulyssespact.com.au/" class="bare">https://ulyssespact.com.au/</a></p>
+</li>
+<li>
+<p><a href="https://blog.trello.com/master-goals-ulysses-pact" class="bare">https://blog.trello.com/master-goals-ulysses-pact</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Unique identifiers of tire-pressure sensors</dt>
+<dd>
+<p>Tire-pressure sensors installed on most of the cars have unique ID numbers
+configured at the factory. More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Direct_TPMS#Registration_of_direct_TPMS_IDs" class="bare">https://en.wikipedia.org/wiki/Direct_TPMS#Registration_of_direct_TPMS_IDs</a></p>
+</li>
+<li>
+<p><a href="https://blog.caristaapp.com/what-is-tpms-id-registration-2cfc452bb6d4" class="bare">https://blog.caristaapp.com/what-is-tpms-id-registration-2cfc452bb6d4</a></p>
+</li>
+<li>
+<p><a href="https://www.standardbrand.com/media/1646/st10235idl-may14_jtf_id-locator.pdf" class="bare">https://www.standardbrand.com/media/1646/st10235idl-may14_jtf_id-locator.pdf</a></p>
+</li>
+<li>
+<p><a href="https://obdstation.com/tpms-reset-tool/" class="bare">https://obdstation.com/tpms-reset-tool/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Usenet</dt>
+<dd>
+<p>A "prehistoric" social network that was created around 1980.
+The name comes from the term "users network".
+It was used for discussions and asking questions. It has a hierarchical structure
+of topics called "newsgroups".
+Even before Internet became widely available it used UUCP (Unix-to-Unix Copy) program to
+exchange posts and updates over telephone lines.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Usenet" class="bare">https://en.wikipedia.org/wiki/Usenet</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/UUCP" class="bare">https://en.wikipedia.org/wiki/UUCP</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Uslon prison</dt>
+<dd>
+<p>Apparently it&#8217;s an abbreviation from GULAG days, not a place:
+USLON: "Upravlenie Severnykh Lagerey Osobogo Naznacheniya", Directorate of Northern Special-Significance Camps
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/List_of_Gulag_camps" class="bare">https://en.wikipedia.org/wiki/List_of_Gulag_camps</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">WAP (Wireless Application Protocol)</dt>
+<dd>
+<p>A protocol that was used by cell phones to access the Internet in the early 2000s.
+WAP browser is an application that can display text and pictures on the phone&#8217;s screen.
+It was used before smartphones became widely available because it could work with
+really small screens and low transmission speeds of that time.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Wireless_Application_Protocol" class="bare">https://en.wikipedia.org/wiki/Wireless_Application_Protocol</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">XML (Extensible Markup Language)</dt>
+<dd>
+<p>A markup language used by many applications to store and exchange information and documents.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/XML" class="bare">https://en.wikipedia.org/wiki/XML</a></p>
+</li>
+<li>
+<p><a href="https://www.xml.com/pub/a/98/10/guide0.html" class="bare">https://www.xml.com/pub/a/98/10/guide0.html</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">ZOMFG</dt>
+<dd>
+<p>Usually spelled entirely in caps, this abbreviation originates from the typo
+you get when you strike the shift key in order to type OMFG, but you miss
+and hit the z instead. From here:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.urbandictionary.com/define.php?term=zOMFG" class="bare">https://www.urbandictionary.com/define.php?term=zOMFG</a></p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-12-12 16:04:03 -0500
+Last updated 2020-12-16 20:58:39 -0500
 </div>
 </div>
 </body>
