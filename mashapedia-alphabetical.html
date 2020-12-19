@@ -1,0 +1,2108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.10">
+<title>Mashapedia: Technologies of Attack Surface by Cory Doctorow</title>
+<style>
+/* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono");
+@import url("https://cdn.jsdelivr.net/gh/asciidoctor/asciidoctor@2.0/data/stylesheets/asciidoctor-default.css"); /* Default asciidoc style framework - important */
+
+/* CUSTOMISATIONS */
+/* Change the values in root for quick customisation. If you want even more fine grain... venture further. */
+:root{
+--maincolor:#121212;
+--primarycolor:#FFFFFF;
+--secondarycolor:#03a9f4;
+--tertiarycolor:#4db6ac;
+--sidebarbackground:#121212;
+--linkcolor:#f44336;
+--linkcoloralternate:#ff9800;
+--precolor:#008800;
+--white:#FFFFFF;
+}
+
+/* Text styles */
+
+body{font-family: "Roboto",sans-serif;background-color: var(--maincolor);color:var(--white);}
+
+h1{color:var(--primarycolor) !important;font-family:"Roboto Slab",sans-serif;}
+h2,h3,h4,h5,h6{color:var(--secondarycolor) !important;font-family:"Roboto Slab",sans-serif;}
+.title{color:var(--white) !important;font-family:"Roboto Slab",sans-serif;font-style: normal; font-weight: normal;}
+p{font-family: "Roboto",sans-serif ! important}
+#toc.toc2 a:link{color:var(--linkcolor);}
+blockquote{color:var(--tertiarycolor) !important}
+.quoteblock{color:var(--white)}
+code{font-family: "Roboto Mono",monospace; color :var(--linkcoloralternate);background-color: var(--sidebarbackground) !important}
+pre{font-family: "Roboto Mono",monospace; color:var(--precolor);background-color: var(--sidebarbackground) !important}
+
+
+/* Table styles */
+th{background-color: var(--maincolor);color:var(--white) !important;}
+td{background-color: var(--maincolor);color: var(--linkcoloralternate) !important}
+
+
+#toc.toc2{background-color:var(--sidebarbackground);}
+#toctitle{color:var(--white);}
+
+/* Responsiveness fixes */
+video {
+  max-width: 100%;
+}
+
+@media all and (max-width: 600px) {
+  table {
+    width: 55vw!important;
+    font-size: 3vw;
+  }
+}
+
+.exampleblock > .content {
+  background-color: var(--maincolor);
+}
+
+a {
+  color: var(--secondarycolor);
+}
+
+.admonitionblock td.icon .icon-tip::before {
+  text-shadow: none;
+  color: var(--white);
+}
+.admonitionblock td.icon .icon-note::before {
+  color: var(--tertiarycolor);
+}
+.admonitionblock td.icon .icon-important::before {
+  color: var(--linkcolor);
+}
+/*.admonitionblock td.icon .icon-caution::before {
+  color: var(--linkcoloralternate);
+}*/
+.admonitionblock td.icon .icon-warning::before {
+  color: var(--primarycolor);
+}
+
+#preamble > .sectionbody > .paragraph:first-of-type p {
+  color: var(--white);
+}
+
+.quoteblock blockquote::before {
+  color: var(--primarycolor);
+}
+.quoteblock .attribution cite, .verseblock .attribution cite {
+  color: var(--white);
+}
+.verseblock pre {
+  color: var(--white);
+}
+.quoteblock blockquote, .quoteblock blockquote p {
+  color: var(--white);
+}
+
+.sidebarblock {
+  background: var(--sidebarbackground);
+}
+.literalblock pre, .listingblock pre:not(.highlight), .listingblock pre[class="highlight"], .listingblock pre[class^="highlight "], .listingblock pre.CodeRay, .listingblock pre.prettyprint {
+  background: var(--sidebarbackground);
+  color: var(--white);
+}
+
+#header .details {
+  color: var(--white);
+}
+#header .details span.email a {
+  color: var(--linkcoloralternate);
+}
+
+</style>
+</head>
+<body class="article">
+<div id="header">
+<h1>Mashapedia: Technologies of <em>Attack Surface</em> by Cory Doctorow</h1>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>In the main <em>Mashapedia</em> <a href="attack-surface-tech.html">document</a> the terms are described chapter-by-chapter.
+This is an alphabetical reference, in case you need it.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_alphabetical_reference">Alphabetical reference</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">0-day or zero-day</dt>
+<dd>
+<p>which allows hackers to exploit it. More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Zero-day_%28computing%29">https://en.wikipedia.org/wiki/Zero-day_(computing)</a></p>
+</li>
+<li>
+<p><a href="https://www.fireeye.com/current-threats/what-is-a-zero-day-exploit.html" class="bare">https://www.fireeye.com/current-threats/what-is-a-zero-day-exploit.html</a></p>
+</li>
+<li>
+<p><a href="https://searchsecurity.techtarget.com/definition/zero-day-vulnerability" class="bare">https://searchsecurity.techtarget.com/definition/zero-day-vulnerability</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">ARGs (Alternate Reality Games)</dt>
+<dd>
+<p>Interactive games that are usually played in real world mixed with multimedia and online services.
+Usually they use stories that are created and controlled by game designers.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Alternate_reality_game" class="bare">https://en.wikipedia.org/wiki/Alternate_reality_game</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/List_of_alternate_reality_games" class="bare">https://en.wikipedia.org/wiki/List_of_alternate_reality_games</a></p>
+</li>
+<li>
+<p><a href="https://www.argn.com/" class="bare">https://www.argn.com/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Advanced Persistent Threat</dt>
+<dd>
+<p>An advanced persistent threat (APT) is a stealthy threat actor,
+typically a nation state or state-sponsored group, which gains unauthorized access
+to a computer network and remains undetected for an extended period.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Advanced_persistent_threat" class="bare">https://en.wikipedia.org/wiki/Advanced_persistent_threat</a></p>
+</li>
+<li>
+<p><a href="https://attack.mitre.org/groups/" class="bare">https://attack.mitre.org/groups/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Adversarial perturbation</dt>
+<dd>
+<p>An "adversarial perturbation" is a change to a physical object that is deliberately
+designed to fool a machine-learning system into mistaking it for something else.
+(from an article written by Cory Doctorow)
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://boingboing.net/2017/08/07/nam-shub-of-enki.html" class="bare">https://boingboing.net/2017/08/07/nam-shub-of-enki.html</a></p>
+</li>
+<li>
+<p><a href="https://boingboing.net/2017/03/29/countermeasures-are-a-thing.html" class="bare">https://boingboing.net/2017/03/29/countermeasures-are-a-thing.html</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/1707.08945.pdf" class="bare">https://arxiv.org/pdf/1707.08945.pdf</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/2005.08087" class="bare">https://arxiv.org/abs/2005.08087</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Am I under arrest?</dt>
+<dd>
+<p>This and the following questions are part of the recommended procedure when interacting
+with police.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.halt.org/am-i-being-detained-6-questions-you-should-ask-during-interactions-with-the-police/" class="bare">https://www.halt.org/am-i-being-detained-6-questions-you-should-ask-during-interactions-with-the-police/</a></p>
+</li>
+<li>
+<p><a href="https://www.browarddefender.org/page3.html" class="bare">https://www.browarddefender.org/page3.html</a></p>
+</li>
+<li>
+<p><a href="https://www.aclu.org/know-your-rights/stopped-by-police/" class="bare">https://www.aclu.org/know-your-rights/stopped-by-police/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Android Developer&#8217;s mode</dt>
+<dd>
+<p>Masha uses USB to connect Tanisha&#8217;s phone to her laptop and manipulate software on her phone.
+She uses Android Developer&#8217;s mode and USB debugging for that. More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://developer.android.com/studio/debug/dev-options" class="bare">https://developer.android.com/studio/debug/dev-options</a></p>
+</li>
+<li>
+<p><a href="https://www.makeuseof.com/tag/what-is-usb-debugging-mode-on-android-makeuseof-explains/" class="bare">https://www.makeuseof.com/tag/what-is-usb-debugging-mode-on-android-makeuseof-explains/</a></p>
+</li>
+<li>
+<p><a href="https://developers.google.com/web/tools/chrome-devtools/remote-debugging" class="bare">https://developers.google.com/web/tools/chrome-devtools/remote-debugging</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Android rootkit</dt>
+<dd>
+<p>A rootkit is a collection of computer software, typically malicious, designed to enable
+access to a computer or an area of its software that is not otherwise allowed (for example,
+to an unauthorized user) and often masks its existence or the existence of other software.
+Rootkits exist for different operating systems, including Android.
+Masha just discovered a rootkit on Tanisha&#8217;s phone.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Rootkit" class="bare">https://en.wikipedia.org/wiki/Rootkit</a></p>
+</li>
+<li>
+<p><a href="http://www.cs.tufts.edu/comp/116/archive/fall2013/azakaria.pdf" class="bare">http://www.cs.tufts.edu/comp/116/archive/fall2013/azakaria.pdf</a></p>
+</li>
+<li>
+<p><a href="https://arstechnica.com/information-technology/2016/11/powerful-backdoorrootkit-found-preinstalled-on-3-million-android-phones/" class="bare">https://arstechnica.com/information-technology/2016/11/powerful-backdoorrootkit-found-preinstalled-on-3-million-android-phones/</a></p>
+</li>
+<li>
+<p><a href="https://www.androidpolice.com/2020/04/19/months-of-research-finally-crack-android-malware-that-could-even-survive-factory-resets/" class="bare">https://www.androidpolice.com/2020/04/19/months-of-research-finally-crack-android-malware-that-could-even-survive-factory-resets/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Anonymouth</dt>
+<dd>
+<p>Document anonymization tool written in Java. More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/psal/anonymouth" class="bare">https://github.com/psal/anonymouth</a></p>
+</li>
+<li>
+<p><a href="https://directory.fsf.org/wiki/Anonymouth" class="bare">https://directory.fsf.org/wiki/Anonymouth</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Anti-Stingray</dt>
+<dd>
+<p>Tools to protect oneself from IMSI-catchers.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://privacysos.org/blog/how-to-defeat-fbi-or-police-stingray-surveillance/" class="bare">https://privacysos.org/blog/how-to-defeat-fbi-or-police-stingray-surveillance/</a></p>
+</li>
+<li>
+<p><a href="https://www.firstpoint-mg.com/blog/top-7-imsi-catcher-detection-solutions-2020/" class="bare">https://www.firstpoint-mg.com/blog/top-7-imsi-catcher-detection-solutions-2020/</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Stingray_phone_tracker" class="bare">https://en.wikipedia.org/wiki/Stingray_phone_tracker</a></p>
+</li>
+<li>
+<p><a href="https://theintercept.com/2020/07/31/protests-surveillance-stingrays-dirtboxes-phone-tracking/" class="bare">https://theintercept.com/2020/07/31/protests-surveillance-stingrays-dirtboxes-phone-tracking/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Asterisk</dt>
+<dd>
+<p>An open source phone framework that can be used to build a Voice-over-IP or IP PBX system.
+Masha runs such a server on the cloud and uses it to route her calls.
+One of the examples: <a href="https://aws.amazon.com/marketplace/pp/Technology-Innovation-Lab-of-Texas-Asterisk-1770-A/B079Y7449R" class="bare">https://aws.amazon.com/marketplace/pp/Technology-Innovation-Lab-of-Texas-Asterisk-1770-A/B079Y7449R</a>
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.asterisk.org/" class="bare">https://www.asterisk.org/</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Asterisk_%28PBX%29">https://en.wikipedia.org/wiki/Asterisk_(PBX)</a></p>
+</li>
+<li>
+<p><a href="https://www.voip-info.org/asterisk/" class="bare">https://www.voip-info.org/asterisk/</a></p>
+</li>
+<li>
+<p><a href="https://techexpert.tips/asterisk/asterisk-installation-cloud-aws-ec2/" class="bare">https://techexpert.tips/asterisk/asterisk-installation-cloud-aws-ec2/</a> (tutorial)</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Backdoor</dt>
+<dd>
+<p>A hidden method to access a computer or network device bypassing the normal authentication scheme,
+usually created as a part of the software running on that computer.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Backdoor_%28computing%29">https://en.wikipedia.org/wiki/Backdoor_(computing)</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Bad spelling in check-in messages</dt>
+<dd>
+<p>Obviously Masha still uses an old, centralized version control system
+like <em>Subversion</em>, and not more modern, decentralized Git.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://superuser.com/questions/436347/git-process-could-anyone-please-explain-the-check-in-check-out-process/436362" class="bare">https://superuser.com/questions/436347/git-process-could-anyone-please-explain-the-check-in-check-out-process/436362</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">BadUSB</dt>
+<dd>
+<p>It is a way to use the microcontroller embedded in a USB device to inject malware in your computer.
+The most dangerous thing about it is that all the work is done by that microcontroller,
+invisible to the target computer&#8217;s CPU.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://opensource.srlabs.de/projects/badusb" class="bare">https://opensource.srlabs.de/projects/badusb</a></p>
+</li>
+<li>
+<p><a href="https://hackaday.com/2014/10/05/badusb-means-were-all-screwed/" class="bare">https://hackaday.com/2014/10/05/badusb-means-were-all-screwed/</a> (there are links to the paper and video
+explaining how it works)</p>
+</li>
+<li>
+<p><a href="https://srlabs.de/wp-content/uploads/2014/11/SRLabs-BadUSB-Pacsec-v2.pdf" class="bare">https://srlabs.de/wp-content/uploads/2014/11/SRLabs-BadUSB-Pacsec-v2.pdf</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Baseband phone security</dt>
+<dd>
+<p>It was confirmed that the software that controls the baseband radio on smartphones can
+be compromised and can allow attackers to control other smartphone devices such as camera and microphone.
+More (some papers are a bit dated, but it&#8217;s quite possible some vulnerabilities described in them
+still exist):</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://techcrunch.com/2019/11/08/android-baseband-flaws/" class="bare">https://techcrunch.com/2019/11/08/android-baseband-flaws/</a></p>
+</li>
+<li>
+<p><a href="https://www.ccdcoe.org/uploads/2018/10/Art-16-Attacking-the-Baseband-Modem-of-Breach-the-Users-Privacy-and-Network-Security.pdf" class="bare">https://www.ccdcoe.org/uploads/2018/10/Art-16-Attacking-the-Baseband-Modem-of-Breach-the-Users-Privacy-and-Network-Security.pdf</a> (2015)</p>
+</li>
+<li>
+<p><a href="https://smartech.gatech.edu/bitstream/handle/1853/43766/davis_andrew_t_201205_ro.pdf" class="bare">https://smartech.gatech.edu/bitstream/handle/1853/43766/davis_andrew_t_201205_ro.pdf</a> (2012)</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Battlefield intelligence</dt>
+<dd>
+<p>Is described in the US Army document "Intelligence Preparation of the Battlefield". More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://home.army.mil/wood/application/files/8915/5751/8365/ATP_2-01.3_Intelligence_Preparation_of_the_Battlefield.pdf" class="bare">https://home.army.mil/wood/application/files/8915/5751/8365/ATP_2-01.3_Intelligence_Preparation_of_the_Battlefield.pdf</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Bayesian inference</dt>
+<dd>
+<p>A method of statistical inference in which Bayes' theorem is used to update the
+probability for a hypothesis as more evidence or information becomes available.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Bayesian_inference" class="bare">https://en.wikipedia.org/wiki/Bayesian_inference</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Bayes%27_theorem" class="bare">https://en.wikipedia.org/wiki/Bayes%27_theorem</a></p>
+</li>
+<li>
+<p><a href="https://seeing-theory.brown.edu/bayesian-inference/index.html" class="bare">https://seeing-theory.brown.edu/bayesian-inference/index.html</a> (interactive, with pictures)</p>
+</li>
+<li>
+<p><a href="https://towardsdatascience.com/probability-concepts-explained-bayesian-inference-for-parameter-estimation-90e8930e5348" class="bare">https://towardsdatascience.com/probability-concepts-explained-bayesian-inference-for-parameter-estimation-90e8930e5348</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Binary Transparency</dt>
+<dd>
+<p>A method that allows users to verify that the piece of software they use is exactly the same
+used by other users, i.e. it was not substituted by a compromised version.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.mozilla.org/Security/Binary_Transparency" class="bare">https://wiki.mozilla.org/Security/Binary_Transparency</a></p>
+</li>
+<li>
+<p>Contour - a practical system for binary transparency: <a href="https://smeiklej.com/files/cbt18.pdf" class="bare">https://smeiklej.com/files/cbt18.pdf</a></p>
+</li>
+<li>
+<p><a href="http://diyhpl.us/wiki/transcripts/building-on-bitcoin/2018/binary-transparency/" class="bare">http://diyhpl.us/wiki/transcripts/building-on-bitcoin/2018/binary-transparency/</a></p>
+</li>
+<li>
+<p><a href="https://github.com/BrandonTang/binary-transparency" class="bare">https://github.com/BrandonTang/binary-transparency</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Blinkenlights</dt>
+<dd>
+<p>Usually refers to the diagnostic lights on computer&#8217;s front panels (in the old days).
+The term derives from the famous text dated as far back as 1955.</p>
+<div class="listingblock">
+<div class="content">
+<pre>ACHTUNG!
+ALLES TURISTEN UND NONTEKNISCHEN LOOKENSPEEPERS!
+DAS KOMPUTERMASCHINE IST NICHT FÜR DER GEFINGERPOKEN UND MITTENGRABEN! ODERWISE IST EASY TO SCHNAPPEN DER SPRINGENWERK, BLOWENFUSEN UND POPPENCORKEN MIT SPITZENSPARKEN.
+IST NICHT FÜR GEWERKEN BEI DUMMKOPFEN. DER RUBBERNECKEN SIGHTSEEREN KEEPEN DAS COTTONPICKEN HÄNDER IN DAS POCKETS MUSS.
+ZO RELAXEN UND WATSCHEN DER BLINKENLICHTEN.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>More:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Blinkenlights" class="bare">https://en.wikipedia.org/wiki/Blinkenlights</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Blogger</dt>
+<dd>
+<p>A blogging platform owned by Google. Created in 1999 by Pyra Labs. Written in Python.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Blogger_%28service%29">https://en.wikipedia.org/wiki/Blogger_(service)</a></p>
+</li>
+<li>
+<p><a href="https://www.blogger.com/" class="bare">https://www.blogger.com/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Bootloader</dt>
+<dd>
+<p>A piece of software which normally starts at the early stages of computer start-up process,
+after executing the BIOS, but <em>before</em> the operating system starts.
+Its purpose is to <em>load</em> the operating system (hence the name).
+Bootloader integrity check is important to avoid a "boot attack":
+type of attack that replaces the original bootloader and installs a bootloader
+that can intercept passwords, including those used for hard drive encryption.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://link.springer.com/chapter/10.1007/978-1-4302-6572-6_6" class="bare">https://link.springer.com/chapter/10.1007/978-1-4302-6572-6_6</a> (very good explanation; you can read a chapter, or download the whole book there&#8201;&#8212;&#8201;thanks, Springer!)</p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Booting#Modern_boot_loaders" class="bare">https://en.wikipedia.org/wiki/Booting#Modern_boot_loaders</a></p>
+</li>
+<li>
+<p><a href="https://engineering.fb.com/2016/01/29/security/hardware-and-firmware-attacks-defending-detecting-and-responding/" class="bare">https://engineering.fb.com/2016/01/29/security/hardware-and-firmware-attacks-defending-detecting-and-responding/</a></p>
+</li>
+<li>
+<p>Evil maid attack: <a href="https://en.wikipedia.org/wiki/Evil_maid_attack" class="bare">https://en.wikipedia.org/wiki/Evil_maid_attack</a></p>
+</li>
+<li>
+<p><a href="https://onlinelibrary.wiley.com/doi/full/10.1002/eng2.12032" class="bare">https://onlinelibrary.wiley.com/doi/full/10.1002/eng2.12032</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Bot or Not</dt>
+<dd>
+<p>Masha says she played this &#8220;game&#8221; with Kriztina and her friends.
+The point is to distinguish bots from real people in social networks.
+Apparently, it&#8217;s not that easy, if you read the Twitter&#8217;s blog post below.
+There are online tools that can help with that, but they very accurate.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://blog.twitter.com/en_us/topics/company/2020/bot-or-not.html" class="bare">https://blog.twitter.com/en_us/topics/company/2020/bot-or-not.html</a></p>
+</li>
+<li>
+<p><a href="https://botometer.osome.iu.edu/" class="bare">https://botometer.osome.iu.edu/</a></p>
+</li>
+<li>
+<p><a href="https://botsentinel.com/" class="bare">https://botsentinel.com/</a></p>
+</li>
+<li>
+<p><a href="https://nakedsecurity.sophos.com/2020/06/10/bot-or-not-a-game-to-train-us-to-spot-chatbots-faking-it-as-humans/" class="bare">https://nakedsecurity.sophos.com/2020/06/10/bot-or-not-a-game-to-train-us-to-spot-chatbots-faking-it-as-humans/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">BusyBox</dt>
+<dd>
+<p>A lightweight software suite with a set of Linux/Unix commands that is
+used in embedded devices (list: <a href="https://busybox.net/products.html" class="bare">https://busybox.net/products.html</a>).
+Can be downloaded and executed as a single binary (size ~1 MB).
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://busybox.net/" class="bare">https://busybox.net/</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/BusyBox" class="bare">https://en.wikipedia.org/wiki/BusyBox</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">BusyBox malware</dt>
+<dd>
+<p>Masha explains it pretty well: there are pieces of malware that can be
+executed on systems running BusyBox.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.csoonline.com/article/2848606/bash-malware-targets-embedded-devices-running-busybox.html" class="bare">https://www.csoonline.com/article/2848606/bash-malware-targets-embedded-devices-running-busybox.html</a></p>
+</li>
+<li>
+<p><a href="https://www.trendmicro.com/vinfo/us/threat-encyclopedia/search/busybox" class="bare">https://www.trendmicro.com/vinfo/us/threat-encyclopedia/search/busybox</a></p>
+</li>
+<li>
+<p><a href="https://www.incibe-cert.es/en/blog/attacking-busybox-small-gaulish-village" class="bare">https://www.incibe-cert.es/en/blog/attacking-busybox-small-gaulish-village</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/BASHLITE" class="bare">https://en.wikipedia.org/wiki/BASHLITE</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">CALEA</dt>
+<dd>
+<p>A wiretapping bill, passed in 1994, as Masha explains it. More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.fcc.gov/public-safety-and-homeland-security/policy-and-licensing-division/general/communications-assistance" class="bare">https://www.fcc.gov/public-safety-and-homeland-security/policy-and-licensing-division/general/communications-assistance</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Communications_Assistance_for_Law_Enforcement_Act" class="bare">https://en.wikipedia.org/wiki/Communications_Assistance_for_Law_Enforcement_Act</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">COINTELPRO</dt>
+<dd>
+<p>COINTELPRO (syllabic abbreviation derived from COunter INTELligence PROgram)
+(1956–present) is a series of covert and illegal projects conducted by the
+United States Federal Bureau of Investigation (FBI) aimed at
+surveilling, infiltrating, discrediting, and disrupting American political
+organizations.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/COINTELPRO" class="bare">https://en.wikipedia.org/wiki/COINTELPRO</a></p>
+</li>
+<li>
+<p><a href="https://vault.fbi.gov/cointel-pro" class="bare">https://vault.fbi.gov/cointel-pro</a></p>
+</li>
+<li>
+<p><a href="https://www.intelligence.senate.gov/sites/default/files/94755_II.pdf" class="bare">https://www.intelligence.senate.gov/sites/default/files/94755_II.pdf</a></p>
+</li>
+<li>
+<p><a href="https://www.freedomarchives.org/Documents/Finder/Black%20Liberation%20Disk/Black%20Power!/SugahData/Government/COINTELPRO.S.pdf" class="bare">https://www.freedomarchives.org/Documents/Finder/Black%20Liberation%20Disk/Black%20Power!/SugahData/Government/COINTELPRO.S.pdf</a></p>
+</li>
+<li>
+<p><a href="https://www.krusch.com/books/kennedy/Cointelpro_Papers.pdf" class="bare">https://www.krusch.com/books/kennedy/Cointelpro_Papers.pdf</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">CV dazzle</dt>
+<dd>
+<p>A type of camouflage used to hamper facial recognition software, inspired by dazzle
+camouflage used by warships.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Computer_vision_dazzle" class="bare">https://en.wikipedia.org/wiki/Computer_vision_dazzle</a>
+<a href="https://en.wikipedia.org/wiki/Dazzle_camouflage" class="bare">https://en.wikipedia.org/wiki/Dazzle_camouflage</a></p>
+</li>
+<li>
+<p><a href="https://cvdazzle.com/" class="bare">https://cvdazzle.com/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Caller ID spoofing</dt>
+<dd>
+<p>A method or tool that allows the caller to pretend that the call is coming from a different number.
+Masha uses it to read friends' voicemails pretending she is calling from <em>their</em> numbers.
+Scammers use this method to pretend they are calling from the same area code&#8201;&#8212;&#8201;that way
+there is more chances that you pick the call.
+Sometimes scammers even pretend they are calling from the <em>actual</em> 800-number which belongs to IRS.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Caller_ID_spoofing" class="bare">https://en.wikipedia.org/wiki/Caller_ID_spoofing</a></p>
+</li>
+<li>
+<p><a href="https://www.fcc.gov/consumers/guides/spoofing-and-caller-id" class="bare">https://www.fcc.gov/consumers/guides/spoofing-and-caller-id</a></p>
+</li>
+<li>
+<p><a href="https://blog.rapid7.com/2018/05/24/how-to-build-your-own-caller-id-spoofer-part-1/" class="bare">https://blog.rapid7.com/2018/05/24/how-to-build-your-own-caller-id-spoofer-part-1/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Catching password from key sounds</dt>
+<dd>
+<p>Different keys on the keyboard produce slightly different sounds so the recorded acoustic pattern
+of you typing in your password can be used to guess it. That&#8217;s why Masha does &#8220;medium-loud AAAAAH&#8221;
+when typing her password.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://security.stackexchange.com/questions/23322/keyboard-sniffing-through-audio-recorded-typing-patterns" class="bare">https://security.stackexchange.com/questions/23322/keyboard-sniffing-through-audio-recorded-typing-patterns</a></p>
+</li>
+<li>
+<p><a href="https://www.davidsalomon.name/CompSec/auxiliary/KybdEmanation.pdf" class="bare">https://www.davidsalomon.name/CompSec/auxiliary/KybdEmanation.pdf</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Keystroke_logging" class="bare">https://en.wikipedia.org/wiki/Keystroke_logging</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Citizen Lab</dt>
+<dd>
+<p>A laboratory based at University of Toronto which works on protecting human rights and privacy
+in cyberspace.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://citizenlab.ca/" class="bare">https://citizenlab.ca/</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Citizen_Lab" class="bare">https://en.wikipedia.org/wiki/Citizen_Lab</a></p>
+</li>
+<li>
+<p><a href="https://twitter.com/citizenlab" class="bare">https://twitter.com/citizenlab</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Cryptoparty</dt>
+<dd>
+<p>CryptoParty (Crypto-Party) is a grassroots global endeavor to introduce the basics of
+practical cryptography such as the Tor anonymity network, key signing parties,
+disk encryption and virtual private networks to the general public.
+The project primarily consists of a series of free public workshops.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.cryptoparty.in/" class="bare">https://www.cryptoparty.in/</a></p>
+</li>
+<li>
+<p><a href="https://github.com/cryptoparty/handbook" class="bare">https://github.com/cryptoparty/handbook</a></p>
+</li>
+<li>
+<p><a href="https://www.cryptoparty.in/learn/handbook" class="bare">https://www.cryptoparty.in/learn/handbook</a> (available in PDF, EPUB, MOBI, HTML)</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Data-collecting light bulbs</dt>
+<dd>
+<p>Most likely Masha means this report: <a href="https://darkcubed.com/iot-security-technical" class="bare">https://darkcubed.com/iot-security-technical</a>.
+Short versions:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://blog.adafruit.com/2019/03/10/is-your-smart-bulb-collecting-data-iot-smartdevice/" class="bare">https://blog.adafruit.com/2019/03/10/is-your-smart-bulb-collecting-data-iot-smartdevice/</a></p>
+</li>
+<li>
+<p><a href="https://www.cnet.com/news/smart-lightbulbs-could-be-exporting-your-personal-data-to-china/" class="bare">https://www.cnet.com/news/smart-lightbulbs-could-be-exporting-your-personal-data-to-china/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Dazzle mask</dt>
+<dd>
+<p>A mask that allows you to trick facial-recognition software into thinking you are not human.
+They may use reflective tapes, infrared lights, lenses, etc.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.businessinsider.com/clothes-accessories-that-outsmart-facial-recognition-tech-2019-10" class="bare">https://www.businessinsider.com/clothes-accessories-that-outsmart-facial-recognition-tech-2019-10</a></p>
+</li>
+<li>
+<p><a href="https://www.reflectacles.com/#home" class="bare">https://www.reflectacles.com/#home</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Double-entry bookkeeping</dt>
+<dd>
+<p>A system of book keeping where every entry to an account requires a corresponding and
+opposite entry to a different account. The double-entry has two equal and corresponding sides
+known as debit and credit.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Double-entry_bookkeeping" class="bare">https://en.wikipedia.org/wiki/Double-entry_bookkeeping</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">EFF&#8217;s Surveillance Self-Defense Kit</dt>
+<dd>
+<p>Surveillance Self-Defense is a digital security guide that teaches you how to assess your
+personal risk from online spying.
+It can help protect you from surveillance by those who might want to find out your secrets,
+from petty criminals to nation states.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://ssd.eff.org/en" class="bare">https://ssd.eff.org/en</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Cyber_self-defense" class="bare">https://en.wikipedia.org/wiki/Cyber_self-defense</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">EL wire</dt>
+<dd>
+<p>Electroluminescent wire is a thin copper wire coated in a phosphor that produces light through electroluminescence when an alternating current is applied to it. More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Electroluminescent_wire" class="bare">https://en.wikipedia.org/wiki/Electroluminescent_wire</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">EXIF metadata</dt>
+<dd>
+<p>Metadata stored in JPEG files that may include technical information about the photo
+like exposure, etc. and also geolocation of the photo if this feature is available
+(i.e. the photo is taken by a smartphone with GPS).
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Exif" class="bare">https://en.wikipedia.org/wiki/Exif</a></p>
+</li>
+<li>
+<p><a href="https://www.howtogeek.com/211427/how-to-see-exactly-where-a-photo-was-taken-and-keep-your-location-private/" class="bare">https://www.howtogeek.com/211427/how-to-see-exactly-where-a-photo-was-taken-and-keep-your-location-private/</a></p>
+</li>
+<li>
+<p><a href="https://alpinesecurity.com/blog/2-simple-ways-to-extract-gps-coordinates-from-pictures/" class="bare">https://alpinesecurity.com/blog/2-simple-ways-to-extract-gps-coordinates-from-pictures/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Enigmail</dt>
+<dd>
+<p>In the email header from Kriztina there is a phrase:</p>
+<div class="listingblock">
+<div class="content">
+<pre>Enigmail UNTRUSTED good signature from Kriztina &lt;kriztinak@riseup.net&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That means she uses <em>Enigmail</em> to encrypt and digitally sign her messages.
+Enigmail works with several mail clients including Thunderbird and Evolution.
+The meaning of "Untrusted good signature" was explained on the Enigmail forum:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>GOOD means that Enigmail verified that the mail content matches the
+signature. Nobody tampered with the message. It reached you unmodified
+and only the ones that have the SECRET key it is signed with are able
+to perform that particular signature.
+UNTRUSTED means that although the message matches the signature, GnuPG
+cannot check whether the key belongs to the OWNER of the email address.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>More:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://enigmail.net/index.php/en/" class="bare">https://enigmail.net/index.php/en/</a></p>
+</li>
+<li>
+<p><a href="https://www.enigmail.net/list_archive/2004-December/003266.html" class="bare">https://www.enigmail.net/list_archive/2004-December/003266.html</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Everything after the slash</dt>
+<dd>
+<p>Masha says: "I itched to get their Google searches, but that was hard because
+Google had better security than every other service they visited&#8201;&#8212;&#8201;strong SSL
+certificates that hid everything after the slash,
+so all I could see from my vantage point was <code><a href="https://google.com/" class="bare">https://google.com/</a></code>&#8201;&#8212;&#8201;and then&#8230;&#8203;
+nothing."</p>
+<div class="paragraph">
+<p>This happens when you visit sites that use HTTPS (secure HTTP) and hence,
+use SSL/TLS certificates.
+Even if somebody (in this case Masha) intercepts the traffic between you and
+your provider, they will see only the domain name of the server you are accessing.
+Everything else in your URL (search queries, usernames, etc.) will be hidden.</p>
+</div>
+<div class="paragraph">
+<p>More:</p>
+</div>
+</dd>
+<dt class="hdlist1">Executive order 12333</dt>
+<dd>
+<p>Executive Order 12333, signed on December 4, 1981 by U.S. President Ronald Reagan,
+was an Executive Order intended to extend powers and responsibilities of U.S.
+intelligence agencies and direct the leaders of U.S. federal agencies to
+co-operate fully with CIA requests for information.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Executive_Order_12333" class="bare">https://en.wikipedia.org/wiki/Executive_Order_12333</a></p>
+</li>
+<li>
+<p><a href="https://www.archives.gov/federal-register/codification/executive-order/12333.html" class="bare">https://www.archives.gov/federal-register/codification/executive-order/12333.html</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Exploit</dt>
+<dd>
+<p>A piece of software or a methodology (series of steps) that allows hackers to use
+a known vulnerability to get access to a target computer. More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Exploit_%28computer_security%29">https://en.wikipedia.org/wiki/Exploit_(computer_security)</a></p>
+</li>
+<li>
+<p>Exploit database: <a href="https://www.exploit-db.com/" class="bare">https://www.exploit-db.com/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">FOB</dt>
+<dd>
+<p>A Forward Operating Base (FOB) is any secured forward operational level military position, commonly a military base, that is used to support strategic goals and tactical objectives.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Forward_operating_base" class="bare">https://en.wikipedia.org/wiki/Forward_operating_base</a></p>
+</li>
+<li>
+<p><a href="https://military.wikia.org/wiki/Forward_Operating_Base_Grizzly" class="bare">https://military.wikia.org/wiki/Forward_Operating_Base_Grizzly</a> (FOB Grizzly mentioned in the book)</p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Forward_Operating_Base_Grizzly" class="bare">https://en.wikipedia.org/wiki/Forward_Operating_Base_Grizzly</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Facebook Tor Hidden Service</dt>
+<dd>
+<p>A site that allows access to Facebook through the Tor protocol.
+According to Alec Muffett "Facebook&#8217;s onion address provides a way to access Facebook through Tor
+without losing the cryptographic protections provided by the Tor cloud. &#8230;&#8203;
+it provides end-to-end communication, from your browser directly into a Facebook datacentre."
+The address is <code>facebookcorewwwi.onion</code> where <code>.onion</code> is the common top-level domain name
+for sites in Tor network. You can enter this domain name in the Tor Browser&#8217;s address field.
+It won&#8217;t work in your normal (Chrome, Firefox, etc.) browser. More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Facebookcorewwwi.onion" class="bare">https://en.wikipedia.org/wiki/Facebookcorewwwi.onion</a></p>
+</li>
+<li>
+<p><a href="https://blog.torproject.org/facebook-hidden-services-and-https-certs" class="bare">https://blog.torproject.org/facebook-hidden-services-and-https-certs</a></p>
+</li>
+<li>
+<p><a href="https://www.cheatsheet.com/technology/what-is-facebooks-tor-hidden-service-why-does-it-matter.html/" class="bare">https://www.cheatsheet.com/technology/what-is-facebooks-tor-hidden-service-why-does-it-matter.html/</a> (this one has a simple description of what Tor is and how it works)</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Faraday cage</dt>
+<dd>
+<p>An enclosure that blocks electromagnetic fields.
+Could be a room, a cabinet, a bag.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Faraday_cage" class="bare">https://en.wikipedia.org/wiki/Faraday_cage</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Fibonaccis</dt>
+<dd>
+<p>Fibonacci numbers, the sequence where each next number is a sum of the two previous.
+They have a lot of interesting features, they are found in nature, etc.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.mathsisfun.com/numbers/fibonacci-sequence.html" class="bare">https://www.mathsisfun.com/numbers/fibonacci-sequence.html</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Fibonacci_number" class="bare">https://en.wikipedia.org/wiki/Fibonacci_number</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=ahXIMUkSXX0" class="bare">https://www.youtube.com/watch?v=ahXIMUkSXX0</a> (a beautiful explanation from Vi Hart)</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Game theory</dt>
+<dd>
+<p>A branch of mathematics that studies different strategies in various types of games.
+Games here are played in different fields such as economics, social studies, etc.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Game_theory" class="bare">https://en.wikipedia.org/wiki/Game_theory</a></p>
+</li>
+<li>
+<p><a href="https://plato.stanford.edu/entries/game-theory/" class="bare">https://plato.stanford.edu/entries/game-theory/</a></p>
+</li>
+<li>
+<p><a href="http://www.dklevine.com/general/whatis.htm" class="bare">http://www.dklevine.com/general/whatis.htm</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Garbage in, garbage out (GIGO)</dt>
+<dd>
+<p>This phrase was first used in November 1957 and is still quite popular among programmers
+and mathematicians. It&#8217;s related to the terms FIFO (first in, first out) and
+LIFO (last in, first out) that describe the behavior of the queue and stack data structures,
+respectively.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Garbage_in,_garbage_out" class="bare">https://en.wikipedia.org/wiki/Garbage_in,_garbage_out</a></p>
+</li>
+<li>
+<p><a href="https://techterms.com/definition/gigo" class="bare">https://techterms.com/definition/gigo</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/FIFO_%28computing_and_electronics%29">https://en.wikipedia.org/wiki/FIFO_(computing_and_electronics)</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Stack_%28abstract_data_type%29">https://en.wikipedia.org/wiki/Stack_(abstract_data_type)</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Google Glass</dt>
+<dd>
+<p>Smart glasses created by Google and first introduced in 2013.
+Masha calls them &#8220;long-abandoned&#8221;, but according to Wikipedia in 2017 and 2019
+Google announced Google Glass Enterprise Edition and Enterprise Edition 2 respectively.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Google_Glass" class="bare">https://en.wikipedia.org/wiki/Google_Glass</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Hacking a self-driving car</dt>
+<dd>
+<p>So far there are only several reports of such hacks and none of them has turned violent yet.
+But still some possibilities are described in this paper:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://physicsworld.com/a/how-to-hack-a-self-driving-car/" class="bare">https://physicsworld.com/a/how-to-hack-a-self-driving-car/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Hardware keylogger</dt>
+<dd>
+<p>A device used to log all keystrokes on a computer which is used to capture passwords.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Hardware_keylogger" class="bare">https://en.wikipedia.org/wiki/Hardware_keylogger</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Keystroke_logging" class="bare">https://en.wikipedia.org/wiki/Keystroke_logging</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Hashing</dt>
+<dd>
+<p>Masha explains it pretty well in the book.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Hash_function" class="bare">https://en.wikipedia.org/wiki/Hash_function</a></p>
+</li>
+<li>
+<p><a href="https://medium.com/tech-tales/what-is-hashing-6edba0ebfa67" class="bare">https://medium.com/tech-tales/what-is-hashing-6edba0ebfa67</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Hoberman sphere</dt>
+<dd>
+<p>An isokinetic structure patented by Chuck Hoberman that resembles a geodesic dome, but is capable of folding down to a fraction of its normal size by the scissor-like action of its joints.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Hoberman_sphere" class="bare">https://en.wikipedia.org/wiki/Hoberman_sphere</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Hyperbolic discounting</dt>
+<dd>
+<p>It is well explained by Ange in the book.
+Hyperbolic discounting refers to the tendency for people to increasingly choose a
+smaller-sooner reward over a larger-later reward as the delay occurs sooner rather
+than later in time.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.behaviorlab.org/Papers/Hyperbolic.pdf" class="bare">http://www.behaviorlab.org/Papers/Hyperbolic.pdf</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Hyperbolic_discounting" class="bare">https://en.wikipedia.org/wiki/Hyperbolic_discounting</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">IED</dt>
+<dd>
+<p>Improvised explosive device. More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Improvised_explosive_device" class="bare">https://en.wikipedia.org/wiki/Improvised_explosive_device</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">IMSI-catcher</dt>
+<dd>
+<p>A device that can <em>pretend</em> to be a cell phone base station and make all phones in the nearest proximity
+to connect to it (because its signal stronger than the real cell towers that are farther away).
+That way it will be able to collect all information about the connected phones such as IMSI
+(international mobile subscriber identity), etc. Also it will be able to intercept phones' traffic,
+voice and data using "man-in-the-middle" attack.
+Devices can be purchased online, as well as anti-IMSI-catchers.
+You can build one yourself, if you want (see the link below).
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/IMSI-catcher" class="bare">https://en.wikipedia.org/wiki/IMSI-catcher</a></p>
+</li>
+<li>
+<p><a href="https://www.paladion.net/blogs/how-to-build-an-imsi-catcher-to-intercept-gsm-traffic" class="bare">https://www.paladion.net/blogs/how-to-build-an-imsi-catcher-to-intercept-gsm-traffic</a></p>
+</li>
+<li>
+<p><a href="https://www.vice.com/en/article/gy7qm9/how-i-made-imsi-catcher-cheap-amazon-github" class="bare">https://www.vice.com/en/article/gy7qm9/how-i-made-imsi-catcher-cheap-amazon-github</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Infect your phone with WhatsApp message</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://arstechnica.com/information-technology/2019/05/whatsapp-vulnerability-exploited-to-infect-phones-with-israeli-spyware/" class="bare">https://arstechnica.com/information-technology/2019/05/whatsapp-vulnerability-exploited-to-infect-phones-with-israeli-spyware/</a></p>
+</li>
+<li>
+<p><a href="https://www.2-spyware.com/remove-whatsapp-virus.html" class="bare">https://www.2-spyware.com/remove-whatsapp-virus.html</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Information Cascade</dt>
+<dd>
+<p>A pattern of information flow when you can see how information or decision coming from
+one person triggers the series of decisions or information passes from several other persons.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Information_cascade" class="bare">https://en.wikipedia.org/wiki/Information_cascade</a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/2005.11041" class="bare">https://arxiv.org/abs/2005.11041</a></p>
+</li>
+<li>
+<p><a href="https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch16.pdf" class="bare">https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch16.pdf</a> (part of a book "Networks, Crowds, and Markets" <a href="https://www.cs.cornell.edu/home/kleinber/networks-book/" class="bare">https://www.cs.cornell.edu/home/kleinber/networks-book/</a>)</p>
+</li>
+<li>
+<p>Information Cascade Experiments <a href="https://wmpeople.wm.edu/asset/index/lrande/cascadehandbook" class="bare">https://wmpeople.wm.edu/asset/index/lrande/cascadehandbook</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Jersey barrier</dt>
+<dd>
+<p>A Jersey barrier, Jersey wall, or Jersey bump is a modular concrete or plastic barrier employed to separate lanes of traffic.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Jersey_barrier" class="bare">https://en.wikipedia.org/wiki/Jersey_barrier</a></p>
+</li>
+<li>
+<p><a href="https://otwsafety.com/how-jersey-barriers-got-their-name/" class="bare">https://otwsafety.com/how-jersey-barriers-got-their-name/</a> (fun facts about)</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Kettling</dt>
+<dd>
+<p>A police tactic for controlling large crowds.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Kettling" class="bare">https://en.wikipedia.org/wiki/Kettling</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Lidar</dt>
+<dd>
+<p>"Light radar"&#8201;&#8212;&#8201;a device that used laser light to scan the area and measure distances to
+objects, walls, etc. It is also used as an acronym of "light detection and ranging"
+and "laser imaging, detection, and ranging".
+In the book Masha uses a drone to get "lidar outlines of all the human in the space".
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Lidar" class="bare">https://en.wikipedia.org/wiki/Lidar</a></p>
+</li>
+<li>
+<p><a href="https://www.neonscience.org/resources/learning-hub/tutorials/lidar-basics" class="bare">https://www.neonscience.org/resources/learning-hub/tutorials/lidar-basics</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">LiveJournal</dt>
+<dd>
+<p>A social network platform created in 1999 that used to be popular before Facebook and Twitter.
+In 2007 it was sold to Russian media company SUP Media. Written in Perl.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/LiveJournal" class="bare">https://en.wikipedia.org/wiki/LiveJournal</a></p>
+</li>
+<li>
+<p><a href="https://www.livejournal.com/" class="bare">https://www.livejournal.com/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">MAC address</dt>
+<dd>
+<p>Masha automatically corrects her boss when she says: &#8220;max address&#8221;.
+MAC stands for &#8220;media access control&#8221; and MAC address means the low-level
+address assigned to a network card.
+Sometimes MAC address is called &#8220;physical address&#8221; or &#8220;hardware address&#8221;.
+Usually it is represented as a series of hexadecimal numbers separated by
+colons, like this: <code>00:0a:95:9d:68:16</code>.
+Usually MAC address identifies a physical device (computer or phone)
+pretty well (as opposed to IP address that could be different in different networks).
+MAC address can be changed by the OS, but that only stays until the next reboot.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/MAC_address" class="bare">https://en.wikipedia.org/wiki/MAC_address</a></p>
+</li>
+<li>
+<p><a href="https://whatismyipaddress.com/mac-address" class="bare">https://whatismyipaddress.com/mac-address</a></p>
+</li>
+<li>
+<p><a href="https://whatismyipaddress.com/change-mac" class="bare">https://whatismyipaddress.com/change-mac</a>
+<a href="https://www.howtogeek.com/192173/how-and-why-to-change-your-mac-address-on-windows-linux-and-mac/" class="bare">https://www.howtogeek.com/192173/how-and-why-to-change-your-mac-address-on-windows-linux-and-mac/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">MIT Media Lab</dt>
+<dd>
+<p>A research lab at MIT famous for its inventions and projects in areas of human-computer interaction,
+artistic visualization, musical devices, sociable robots, etc.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.media.mit.edu/" class="bare">https://www.media.mit.edu/</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/MIT_Media_Lab" class="bare">https://en.wikipedia.org/wiki/MIT_Media_Lab</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">MRAP</dt>
+<dd>
+<p>Mine-Resistant Ambush Protected is a term for United States military light
+tactical vehicles produced as part of the MRAP program that are designed
+specifically to withstand improvised explosive device (IED) attacks and ambushes.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/MRAP" class="bare">https://en.wikipedia.org/wiki/MRAP</a></p>
+</li>
+<li>
+<p><a href="https://asc.army.mil/web/portfolio-item/cs-css-mine-resistant-ambush-protected-mrap-vehicle-mrap/" class="bare">https://asc.army.mil/web/portfolio-item/cs-css-mine-resistant-ambush-protected-mrap-vehicle-mrap/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">MRE</dt>
+<dd>
+<p>The Meal, Ready-to-Eat – commonly known as the MRE – is a self-contained,
+individual field ration in lightweight packaging bought by the United States
+Department of Defense for its service members for use in combat or other field
+conditions where organized food facilities are not available.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Meal,_Ready-to-Eat" class="bare">https://en.wikipedia.org/wiki/Meal,_Ready-to-Eat</a></p>
+</li>
+<li>
+<p><a href="https://www.mreinfo.com/" class="bare">https://www.mreinfo.com/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Machine learning</dt>
+<dd>
+<p>Ange does a great job explaining machine learning as simple as possible.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Machine_learning" class="bare">https://en.wikipedia.org/wiki/Machine_learning</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Malware</dt>
+<dd>
+<p>Malicious software: software intentionally designed to cause damage to computer systems.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Malware" class="bare">https://en.wikipedia.org/wiki/Malware</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Malware attack on baseband radio</dt>
+<dd>
+<p>Baseband vulnerabilities give attackers the ability to monitor a phone’s communications,
+place calls, send premium SMS messages or cause large data transfers unbeknownst
+to the owner of the phone.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.usenix.org/system/files/conference/woot12/woot12-final24.pdf" class="bare">https://www.usenix.org/system/files/conference/woot12/woot12-final24.pdf</a></p>
+</li>
+<li>
+<p><a href="https://ccdcoe.org/uploads/2018/10/Art-16-Attacking-the-Baseband-Modem-of-Breach-the-Users-Privacy-and-Network-Security.pdf" class="bare">https://ccdcoe.org/uploads/2018/10/Art-16-Attacking-the-Baseband-Modem-of-Breach-the-Users-Privacy-and-Network-Security.pdf</a></p>
+</li>
+<li>
+<p><a href="https://threatpost.com/baseband-zero-day-exposes-millions-of-mobile-phones-to-attack/124833/" class="bare">https://threatpost.com/baseband-zero-day-exposes-millions-of-mobile-phones-to-attack/124833/</a></p>
+</li>
+<li>
+<p><a href="https://attack.mitre.org/techniques/T1477/" class="bare">https://attack.mitre.org/techniques/T1477/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Man-in-the-middle attack</dt>
+<dd>
+<p>This is the category of attacks where the attacker injects <em>something</em> in the transmission
+channel (voice, data, etc.) that can listen to the traffic and potentially alter the traffic.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack" class="bare">https://en.wikipedia.org/wiki/Man-in-the-middle_attack</a></p>
+</li>
+<li>
+<p><a href="https://www.rapid7.com/fundamentals/man-in-the-middle-attacks/" class="bare">https://www.rapid7.com/fundamentals/man-in-the-middle-attacks/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Microfiche</dt>
+<dd>
+<p>A sheet of flat film, 105x148 mm in size, that contains a set of microimages, usually of size 10x14 mm.
+It is used to store books, magazines, newspapers in a compact and durable form.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Microform#Microfiche" class="bare">https://en.wikipedia.org/wiki/Microform#Microfiche</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">MySpace</dt>
+<dd>
+<p>A social network that used to be the largest social networking site in the world (between 2005 and 2009).
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Myspace" class="bare">https://en.wikipedia.org/wiki/Myspace</a></p>
+</li>
+<li>
+<p><a href="https://myspace.com/" class="bare">https://myspace.com/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">NFC, Near-Field Communication</dt>
+<dd>
+<p>A set of communication protocols for communication between two electronic devices
+over a distance of 4 cm. Used in various types of key cards, passes. etc.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Near-field_communication" class="bare">https://en.wikipedia.org/wiki/Near-field_communication</a></p>
+</li>
+<li>
+<p><a href="https://nfc-forum.org/" class="bare">https://nfc-forum.org/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Openstreetmap</dt>
+<dd>
+<p>Wrongly called "Openstreetmaps" in the book. An open source alternative to Google Maps.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.openstreetmap.org/" class="bare">https://www.openstreetmap.org/</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/OpenStreetMap" class="bare">https://en.wikipedia.org/wiki/OpenStreetMap</a></p>
+</li>
+<li>
+<p><a href="https://wiki.osmfoundation.org/wiki/Main_Page" class="bare">https://wiki.osmfoundation.org/wiki/Main_Page</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">PGP</dt>
+<dd>
+<p>Pretty Good Privacy, a cryptographic method used for encryption and digital signing documents, emails, etc.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Pretty_Good_Privacy" class="bare">https://en.wikipedia.org/wiki/Pretty_Good_Privacy</a></p>
+</li>
+<li>
+<p><a href="https://users.ece.cmu.edu/~adrian/630-f04/PGP-intro.html" class="bare">https://users.ece.cmu.edu/~adrian/630-f04/PGP-intro.html</a> (how it works)</p>
+</li>
+<li>
+<p><a href="https://www.openpgp.org/" class="bare">https://www.openpgp.org/</a></p>
+</li>
+<li>
+<p><a href="https://gnupg.org/" class="bare">https://gnupg.org/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">PX</dt>
+<dd>
+<p>A type of retail store operating on United States military installations worldwide.
+Originally akin to trading posts, they now resemble department stores or strip malls.
+PX is US Army terminology. US Air Force uses Base Exchange (BX), US Navy uses
+Navy Exchange (NEX), Marine Corps calls it Marine Corps Exchange (MCX).
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://military.wikia.org/wiki/Base_Exchange" class="bare">https://military.wikia.org/wiki/Base_Exchange</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Base_exchange" class="bare">https://en.wikipedia.org/wiki/Base_exchange</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Paranoid Android</dt>
+<dd>
+<p>In the book it seems to be the Android-based OS for smartphones focused on security.
+The main feature of it is that you update it very often to make sure all known
+vulnerabilities are patched or at least there are no known exploits for them.
+Masha explains that you should always check the OS signatures to make sure
+you are actually installing the correct bits and not something created by
+the government hackers containing backdoors and loggers.
+Apparently there is such a project in real life, but it&#8217;s not specifically
+focused on security&#8201;&#8212;&#8201;it just uses the cool name.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Paranoid_Android_%28software%29">https://en.wikipedia.org/wiki/Paranoid_Android_(software)</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">ParanoidLinux</dt>
+<dd>
+<p>There is a project with this name (<a href="https://sourceforge.net/projects/linuxparanoid/" class="bare">https://sourceforge.net/projects/linuxparanoid/</a>)
+but it doesn&#8217;t seem to be active.
+Most likely what Masha means by ParanoidLinux is Tails (<a href="https://boingboing.net/2019/12/16/paranoid-linux-for-real.html" class="bare">https://boingboing.net/2019/12/16/paranoid-linux-for-real.html</a>).</p>
+</dd>
+<dt class="hdlist1">Pastebin</dt>
+<dd>
+<p>A storage site where people can post pieces of code and other text information.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Pastebin" class="bare">https://en.wikipedia.org/wiki/Pastebin</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Plausible deniability</dt>
+<dd>
+<p>Plausible deniability is the ability of people, typically senior officials in a formal or
+informal chain of command, to deny knowledge of or responsibility for any damnable actions
+committed by others in an organizational hierarchy because of a lack or absence of evidence
+that can confirm their participation, even if they were personally involved in or at least
+willfully ignorant of the actions. If illegal or otherwise-disreputable and unpopular
+activities become public, high-ranking officials may deny any awareness of such acts to
+insulate themselves and shift the blame onto the agents who carried out the acts, as they are
+confident that their doubters will be unable to prove otherwise. The lack of evidence to the
+contrary ostensibly makes the denial plausible (credible), but sometimes, it makes the denial
+only unactionable.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Plausible_deniability" class="bare">https://en.wikipedia.org/wiki/Plausible_deniability</a></p>
+</li>
+<li>
+<p><a href="https://www.urbandictionary.com/define.php?term=plausible%20deniability" class="bare">https://www.urbandictionary.com/define.php?term=plausible%20deniability</a></p>
+</li>
+<li>
+<p><a href="https://politicaldictionary.com/words/plausible-deniability/" class="bare">https://politicaldictionary.com/words/plausible-deniability/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Public-private key cryptography</dt>
+<dd>
+<p>Again, Masha does a great job explaining the basics.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Public-key_cryptography" class="bare">https://en.wikipedia.org/wiki/Public-key_cryptography</a></p>
+</li>
+<li>
+<p><a href="https://ssd.eff.org/en/module/deep-dive-end-end-encryption-how-do-public-key-encryption-systems-work" class="bare">https://ssd.eff.org/en/module/deep-dive-end-end-encryption-how-do-public-key-encryption-systems-work</a></p>
+</li>
+<li>
+<p><a href="https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:online-data-security/xcae6f4a7ff015e7d:data-encryption-techniques/a/public-key-encryption" class="bare">https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:online-data-security/xcae6f4a7ff015e7d:data-encryption-techniques/a/public-key-encryption</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Pwned</dt>
+<dd>
+<p>Historically it&#8217;s a misspelled word &#8220;owned&#8221; (part of <em>leetspeak</em>) which is now used when somebody
+compromised your device (phone, computer) or your data and now you are <em>pwned</em>
+by bad guys.
+There is a site called &#8220;Have I been pwned?&#8221; which allows you to check if your
+personal data was leaked during one of the known data breaches.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Leet#Owned_and_pwned" class="bare">https://en.wikipedia.org/wiki/Leet#Owned_and_pwned</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Have_I_Been_Pwned%3F" class="bare">https://en.wikipedia.org/wiki/Have_I_Been_Pwned%3F</a></p>
+</li>
+<li>
+<p><a href="https://haveibeenpwned.com/" class="bare">https://haveibeenpwned.com/</a></p>
+</li>
+<li>
+<p><a href="https://www.urbandictionary.com/define.php?term=pwned" class="bare">https://www.urbandictionary.com/define.php?term=pwned</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">RFID (Radio-frequency identification)</dt>
+<dd>
+<p>A method of exchanging identification information over radio.
+It includes RFID tags and RFID readers.
+RFID tags can be passive (i.e. not containing any battery) and really cheap.
+They get the energy they need to operate from the reader that reads from them.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Radio-frequency_identification" class="bare">https://en.wikipedia.org/wiki/Radio-frequency_identification</a></p>
+</li>
+<li>
+<p><a href="https://www.rfidjournal.com/" class="bare">https://www.rfidjournal.com/</a></p>
+</li>
+<li>
+<p><a href="https://resources.bishopfox.com/resources/tools/rfid-hacking/attack-tools/" class="bare">https://resources.bishopfox.com/resources/tools/rfid-hacking/attack-tools/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">RPG</dt>
+<dd>
+<p><em>Not</em> a Role-Playing Game (here).
+A rocket-propelled grenade (often abbreviated RPG) is a shoulder-fired missile
+weapon that launches rockets equipped with an explosive warhead.
+Fun fact:
+The term "rocket-propelled grenade" is a backronym; it stems from the Russian
+language РПГ which stands for ручной противотанковый гранатомёт (transliterated as
+"ruchnoy protivotankovy granatomyot", which has the initials "RPG"), meaning
+"handheld anti-tank grenade launcher", the name given to early Russian designs.
+Typical range is around several hundred meters.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Rocket-propelled_grenade" class="bare">https://en.wikipedia.org/wiki/Rocket-propelled_grenade</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/RPG-7" class="bare">https://en.wikipedia.org/wiki/RPG-7</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Raspi Altair 8800</dt>
+<dd>
+<p>Altair 8800 is one of the first personal computers which was introduced in 1974.
+For many people it has sentimental value&#8201;&#8212;&#8201;that&#8217;s why some people design and sell
+Altair emulators that use modern technologies such as Arduino and Raspberry Pi.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Altair_8800" class="bare">https://en.wikipedia.org/wiki/Altair_8800</a></p>
+</li>
+<li>
+<p><a href="https://www.adwaterandstir.com/product/altair-8800-emulator-kit/" class="bare">https://www.adwaterandstir.com/product/altair-8800-emulator-kit/</a></p>
+</li>
+<li>
+<p><a href="https://github.com/dankar/altair8800" class="bare">https://github.com/dankar/altair8800</a></p>
+</li>
+<li>
+<p><a href="http://www.astrorat.com/altair8800/altair8800clonemeetrp.html" class="bare">http://www.astrorat.com/altair8800/altair8800clonemeetrp.html</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Red team</dt>
+<dd>
+<p>A red team is a group that helps organizations to improve themselves by providing opposition
+to the point of view of the organization that they are helping.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Red_team" class="bare">https://en.wikipedia.org/wiki/Red_team</a></p>
+</li>
+<li>
+<p><a href="https://csrc.nist.gov/glossary/term/Red_Team" class="bare">https://csrc.nist.gov/glossary/term/Red_Team</a></p>
+</li>
+<li>
+<p><a href="https://www.redteamsecure.com/blog/what-is-red-teaming-and-why-do-i-need-it-2/" class="bare">https://www.redteamsecure.com/blog/what-is-red-teaming-and-why-do-i-need-it-2/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Regular expressions</dt>
+<dd>
+<p>A (smart) way to search specific patterns or strings in text files.
+You can describe patterns like "one to three numbers followed by a dash followed by several capital letters, no more than 8."
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Regular_expression" class="bare">https://en.wikipedia.org/wiki/Regular_expression</a></p>
+</li>
+<li>
+<p><a href="https://regexr.com/" class="bare">https://regexr.com/</a></p>
+</li>
+<li>
+<p><a href="https://regexone.com/" class="bare">https://regexone.com/</a> (interactive tutorial)</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Reverse shell</dt>
+<dd>
+<p>A method to connect back to the attacking computer from the target computer.
+Because it is initiated from the target computer it can be a way to bypass
+a firewall or NAT service.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.netsparker.com/blog/web-security/understanding-reverse-shells/" class="bare">https://www.netsparker.com/blog/web-security/understanding-reverse-shells/</a></p>
+</li>
+<li>
+<p><a href="https://hackernoon.com/reverse-shell-cf154dfee6bd" class="bare">https://hackernoon.com/reverse-shell-cf154dfee6bd</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Riseup</dt>
+<dd>
+<p>Masha receives an email from Kriztina from her address at <code>riseup.net</code>.
+Riseup provides online communication tools for people and groups working on liberatory social
+change.
+We are a project to create democratic alternatives and practice self-determination by
+controlling our own secure means of communications.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://riseup.net/" class="bare">https://riseup.net/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">SIM-shaped tentacle</dt>
+<dd>
+<p>Most likely Masha uses a SIM extension cable similar to this: <a href="https://www.microsatacables.com/micro-sim-card-to-sim-card-extension-cable-msim-1175-ext" class="bare">https://www.microsatacables.com/micro-sim-card-to-sim-card-extension-cable-msim-1175-ext</a></p>
+</dd>
+<dt class="hdlist1">Safe Hex</dt>
+<dd>
+<p>The rules for safe computing.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.techsupportalert.com/safe-hex-safe-computing-practices.htm" class="bare">https://www.techsupportalert.com/safe-hex-safe-computing-practices.htm</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Sectec</dt>
+<dd>
+<p><em>Not</em> a CCTV camera produced by Shenshen Sectec Co. (<a href="http://www.sectec.com.cn/" class="bare">http://www.sectec.com.cn/</a>)</p>
+</dd>
+<dt class="hdlist1">Semtex</dt>
+<dd>
+<p>More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Semtex" class="bare">https://en.wikipedia.org/wiki/Semtex</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Shift-tilt miniature</dt>
+<dd>
+<p>Tilt–shift photography (Masha incorrectly calls it &#8220;shift-tilt&#8221;) is the use of camera
+movements that change the orientation or position of the lens with respect to the film
+or image sensor on cameras.</p>
+<div class="paragraph">
+<p>Sometimes the term is used when the large depth of field is simulated with digital
+post-processing; the name may derive from a perspective control lens (or tilt–shift lens)
+normally required when the effect is produced optically.
+More:</p>
+</div>
+</dd>
+<dt class="hdlist1">Signal</dt>
+<dd>
+<p>A communication application which is considered to be the most secure for end-to-end
+encryption. Trusted and used by Edward Snowden, Jack Dorsey, Bruce Schneier.
+It uses the open-source Signal protocol.
+Works on iOS, Android, Linux, macOS, Windows
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://signal.org/en/" class="bare">https://signal.org/en/</a></p>
+</li>
+<li>
+<p><a href="https://github.com/signalapp" class="bare">https://github.com/signalapp</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Signal_Protocol" class="bare">https://en.wikipedia.org/wiki/Signal_Protocol</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Stalkerware</dt>
+<dd>
+<p>Monitoring software or spyware that is used for stalking.
+The term was coined when people started to widely use commercial spyware
+to spy on their spouses or intimate partners.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Stalkerware" class="bare">https://en.wikipedia.org/wiki/Stalkerware</a></p>
+</li>
+<li>
+<p><a href="https://stopstalkerware.org/what-is-stalkerware/" class="bare">https://stopstalkerware.org/what-is-stalkerware/</a></p>
+</li>
+<li>
+<p><a href="https://securelist.com/the-state-of-stalkerware-in-2019/93634/" class="bare">https://securelist.com/the-state-of-stalkerware-in-2019/93634/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Stylometry</dt>
+<dd>
+<p>A method to study linguistic style to find out who the author of the document is.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Stylometry" class="bare">https://en.wikipedia.org/wiki/Stylometry</a></p>
+</li>
+<li>
+<p><a href="https://programminghistorian.org/en/lessons/introduction-to-stylometry-with-python" class="bare">https://programminghistorian.org/en/lessons/introduction-to-stylometry-with-python</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Sukey</dt>
+<dd>
+<p>Sukey is an organization which emerged in Britain on 28 January 2011, with the aim of
+improving communications among participants in the student demonstrations.
+Its immediate aim was to counteract the police tactics of kettling, by coordinating
+information electronically and transmitting it to the protesters,
+allowing them to avoid the police kettle.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Sukey" class="bare">https://en.wikipedia.org/wiki/Sukey</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Tails</dt>
+<dd>
+<p>A security-focused Linux distribution that aims at preserving privacy and anonymity.
+It usually loads from a live DVD or USB and provides Linux environment that is based on Tor network.
+Your browsing information is not stored anywhere unless you specifically instruct it to do so.
+<em>Tails</em> provides an emergency shutdown: when you pull the USB out of the slot, the system
+erases all computer memory and shuts itself down immediately.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Tails_%28operating_system%29">https://en.wikipedia.org/wiki/Tails_(operating_system)</a></p>
+</li>
+<li>
+<p><a href="https://tails.boum.org/" class="bare">https://tails.boum.org/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Technical debt</dt>
+<dd>
+<p>Masha calls it &#8220;technology debt&#8221;, but &#8220;technical debt&#8221; is more common.
+Masha explains it pretty well: sometimes you create a solution to quickly
+achieve your short-term goals, but in the long run this solution keeps
+you from doing it the &#8220;right way&#8221;.
+The longer you postpone re-doing it properly, the bigger it grows and
+the harder it is to &#8220;pay off&#8221; your technical debt.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Technical_debt" class="bare">https://en.wikipedia.org/wiki/Technical_debt</a></p>
+</li>
+<li>
+<p><a href="https://martinfowler.com/bliki/TechnicalDebt.html" class="bare">https://martinfowler.com/bliki/TechnicalDebt.html</a> (Martin Fowler explains it well)</p>
+</li>
+<li>
+<p><a href="https://hackernoon.com/there-are-3-main-types-of-technical-debt-heres-how-to-manage-them-4a3328a4c50c" class="bare">https://hackernoon.com/there-are-3-main-types-of-technical-debt-heres-how-to-manage-them-4a3328a4c50c</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Threat model</dt>
+<dd>
+<p>Threat modeling is a process by which potential threats, such as structural
+vulnerabilities or the absence of appropriate safeguards, can be identified,
+enumerated, and mitigations can be prioritized.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Threat_model" class="bare">https://en.wikipedia.org/wiki/Threat_model</a></p>
+</li>
+<li>
+<p><a href="https://securityintelligence.com/posts/what-is-threat-modeling-and-how-does-it-impact-application-security/" class="bare">https://securityintelligence.com/posts/what-is-threat-modeling-and-how-does-it-impact-application-security/</a></p>
+</li>
+<li>
+<p><a href="https://owasp.org/www-community/Application_Threat_Modeling" class="bare">https://owasp.org/www-community/Application_Threat_Modeling</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Tor</dt>
+<dd>
+<p>By using the Tor Browser you can visit web sites without letting them know your location or your actual IP address. More about Tor (including questions "is it legal?"):</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.torproject.org/" class="bare">https://www.torproject.org/</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Tor_%28anonymity_network%29">https://en.wikipedia.org/wiki/Tor_(anonymity_network)</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Tunnel out</dt>
+<dd>
+<p>To use an SSH tunnel to get secure access to a remote box. Usually you use SSH tunneling
+to bypass firewalls that prohibit certain Internet services. More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Tunneling_protocol#Secure_Shell_tunneling" class="bare">https://en.wikipedia.org/wiki/Tunneling_protocol#Secure_Shell_tunneling</a></p>
+</li>
+<li>
+<p><a href="https://www.ssh.com/ssh/tunneling/example" class="bare">https://www.ssh.com/ssh/tunneling/example</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">USB Port Physical Lock</dt>
+<dd>
+<p>There are several variants of such a device that physically blocks access to the USB port.
+Some of them have keys, some should be physically destroyed to get access to the port.
+Examples:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.padjack.com/padjack-versions/usb-port-lock/" class="bare">https://www.padjack.com/padjack-versions/usb-port-lock/</a> (should be destroyed and resealed later)</p>
+</li>
+<li>
+<p><a href="https://connectivitycenter.com/product/smart-keeper-usb-port-lock-professional/" class="bare">https://connectivitycenter.com/product/smart-keeper-usb-port-lock-professional/</a> (used with a key)</p>
+</li>
+<li>
+<p><a href="https://lindy.com/en/technology/port-blockers/" class="bare">https://lindy.com/en/technology/port-blockers/</a> (with a key)</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">USB stick with keypad</dt>
+<dd>
+<p>Probably Marcus uses something like this: <a href="https://www.amazon.com/Encrypted-Certified-Protection-Encryption-16G/dp/B07JNDW5H7/" class="bare">https://www.amazon.com/Encrypted-Certified-Protection-Encryption-16G/dp/B07JNDW5H7/</a></p>
+</dd>
+<dt class="hdlist1">USG</dt>
+<dd>
+<p>USG is a USB firewall that can protect your computer from BadUSB.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://hothardware.com/news/usg-dongle-firewall-device-is-like-a-condom-for-your-usb-ports" class="bare">https://hothardware.com/news/usg-dongle-firewall-device-is-like-a-condom-for-your-usb-ports</a></p>
+</li>
+<li>
+<p><a href="https://github.com/robertfisk/USG" class="bare">https://github.com/robertfisk/USG</a></p>
+</li>
+<li>
+<p><a href="https://github.com/robertfisk/USG/wiki" class="bare">https://github.com/robertfisk/USG/wiki</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Ulysses pact</dt>
+<dd>
+<p>Masha explains it very well. Apparently, there are &#8220;Ulysses pact&#8221; applications and
+other technologies to help you keep your promises.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Ulysses_pact" class="bare">https://en.wikipedia.org/wiki/Ulysses_pact</a> (look for &#8220;Technological context&#8221;)</p>
+</li>
+<li>
+<p><a href="https://ulyssespact.com.au/" class="bare">https://ulyssespact.com.au/</a></p>
+</li>
+<li>
+<p><a href="https://blog.trello.com/master-goals-ulysses-pact" class="bare">https://blog.trello.com/master-goals-ulysses-pact</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Unique identifiers of tire-pressure sensors</dt>
+<dd>
+<p>Tire-pressure sensors installed on most of the cars have unique ID numbers
+configured at the factory. More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Direct_TPMS#Registration_of_direct_TPMS_IDs" class="bare">https://en.wikipedia.org/wiki/Direct_TPMS#Registration_of_direct_TPMS_IDs</a></p>
+</li>
+<li>
+<p><a href="https://blog.caristaapp.com/what-is-tpms-id-registration-2cfc452bb6d4" class="bare">https://blog.caristaapp.com/what-is-tpms-id-registration-2cfc452bb6d4</a></p>
+</li>
+<li>
+<p><a href="https://www.standardbrand.com/media/1646/st10235idl-may14_jtf_id-locator.pdf" class="bare">https://www.standardbrand.com/media/1646/st10235idl-may14_jtf_id-locator.pdf</a></p>
+</li>
+<li>
+<p><a href="https://obdstation.com/tpms-reset-tool/" class="bare">https://obdstation.com/tpms-reset-tool/</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Usenet</dt>
+<dd>
+<p>A "prehistoric" social network that was created around 1980.
+The name comes from the term "users network".
+It was used for discussions and asking questions. It has a hierarchical structure
+of topics called "newsgroups".
+Even before Internet became widely available it used UUCP (Unix-to-Unix Copy) program to
+exchange posts and updates over telephone lines.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Usenet" class="bare">https://en.wikipedia.org/wiki/Usenet</a></p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/UUCP" class="bare">https://en.wikipedia.org/wiki/UUCP</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Uslon prison</dt>
+<dd>
+<p>Apparently it&#8217;s an abbreviation from GULAG days, not a place:
+USLON: "Upravlenie Severnykh Lagerey Osobogo Naznacheniya", Directorate of Northern Special-Significance Camps
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/List_of_Gulag_camps" class="bare">https://en.wikipedia.org/wiki/List_of_Gulag_camps</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">WAP (Wireless Application Protocol)</dt>
+<dd>
+<p>A protocol that was used by cell phones to access the Internet in the early 2000s.
+WAP browser is an application that can display text and pictures on the phone&#8217;s screen.
+It was used before smartphones became widely available because it could work with
+really small screens and low transmission speeds of that time.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Wireless_Application_Protocol" class="bare">https://en.wikipedia.org/wiki/Wireless_Application_Protocol</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">XML (Extensible Markup Language)</dt>
+<dd>
+<p>A markup language used by many applications to store and exchange information and documents.
+More:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/XML" class="bare">https://en.wikipedia.org/wiki/XML</a></p>
+</li>
+<li>
+<p><a href="https://www.xml.com/pub/a/98/10/guide0.html" class="bare">https://www.xml.com/pub/a/98/10/guide0.html</a></p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">ZOMFG</dt>
+<dd>
+<p>Usually spelled entirely in caps, this abbreviation originates from the typo
+you get when you strike the shift key in order to type OMFG, but you miss
+and hit the z instead. From here:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.urbandictionary.com/define.php?term=zOMFG" class="bare">https://www.urbandictionary.com/define.php?term=zOMFG</a></p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2020-12-18 20:25:34 -0500
+</div>
+</div>
+</body>
+</html>

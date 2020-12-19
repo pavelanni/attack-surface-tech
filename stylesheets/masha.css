@@ -1,7 +1,9 @@
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
 
-@import url(//fonts.googleapis.com/css?family=Noto+Sans);
-@import url(https://cdn.jsdelivr.net/gh/asciidoctor/asciidoctor@2.0/data/stylesheets/asciidoctor-default.css); /* Default asciidoc style framework - important */
+@import url("https://fonts.googleapis.com/css2?family=Roboto");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono");
+@import url("https://cdn.jsdelivr.net/gh/asciidoctor/asciidoctor@2.0/data/stylesheets/asciidoctor-default.css"); /* Default asciidoc style framework - important */
 
 /* CUSTOMISATIONS */
 /* Change the values in root for quick customisation. If you want even more fine grain... venture further. */
@@ -19,17 +21,17 @@
 
 /* Text styles */
 
-body{font-family: "Noto Sans",sans-serif;background-color: var(--maincolor);color:var(--white);}
+body{font-family: "Roboto",sans-serif;background-color: var(--maincolor);color:var(--white);}
 
-h1{color:var(--primarycolor) !important;font-family:"Noto Sans",sans-serif;}
-h2,h3,h4,h5,h6{color:var(--secondarycolor) !important;font-family:"Noto Sans",sans-serif;}
-.title{color:var(--white) !important;font-family:"Noto Sans",sans-serif;font-style: normal; font-weight: normal;}
-p{font-family: "Noto Sans",sans-serif ! important}
+h1{color:var(--primarycolor) !important;font-family:"Roboto Slab",sans-serif;}
+h2,h3,h4,h5,h6{color:var(--secondarycolor) !important;font-family:"Roboto Slab",sans-serif;}
+.title{color:var(--white) !important;font-family:"Roboto Slab",sans-serif;font-style: normal; font-weight: normal;}
+p{font-family: "Roboto",sans-serif ! important}
 #toc.toc2 a:link{color:var(--linkcolor);}
 blockquote{color:var(--tertiarycolor) !important}
 .quoteblock{color:var(--white)}
-code{color:var(--linkcoloralternate);background-color: var(--sidebarbackground) !important}
-pre{color:var(--precolor);background-color: var(--sidebarbackground) !important}
+code{font-family: "Roboto Mono",monospace; color :var(--linkcoloralternate);background-color: var(--sidebarbackground) !important}
+pre{font-family: "Roboto Mono",monospace; color:var(--precolor);background-color: var(--sidebarbackground) !important}
 
 
 /* Table styles */
