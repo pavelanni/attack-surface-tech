@@ -14,7 +14,7 @@ Doctorow usually doesn`'t give you a lot of explanations, assuming that you can
 find all the necessary information if you want to.
 
 When I started reading _Attack Surface_ I was amazed by the amount of tech terms Doctorow 
-was using here and there. A thought about some terms: "`Okay, I know what '`Tor`' means, 
+was using here and there. I thought about some terms: "`Okay, I know what '`Tor`' means, 
 but does everybody else who is reading this book now?`". Other terms I had to google myself: "`What is IMSI-catcher?`" 
 
 I thought it might be a good idea to collect all tech terms that _might_ be new to the readers
