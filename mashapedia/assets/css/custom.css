@@ -1,0 +1,44 @@
+/* Custom styles for Mashapedia */
+
+/* Improve paragraph spacing */
+p {
+  margin-bottom: 1.25rem; /* 20px */
+  line-height: 1.7;
+}
+
+/* Make h2 headings more prominent on home page and other pages */
+h2 {
+  font-size: 1.875rem; /* 30px */
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: rgb(17 24 39); /* gray-900 */
+}
+
+/* Dark mode h2 styling */
+.dark h2 {
+  color: rgb(243 244 246); /* gray-100 */
+}
+
+/* Ensure h2 headings stand out on the hextra-home layout */
+.hextra-home h2 {
+  font-size: 2rem; /* 32px */
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+/* Add visual separator under h2 headings */
+.hextra-home h2::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 0.25rem;
+  background: rgb(59 130 246); /* blue-500 */
+  margin-top: 0.75rem;
+  border-radius: 0.25rem;
+}
+
+.dark .hextra-home h2::after {
+  background: rgb(96 165 250); /* blue-400 */
+}
