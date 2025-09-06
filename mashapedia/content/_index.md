@@ -48,10 +48,6 @@ This is my collection of *Attack Surface* terms. Most of the time I give links t
     link="/alphabetical"
   >}}
   {{< hextra/feature-card
-    title="Comprehensive Links"
-    subtitle="Each term includes multiple reference links to Wikipedia and other authoritative sources."
-  >}}
-  {{< hextra/feature-card
     title="Open Source"
     subtitle="Contribute corrections, expansions, or new terms via GitHub pull requests."
     link="https://github.com/pavelanni/attack-surface-tech"

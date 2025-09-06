@@ -1,13 +1,11 @@
 ---
-title: Documentation
+title: Mashapedia
 weight: 1
 sidebar:
   open: true
 ---
 
-# Mashapedia Documentation
-
-Welcome to the Mashapedia - a comprehensive glossary of technologies mentioned in Cory Doctorow's "Attack Surface".
+Welcome to the Mashapedia - a comprehensive glossary of technologies mentioned in Cory Doctorow's _Attack Surface_.
 
 ## How to Use This Guide
 
@@ -18,9 +16,13 @@ This documentation is organized in two ways:
 
 ## About the Book
 
-"Attack Surface" is the third book in Cory Doctorow's Little Brother series. It follows Masha Maximow, a tech specialist who worked for private military contractors and intelligence agencies, as she grapples with the moral implications of surveillance technology and decides to use her skills to fight back against authoritarian systems.
+_Attack Surface_ is the third book in Cory Doctorow's _Little Brother_ series. It follows Masha Maximow,
+a tech specialist who worked for private military contractors and intelligence agencies,
+as she grapples with the moral implications of surveillance technology and decides to use
+her skills to fight back against authoritarian systems.
 
-The book is packed with real-world technology references, from Tor and Signal to IMSI-catchers and adversarial perturbation. This glossary aims to help readers understand these technologies better.
+The book is packed with real-world technology references, from Tor and Signal to IMSI-catchers and adversarial perturbation.
+This glossary aims to help readers understand these technologies better.
 
 ## Contributing
 

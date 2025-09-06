@@ -3,163 +3,180 @@ title: "Chapter 5"
 weight: 60
 ---
 
-## Chapter 5
-
-Cryptoparty
+### Cryptoparty
 
 CryptoParty (Crypto-Party) is a grassroots global endeavor to introduce the basics of
-practical cryptography such as the Tor anonymity network, key signing parties, 
-disk encryption and virtual private networks to the general public. 
+practical cryptography such as the Tor anonymity network, key signing parties,
+disk encryption and virtual private networks to the general public.
 The project primarily consists of a series of free public workshops.
-More:
+
+**Learn more:**
 * https://www.cryptoparty.in/
 * https://github.com/cryptoparty/handbook
-* https://www.cryptoparty.in/learn/handbook (available in PDF, EPUB, MOBI, HTML)
+* https://www.cryptoparty.in/learn/handbook (available in PDF, `EPUB`, `MOBI`, HTML)
 
-### 
-EFF's Surveillance Self-Defense Kit
+---
+
+### EFF's Surveillance Self-Defense Kit
 
 Surveillance Self-Defense is a digital security guide that teaches you how to assess your
-personal risk from online spying. 
+personal risk from online spying.
 It can help protect you from surveillance by those who might want to find out your secrets,
-from petty criminals to nation states. 
-More:
+from petty criminals to nation states.
+
+**Learn more:**
 * https://ssd.eff.org/en
-* https://en.wikipedia.org/wiki/Cyber*self-defense
+* https://en.wikipedia.org/wiki/Cyber_self-defense
 
-### 
-Advanced Persistent Threat
+---
 
-An advanced persistent threat (APT) is a stealthy threat actor, 
-typically a nation state or state-sponsored group, which gains unauthorized access 
+### Advanced Persistent Threat
+
+An advanced persistent threat (APT) is a stealthy threat actor,
+typically a nation state or state-sponsored group, which gains unauthorized access
 to a computer network and remains undetected for an extended period.
-More:
-* https://en.wikipedia.org/wiki/Advanced*persistent*threat
+
+**Learn more:**
+* https://en.wikipedia.org/wiki/Advanced_persistent_threat
 * https://attack.mitre.org/groups/
 
-### 
-EXIF metadata
+---
+
+### EXIF metadata
 
 Metadata stored in JPEG files that may include technical information about the photo
-like exposure, etc. and also geolocation of the photo if this feature is available 
+like exposure, etc. and also geolocation of the photo if this feature is available
 (i.e. the photo is taken by a smartphone with GPS).
-More:
+
+**Learn more:**
 * https://en.wikipedia.org/wiki/Exif
 * https://www.howtogeek.com/211427/how-to-see-exactly-where-a-photo-was-taken-and-keep-your-location-private/
 * https://alpinesecurity.com/blog/2-simple-ways-to-extract-gps-coordinates-from-pictures/
 
-### 
-SIM-shaped tentacle
+---
+
+### SIM-shaped tentacle
 
 Most likely Masha uses a SIM extension cable similar to this: https://www.microsatacables.com/micro-sim-card-to-sim-card-extension-cable-msim-1175-ext
 
-### 
-Malware attack on baseband radio
+---
+
+### Malware attack on baseband radio
 
 Baseband vulnerabilities give attackers the ability to monitor a phone’s communications,
-place calls, send premium SMS messages or cause large data transfers unbeknownst 
+place calls, send premium SMS messages or cause large data transfers unbeknownst
 to the owner of the phone.
-More:
+
+**Learn more:**
 * https://www.usenix.org/system/files/conference/woot12/woot12-final24.pdf
 * https://ccdcoe.org/uploads/2018/10/Art-16-Attacking-the-Baseband-Modem-of-Breach-the-Users-Privacy-and-Network-Security.pdf
 * https://threatpost.com/baseband-zero-day-exposes-millions-of-mobile-phones-to-attack/124833/
 * https://attack.mitre.org/techniques/T1477/
 
-### 
+---
 
-USG
+### USG
 
 USG is a USB firewall that can protect your computer from BadUSB.
-More:
+
+**Learn more:**
 * https://hothardware.com/news/usg-dongle-firewall-device-is-like-a-condom-for-your-usb-ports
-* https://github.com/robertfisk/USG 
+* https://github.com/robertfisk/USG
 * https://github.com/robertfisk/USG/wiki
 
-### 
-Android Developer's mode
+---
 
-Masha uses USB to connect Tanisha`'s phone to her laptop and manipulate software on her phone.
-She uses Android Developer`'s mode and USB debugging for that. More:
+### Android Developer's mode
+
+Masha uses USB to connect Tanisha's phone to her laptop and manipulate software on her phone.
+She uses Android Developer's mode and USB debugging for that. More:
 * https://developer.android.com/studio/debug/dev-options
 * https://www.makeuseof.com/tag/what-is-usb-debugging-mode-on-android-makeuseof-explains/
 * https://developers.google.com/web/tools/chrome-devtools/remote-debugging
 
-### 
-Android rootkit
+---
 
-A rootkit is a collection of computer software, typically malicious, designed to enable 
-access to a computer or an area of its software that is not otherwise allowed (for example, 
+### Android rootkit
+
+A rootkit is a collection of computer software, typically malicious, designed to enable
+access to a computer or an area of its software that is not otherwise allowed (for example,
 to an unauthorized user) and often masks its existence or the existence of other software.
-Rootkits exist for different operating systems, including Android. 
-Masha just discovered a rootkit on Tanisha`'s phone.
-More:
+Rootkits exist for different operating systems, including Android.
+Masha just discovered a rootkit on Tanisha's phone.
+
+**Learn more:**
 * https://en.wikipedia.org/wiki/Rootkit
 * http://www.cs.tufts.edu/comp/116/archive/fall2013/azakaria.pdf
 * https://arstechnica.com/information-technology/2016/11/powerful-backdoorrootkit-found-preinstalled-on-3-million-android-phones/
 * https://www.androidpolice.com/2020/04/19/months-of-research-finally-crack-android-malware-that-could-even-survive-factory-resets/
 
-### 
-Pwned
+---
 
-Historically it`'s a misspelled word "`owned`" (part of *leetspeak*) which is now used when somebody 
-compromised your device (phone, computer) or your data and now you are *pwned*
-by bad guys. 
-There is a site called "`Have I been pwned?`" which allows you to check if your
-personal data was leaked during one of the known data breaches. 
-More:
-* https://en.wikipedia.org/wiki/Leet#Owned*and*pwned
-* https://en.wikipedia.org/wiki/Have*I*Been*Pwned%3F
+### Pwned
+
+Historically it's a misspelled word "owned" (part of _leetspeak_) which is now used when somebody
+compromised your device (phone, computer) or your data and now you are _pwned_
+by bad guys.
+There is a site called "Have I been pwned?" which allows you to check if your
+personal data was leaked during one of the known data breaches.
+
+**Learn more:**
+* https://en.wikipedia.org/wiki/Leet#Owned_and_pwned
+* https://en.wikipedia.org/wiki/Have_I_Been_Pwned%3F
 * https://haveibeenpwned.com/
 * https://www.urbandictionary.com/define.php?term=pwned
 
-### 
-IED
+---
+
+### IED
 
 Improvised explosive device. More:
-* https://en.wikipedia.org/wiki/Improvised*explosive*device
+* https://en.wikipedia.org/wiki/Improvised_explosive_device
 
-### 
-Shift-tilt miniature
+---
 
-Tilt–shift photography (Masha incorrectly calls it "`shift-tilt`") is the use of camera
-movements that change the orientation or position of the lens with respect to the film 
+### Shift-tilt miniature
+
+Tilt–shift photography (Masha incorrectly calls it "shift-tilt") is the use of camera
+movements that change the orientation or position of the lens with respect to the film
 or image sensor on cameras.
-+
-Sometimes the term is used when the large depth of field is simulated with digital 
-post-processing; the name may derive from a perspective control lens (or tilt–shift lens) 
-normally required when the effect is produced optically.
-More:
 
-* https://en.wikipedia.org/wiki/Tilt%E2%80%93shift*photography
+Sometimes the term is used when the large depth of field is simulated with digital
+post-processing; the name may derive from a perspective control lens (or tilt–shift lens)
+normally required when the effect is produced optically.
+
+**Learn more:**
+* https://en.wikipedia.org/wiki/Tilt%E2%80%93shift_photography
 * https://www.masterclass.com/articles/how-to-shoot-tilt-shift-photography
 * https://www.smashingmagazine.com/2008/11/beautiful-examples-of-tilt-shift-photography/
 
-### 
-CALEA
+---
+
+### CALEA
 
 A wiretapping bill, passed in 1994, as Masha explains it. More:
 * https://www.fcc.gov/public-safety-and-homeland-security/policy-and-licensing-division/general/communications-assistance
-* https://en.wikipedia.org/wiki/Communications*Assistance*for*Law*Enforcement*Act
+* https://en.wikipedia.org/wiki/Communications_Assistance_for_Law_Enforcement_Act
 
-### 
-Google Glass
+---
 
-Smart glasses created by Google and first introduced in 2013. 
-Masha calls them "`long-abandoned`", but according to Wikipedia in 2017 and 2019
+### Google Glass
+
+Smart glasses created by Google and first introduced in 2013.
+Masha calls them "long-abandoned", but according to Wikipedia in 2017 and 2019
 Google announced Google Glass Enterprise Edition and Enterprise Edition 2 respectively.
-More:
-* https://en.wikipedia.org/wiki/Google*Glass
 
-### 
-Am I under arrest?
+**Learn more:**
+* https://en.wikipedia.org/wiki/Google_Glass
 
-This and the following questions are part of the recommended procedure when interacting 
+---
+
+### Am I under arrest?
+
+This and the following questions are part of the recommended procedure when interacting
 with police.
-More: 
+
+**Learn more:**
 * https://www.halt.org/am-i-being-detained-6-questions-you-should-ask-during-interactions-with-the-police/
 * https://www.browarddefender.org/page3.html
 * https://www.aclu.org/know-your-rights/stopped-by-police/
-
-### 
-
-[[chapter-6]]
