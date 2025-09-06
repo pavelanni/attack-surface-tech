@@ -1,4 +1,4 @@
-baseURL: https://example.org/
+baseURL: https://mashapedia.org/
 languageCode: en-us
 title: "Mashapedia: Technologies of Attack Surface"
 theme: hextra
@@ -16,7 +16,7 @@ params:
 
   editURL:
     enable: true
-    base: "https://github.com/pavelanni/attack-surface-tech/edit/main/mashapedia"
+    base: "https://github.com/pavelanni/attack-surface-tech/edit/main/mashapedia/content"
 
   search:
     enable: true

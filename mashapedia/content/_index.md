@@ -28,11 +28,11 @@ layout: hextra-home
 
 ## About This Project
 
-I am a big fan of Cory Doctorow ([@doctorow](https://twitter.com/doctorow)). Not only his books *Little Brother*, *Homeland*, and now *Attack Surface* discuss important topics like online privacy and the role of technology in today's world, but also they educate the readers by telling them stories about modern tech solutions and tools.
+I am a big fan of Cory Doctorow ([@doctorow](https://twitter.com/doctorow)). Not only his books _Little Brother_, _Homeland_, and now _Attack Surface_ discuss important topics like online privacy and the role of technology in today's world, but also they educate the readers by telling them stories about modern tech solutions and tools.
 
-When I started reading *Attack Surface* I was amazed by the amount of tech terms Doctorow was using here and there. I thought about some terms: "Okay, I know what 'Tor' means, but does everybody else who is reading this book now?". Other terms I had to google myself: "What is IMSI-catcher?"
+When I started reading _Attack Surface_ I was amazed by the amount of tech terms Doctorow was using here and there. I thought about some terms: "Okay, I know what 'Tor' means, but does everybody else who is reading this book now?" Other terms I had to google myself: "What is IMSI-catcher?"
 
-This is my collection of *Attack Surface* terms. Most of the time I give links to Wikipedia, sometimes to other resources.
+This is my collection of _Attack Surface_ terms. Most of the time I give links to Wikipedia, sometimes to other resources.
 
 ## Features
 
