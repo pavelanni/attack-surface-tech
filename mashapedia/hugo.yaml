@@ -1,0 +1,54 @@
+baseURL: https://example.org/
+languageCode: en-us
+title: "Mashapedia: Technologies of Attack Surface"
+theme: hextra
+
+params:
+  description: A glossary of technologies mentioned in Cory Doctorow's book "Attack Surface"
+  
+  navbar:
+    displayTitle: true
+    displayLogo: false
+    
+  footer:
+    displayCopyright: true
+    displayPoweredBy: true
+
+  editURL:
+    enable: true
+    base: "https://github.com/pavelanni/attack-surface-tech/edit/main/mashapedia"
+
+  search:
+    enable: true
+    type: flexsearch
+    
+  sidebar:
+    enable: true
+    
+  toc:
+    enable: true
+    
+menu:
+  main:
+    - name: Documentation
+      pageRef: /docs
+      weight: 1
+    - name: Alphabetical Index
+      pageRef: /alphabetical
+      weight: 2
+    - name: About
+      pageRef: /about
+      weight: 3
+    - name: GitHub ↗
+      url: https://github.com/pavelanni/attack-surface-tech
+      weight: 4
+      
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    codeFences: true
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: false

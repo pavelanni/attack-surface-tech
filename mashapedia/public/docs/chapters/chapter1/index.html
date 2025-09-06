@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="noindex, nofollow" />
+  <link rel="icon shortcut" href="/favicon.ico" sizes="32x32" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" id="favicon-svg" />
+<link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+<link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
+<title>Chapter 1 – Mashapedia: Technologies of Attack Surface</title>
+  <meta name="description" content="Chapter 1 Tor:: A network that enables anonymous communications. By using the Tor Browser you can visit web sites without letting them know your location or your actual IP address. More about Tor (including questions “is it legal?”):
+https://www.torproject.org/ https://en.wikipedia.org/wiki/Tor*(anonymity*network) Facebook Tor Hidden Service
+A site that allows access to Facebook through the Tor protocol. According to Alec Muffett “Facebook’s onion address provides a way to access Facebook through Tor without losing the cryptographic protections provided by the Tor cloud. … it provides end-to-end communication, from your browser directly into a Facebook datacentre.” The address is facebookcorewwwi.onion where .onion is the common top-level domain name for sites in Tor network. You can enter this domain name in the Tor Browser’s address field. It won’t work in your normal (Chrome, Firefox, etc.) browser. More:" /><link rel="canonical" href="http://localhost:1313/docs/chapters/chapter1/" itemprop="url" />
+
+<meta property="og:title" content="Chapter 1">
+<meta
+  property="og:description"
+  content="
+    
+      Chapter 1
+    Tor:: A network that enables anonymous communications.
+By using the Tor Browser you can visit web sites without letting them know your location or your actual IP address. More about Tor (including questions &ldquo;is it legal?&rdquo;):
+
+https://www.torproject.org/
+https://en.wikipedia.org/wiki/Tor*(anonymity*network)
+
+
+    Facebook Tor Hidden Service
+A site that allows access to Facebook through the Tor protocol.
+According to Alec Muffett &ldquo;Facebook&rsquo;s onion address provides a way to access Facebook through Tor
+without losing the cryptographic protections provided by the Tor cloud. &hellip;
+it provides end-to-end communication, from your browser directly into a Facebook datacentre.&rdquo;
+The address is facebookcorewwwi.onion where .onion is the common top-level domain name
+for sites in Tor network. You can enter this domain name in the Tor Browser&rsquo;s address field.
+It won&rsquo;t work in your normal (Chrome, Firefox, etc.) browser. More:
+    
+  ">
+<meta
+  property="og:type"
+  content="
+    article
+  ">
+<meta property="og:url" content="http://localhost:1313/docs/chapters/chapter1/"><meta property="article:section" content="docs">
+
+
+
+
+  <meta itemprop="name" content="Chapter 1">
+  <meta itemprop="description" content="Chapter 1 Tor:: A network that enables anonymous communications. By using the Tor Browser you can visit web sites without letting them know your location or your actual IP address. More about Tor (including questions “is it legal?”):
+https://www.torproject.org/ https://en.wikipedia.org/wiki/Tor*(anonymity*network) Facebook Tor Hidden Service
+A site that allows access to Facebook through the Tor protocol. According to Alec Muffett “Facebook’s onion address provides a way to access Facebook through Tor without losing the cryptographic protections provided by the Tor cloud. … it provides end-to-end communication, from your browser directly into a Facebook datacentre.” The address is facebookcorewwwi.onion where .onion is the common top-level domain name for sites in Tor network. You can enter this domain name in the Tor Browser’s address field. It won’t work in your normal (Chrome, Firefox, etc.) browser. More:">
+  <meta itemprop="wordCount" content="1620">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Chapter 1">
+  <meta name="twitter:description" content="Chapter 1 Tor:: A network that enables anonymous communications. By using the Tor Browser you can visit web sites without letting them know your location or your actual IP address. More about Tor (including questions “is it legal?”):
+https://www.torproject.org/ https://en.wikipedia.org/wiki/Tor*(anonymity*network) Facebook Tor Hidden Service
+A site that allows access to Facebook through the Tor protocol. According to Alec Muffett “Facebook’s onion address provides a way to access Facebook through Tor without losing the cryptographic protections provided by the Tor cloud. … it provides end-to-end communication, from your browser directly into a Facebook datacentre.” The address is facebookcorewwwi.onion where .onion is the common top-level domain name for sites in Tor network. You can enter this domain name in the Tor Browser’s address field. It won’t work in your normal (Chrome, Firefox, etc.) browser. More:">
+<link href="/css/compiled/main.css" rel="stylesheet" />
+    <link href="/css/variables.css" rel="stylesheet" />
+    <link href="/css/custom.css" rel="stylesheet" />
+
+  
+
+
+  <script>
+    
+
+    function setTheme(theme) {
+      document.documentElement.classList.remove("light", "dark");
+
+      if (theme !== "light" && theme !== "dark") {
+       theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+
+      document.documentElement.classList.add(theme);
+      document.documentElement.style.colorScheme = theme;
+    }
+
+    setTheme("color-theme" in localStorage ? localStorage.getItem("color-theme") : 'system')
+
+  </script>
+
+  <script>
+    
+
+    if (localStorage.getItem('banner-closed')) {
+      document.documentElement.style.setProperty("--hextra-banner-height", "0px");
+      document.documentElement.classList.add("hextra-banner-hidden");
+    }
+  </script>
+
+  
+  
+  </head>
+<body><div class="hextra-nav-container hx:sticky hx:top-0 hx:z-20 hx:w-full hx:bg-transparent hx:print:hidden">
+  <div
+    class="hextra-nav-container-blur hx:pointer-events-none hx:absolute hx:z-[-1] hx:h-full hx:w-full hx:bg-white hx:dark:bg-dark hx:shadow-[0_2px_4px_rgba(0,0,0,.02),0_1px_0_rgba(0,0,0,.06)] hx:contrast-more:shadow-[0_0_0_1px_#000] hx:dark:shadow-[0_-1px_0_rgba(255,255,255,.1)_inset] hx:contrast-more:dark:shadow-[0_0_0_1px_#fff]"
+  ></div>
+
+  <nav class="hextra-max-navbar-width hx:mx-auto hx:flex hx:items-center hx:justify-end hx:gap-2 hx:h-16 hx:px-6">
+    <a class="hx:flex hx:items-center hx:hover:opacity-75 hx:ltr:mr-auto hx:rtl:ml-auto" href="/">
+    <span class="hx:mr-2 hx:font-extrabold hx:inline hx:select-none" title="Mashapedia: Technologies of Attack Surface">Mashapedia: Technologies of Attack Surface</span>
+</a>
+<a
+  title=""
+  href="/docs"
+  
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:font-medium"
+><span class="hx:text-center">Documentation</span>
+</a><a
+  title=""
+  href="/alphabetical"
+  
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+><span class="hx:text-center">Alphabetical Index</span>
+</a><a
+  title=""
+  href="/about"
+  
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+><span class="hx:text-center">About</span>
+</a><a
+  title=""
+  href="https://github.com/pavelanni/attack-surface-tech"
+  target="_blank" rel="noreferrer"
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+><span class="hx:text-center">GitHub ↗</span>
+</a><button type="button" aria-label="Menu" class="hextra-hamburger-menu hx:cursor-pointer hx:-mr-2 hx:rounded-sm hx:p-2 hx:active:bg-gray-400/20 hx:md:hidden"><svg height=24 fill="none" viewBox="0 0 24 24" stroke="currentColor"><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8H20"></path></g><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16H20"></path></g></svg></button>
+  </nav>
+</div>
+
+  <div class='hx:mx-auto hx:flex hextra-max-page-width'>
+    <aside class="hextra-sidebar-container hx:flex hx:flex-col hx:print:hidden hx:md:top-16 hx:md:shrink-0 hx:md:w-64 hx:md:self-start hx:max-md:[transform:translate3d(0,-100%,0)] hx:md:sticky">
+  
+  <div class="hx:px-4 hx:pt-4 hx:md:hidden">
+    <div class="hextra-search-wrapper hx:relative hx:md:w-64">
+  <div class="hx:relative hx:flex hx:items-center hx:text-gray-900 hx:contrast-more:text-gray-800 hx:dark:text-gray-300 hx:contrast-more:dark:text-gray-300">
+    <input
+      placeholder="Search..."
+      class="hextra-search-input hx:focus:hextra-focus hx:block hx:w-full hx:appearance-none hx:rounded-lg hx:px-3 hx:py-2 hx:transition-colors hx:text-base hx:leading-tight hx:md:text-sm hx:bg-black/[.05] hx:dark:bg-gray-50/10 hx:focus:bg-white hx:dark:focus:bg-dark hx:placeholder:text-gray-500 hx:dark:placeholder:text-gray-400 hx:contrast-more:border hx:contrast-more:border-current"
+      type="search"
+      value=""
+      spellcheck="false"
+    />
+    <kbd
+      class="hx:absolute hx:my-1.5 hx:select-none hx:ltr:right-1.5 hx:rtl:left-1.5 hx:h-5 hx:rounded-sm hx:bg-white hx:px-1.5 hx:font-mono hx:text-[10px] hx:font-medium hx:text-gray-500 hx:border hx:border-gray-200 hx:dark:border-gray-100/20 hx:dark:bg-dark/50 hx:contrast-more:border-current hx:contrast-more:text-current hx:contrast-more:dark:border-current hx:items-center hx:gap-1 hx:transition-opacity hx:pointer-events-none hx:hidden hx:sm:flex"
+    >
+      CTRL K
+    </kbd>
+  </div>
+
+  <div>
+    <ul
+      class="hextra-search-results hextra-scrollbar hx:hidden hx:border hx:border-gray-200 hx:bg-white hx:text-gray-100 hx:dark:border-neutral-800 hx:dark:bg-neutral-900 hx:absolute hx:top-full hx:z-20 hx:mt-2 hx:overflow-auto hx:overscroll-contain hx:rounded-xl hx:py-2.5 hx:shadow-xl hx:max-h-[min(calc(50vh-11rem-env(safe-area-inset-bottom)),400px)] hx:md:max-h-[min(calc(100vh-5rem-env(safe-area-inset-bottom)),400px)] hx:inset-x-0 hx:ltr:md:left-auto hx:rtl:md:right-auto hx:contrast-more:border hx:contrast-more:border-gray-900 hx:contrast-more:dark:border-gray-50 hx:w-screen hx:min-h-[100px] hx:max-w-[min(calc(100vw-2rem),calc(100%+20rem))]"
+      style="transition: max-height 0.2s ease 0s;"
+    ></ul>
+  </div>
+</div>
+
+  </div>
+  <div class="hextra-scrollbar hx:overflow-y-auto hx:overflow-x-hidden hx:p-4 hx:grow hx:md:h-[calc(100vh-var(--navbar-height)-var(--menu-height))]">
+    <ul class="hx:flex hx:flex-col hx:gap-1 hx:md:hidden">
+      
+      
+          <li class="open"><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/"
+    
+  >Documentation
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
+    </a><div class="hx:ltr:pr-0 hx:overflow-hidden">
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col open"><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/"
+    
+  >Browse by Chapter
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
+    </a>
+              <div class="hx:ltr:pr-0 hx:overflow-hidden">
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/introduction/"
+    
+  >Introduction
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col open"><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+    href="/docs/chapters/chapter1/"
+    
+  >Chapter 1
+    </a>
+  
+    <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
+              <a
+                href="#chapter-1"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Chapter 1</a>
+            </li>
+          <li>
+              <a
+                href="#heading"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Usually refers to the diagnostic lights on computer`’s front panels (in the old days).
+The term derives from the famous text dated as far back as 1955.
+&#43;</a>
+            </li>
+          <li>
+              <a
+                href="#zo-relaxen-und-watschen-der-blinkenlichten"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >ACHTUNG!
+ALLES TURISTEN UND NONTEKNISCHEN LOOKENSPEEPERS!
+DAS KOMPUTERMASCHINE IST NICHT FÜR DER GEFINGERPOKEN UND MITTENGRABEN! ODERWISE IST EASY TO SCHNAPPEN DER SPRINGENWERK, BLOWENFUSEN UND POPPENCORKEN MIT SPITZENSPARKEN.
+IST NICHT FÜR GEWERKEN BEI DUMMKOPFEN. DER RUBBERNECKEN SIGHTSEEREN KEEPEN DAS COTTONPICKEN HÄNDER IN DAS POCKETS MUSS.
+ZO RELAXEN UND WATSCHEN DER BLINKENLICHTEN.</a>
+            </li>
+          </ul>
+  
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/chapter2/"
+    
+  >Chapter 2
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/chapter3/"
+    
+  >Chapter 3
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/chapter4/"
+    
+  >Chapter 4
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/chapter5/"
+    
+  >Chapter 5
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/chapter6/"
+    
+  >Chapter 6
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/chapter7/"
+    
+  >Chapter 7
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/chapter8/"
+    
+  >Chapter 8
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/chapter9/"
+    
+  >Chapter 9
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/chapter10/"
+    
+  >Chapter 10
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/chapter11/"
+    
+  >Chapter 11
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/chapter12/"
+    
+  >Chapter 12
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/chapter13/"
+    
+  >Chapter 13
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/chapter14/"
+    
+  >Chapter 14
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/epilogue/"
+    
+  >Epilogue
+    </a>
+              
+            </li></ul>
+      </div>
+            </li></ul>
+      </div></li>
+          <li class=""><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/alphabetical/"
+    
+  >Alphabetical Index
+    </a></li>
+          <li class=""><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/about/"
+    
+  >About
+    </a></li>
+    </ul>
+
+    <ul class="hx:flex hx:flex-col hx:gap-1 hx:max-md:hidden">
+        
+          <li class="open"><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/"
+    
+  >Browse by Chapter
+        <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></span>
+    </a><div class="hx:ltr:pr-0 hx:overflow-hidden">
+        <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/introduction/"
+    
+  >Introduction
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col open"><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+    href="/docs/chapters/chapter1/"
+    
+  >Chapter 1
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/chapter2/"
+    
+  >Chapter 2
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/chapter3/"
+    
+  >Chapter 3
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/chapter4/"
+    
+  >Chapter 4
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/chapter5/"
+    
+  >Chapter 5
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/chapter6/"
+    
+  >Chapter 6
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/chapter7/"
+    
+  >Chapter 7
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/chapter8/"
+    
+  >Chapter 8
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/chapter9/"
+    
+  >Chapter 9
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/chapter10/"
+    
+  >Chapter 10
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/chapter11/"
+    
+  >Chapter 11
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/chapter12/"
+    
+  >Chapter 12
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/chapter13/"
+    
+  >Chapter 13
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/chapter14/"
+    
+  >Chapter 14
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/docs/chapters/epilogue/"
+    
+  >Epilogue
+    </a>
+              
+            </li></ul>
+      </div></li>
+        
+      </ul>
+    </div>
+  
+  
+    <div class="  hx:sticky hx:bottom-0 hx:max-h-(--menu-height) hx:bg-white hx:dark:bg-dark hx:mx-4 hx:py-4 hx:shadow-[0_-12px_16px_#fff] hx:flex hx:items-center hx:gap-2 hx:border-gray-200 hx:dark:border-neutral-800 hx:dark:shadow-[0_-12px_16px_#111] hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:shadow-none hx:border-t" data-toggle-animation="show"><div class="hx:flex hx:grow hx:flex-col"><div class="hx:flex hx:justify-items-start hx:group" data-theme="light">
+  <button
+    title="Change theme"
+    data-state="closed"
+    data-location="bottom"
+    class="hextra-theme-toggle hx:cursor-pointer hx:rounded-md hx:text-left hx:font-medium hx:h-7 hx:px-2 hx:text-xs hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:font-medium hx:text-gray-600 hx:transition-colors hx:dark:text-gray-400 hx:grow"
+    type="button"
+    aria-label="Change theme"
+  >
+    <div class="hx:flex hx:items-center hx:gap-2 hx:capitalize"><svg height=12 class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=system]:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg><span class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=system]:hidden">Light</span><svg height=12 class="hx:group-data-[theme=light]:hidden hx:group-data-[theme=system]:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg><span class="hx:group-data-[theme=light]:hidden hx:group-data-[theme=system]:hidden">Dark</span><svg height=12 class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=light]:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="currentColor">
+  <path d="M 11.996094,2 C 6.4986225,2.0192368 2.03125,6.5024993 2.03125,12 c 0,5.497501 4.4673725,9.980763 9.964844,10 H 12 12.0039 c 5.497471,-0.01924 9.964844,-4.502499 9.964844,-10 0,-5.4975007 -4.467373,-9.9807632 -9.964844,-10 H 12 Z M 12,4 c 4.417218,0.017598 7.96875,3.5822356 7.96875,8 0,4.417764 -3.551532,7.982402 -7.96875,8 z" />
+</svg>
+<span class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=light]:hidden">System</span></div>
+  </button>
+  <ul
+    class="hextra-theme-toggle-options hx:hidden hx:z-20 hx:max-h-64 hx:overflow-auto hx:rounded-md hx:ring-1 hx:ring-black/5 hx:bg-white hx:py-1 hx:text-sm hx:shadow-lg hx:dark:ring-white/20 hx:dark:bg-neutral-800"
+    style="position: fixed; inset: auto auto 0px 0px; margin: 0px; min-width: 100px;"
+    data-theme="light"
+  >
+    <li class="hx:flex hx:flex-col">
+      <p
+        data-item="light"
+        class="hx:text-gray-800 hx:dark:text-gray-100 hx:hover:bg-primary-50 hx:hover:text-primary-600 hx:hover:dark:bg-primary-500/10 hx:hover:dark:text-primary-600 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9"
+      >
+        Light
+         <span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3 hx:group-data-[theme=dark]:hidden hx:group-data-[theme=system]:hidden"><svg height=1em width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>
+      </p>
+    </li>
+    <li class="hx:flex hx:flex-col">
+      <p
+        data-item="dark"
+        class="hx:text-gray-800 hx:dark:text-gray-100 hx:hover:bg-primary-50 hx:hover:text-primary-600 hx:hover:dark:bg-primary-500/10 hx:hover:dark:text-primary-600 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9"
+      >
+        Dark
+         <span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3 hx:group-data-[theme=light]:hidden hx:group-data-[theme=system]:hidden"><svg height=1em width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>
+      </p>
+    </li>
+    <li class="hx:flex hx:flex-col">
+      <p
+        data-item="system"
+        class="hx:text-gray-800 hx:dark:text-gray-100 hx:hover:bg-primary-50 hx:hover:text-primary-600 hx:hover:dark:bg-primary-500/10 hx:hover:dark:text-primary-600 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9"
+      >
+        System
+         <span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3 hx:group-data-[theme=dark]:hidden hx:group-data-[theme=light]:hidden"><svg height=1em width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>
+      </p>
+    </li>
+  </ul>
+</div></div></div></aside>
+    
+<nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="table of contents">
+    <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">On this page</p><ul>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#chapter-1">Chapter 1
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#heading">Usually refers to the diagnostic lights on computer`’s front panels (in the old days).
+The term derives from the famous text dated as far back as 1955.
+&#43;
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#zo-relaxen-und-watschen-der-blinkenlichten">ACHTUNG!
+ALLES TURISTEN UND NONTEKNISCHEN LOOKENSPEEPERS!
+DAS KOMPUTERMASCHINE IST NICHT FÜR DER GEFINGERPOKEN UND MITTENGRABEN! ODERWISE IST EASY TO SCHNAPPEN DER SPRINGENWERK, BLOWENFUSEN UND POPPENCORKEN MIT SPITZENSPARKEN.
+IST NICHT FÜR GEWERKEN BEI DUMMKOPFEN. DER RUBBERNECKEN SIGHTSEEREN KEEPEN DAS COTTONPICKEN HÄNDER IN DAS POCKETS MUSS.
+ZO RELAXEN UND WATSCHEN DER BLINKENLICHTEN.
+        </a>
+      </li></ul>
+      <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400"><a class="hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50" href="https://github.com/pavelanni/attack-surface-tech/edit/main/mashapedia/docs/chapters/chapter1.md" target="_blank" rel="noreferrer">Edit this page on GitHub →</a>
+        <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx:cursor-pointer hx:transition-all hx:duration-75 hx:opacity-0 hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
+          <span>Scroll to top</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx:inline hx:ltr:ml-1 hx:rtl:mr-1 hx:h-3.5 hx:w-3.5 hx:rounded-full hx:border hx:border-gray-500 hx:hover:border-gray-900 hx:dark:border-gray-400 hx:dark:hover:border-gray-100 hx:contrast-more:border-gray-800 hx:contrast-more:dark:border-gray-50">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+    <article class="hx:w-full hx:break-words hx:flex hx:min-h-[calc(100vh-var(--navbar-height))] hx:min-w-0 hx:justify-center hx:pb-8 hx:pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+      <main class="hx:w-full hx:min-w-0 hx:max-w-6xl hx:px-6 hx:pt-4 hx:md:px-12">
+        <div class="hx:mt-1.5 hx:flex hx:items-center hx:gap-1 hx:overflow-hidden hx:text-sm hx:text-gray-500 hx:dark:text-gray-400 hx:contrast-more:text-current">
+        <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
+          <a href="/docs/">Documentation</a>
+        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
+          <a href="/docs/chapters/">Browse by Chapter</a>
+        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">Chapter 1</div>
+  </div>
+
+        <div class="content">
+          <h1>Chapter 1</h1>
+          <h2>Chapter 1<span class="hx:absolute hx:-mt-20" id="chapter-1"></span>
+    <a href="#chapter-1" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Tor:: A network that enables anonymous communications.
+By using the Tor Browser you can visit web sites without letting them know your location or your actual IP address. More about Tor (including questions &ldquo;is it legal?&rdquo;):</p>
+<ul>
+<li><a href="https://www.torproject.org/"target="_blank" rel="noopener">https://www.torproject.org/</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tor*%28anonymity*network%29"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Tor*(anonymity*network)</a></li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Facebook Tor Hidden Service</p>
+<p>A site that allows access to Facebook through the Tor protocol.
+According to Alec Muffett &ldquo;Facebook&rsquo;s onion address provides a way to access Facebook through Tor
+without losing the cryptographic protections provided by the Tor cloud. &hellip;
+it provides end-to-end communication, from your browser directly into a Facebook datacentre.&rdquo;
+The address is <code>facebookcorewwwi.onion</code> where <code>.onion</code> is the common top-level domain name
+for sites in Tor network. You can enter this domain name in the Tor Browser&rsquo;s address field.
+It won&rsquo;t work in your normal (Chrome, Firefox, etc.) browser. More:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Facebookcorewwwi.onion"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Facebookcorewwwi.onion</a></li>
+<li><a href="https://blog.torproject.org/facebook-hidden-services-and-https-certs"target="_blank" rel="noopener">https://blog.torproject.org/facebook-hidden-services-and-https-certs</a></li>
+<li><a href="https://www.cheatsheet.com/technology/what-is-facebooks-tor-hidden-service-why-does-it-matter.html/"target="_blank" rel="noopener">https://www.cheatsheet.com/technology/what-is-facebooks-tor-hidden-service-why-does-it-matter.html/</a> (this one has a simple description of what Tor is and how it works)</li>
+</ul>
+<p>Sectec:: A fictional networking device produced by Xoth.
+<em>Not</em> a CCTV camera produced by Shenshen Sectec Co. (<a href="http://www.sectec.com.cn/"target="_blank" rel="noopener">http://www.sectec.com.cn/</a>)</p>
+<p>0-day or zero-day:: A vulnerability that has not been fixed by the vendor or was fixed just recently
+which allows hackers to exploit it. More:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Zero-day*%28computing%29"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Zero-day*(computing)</a></li>
+<li><a href="https://www.fireeye.com/current-threats/what-is-a-zero-day-exploit.html"target="_blank" rel="noopener">https://www.fireeye.com/current-threats/what-is-a-zero-day-exploit.html</a></li>
+<li><a href="https://searchsecurity.techtarget.com/definition/zero-day-vulnerability"target="_blank" rel="noopener">https://searchsecurity.techtarget.com/definition/zero-day-vulnerability</a></li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Exploit</p>
+<p>A piece of software or a methodology (series of steps) that allows hackers to use
+a known vulnerability to get access to a target computer. More:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Exploit*%28computer*security%29"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Exploit*(computer*security)</a></li>
+<li>Exploit database: <a href="https://www.exploit-db.com/"target="_blank" rel="noopener">https://www.exploit-db.com/</a></li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Tunnel out</p>
+<p>To use an SSH tunnel to get secure access to a remote box. Usually you use SSH tunneling
+to bypass firewalls that prohibit certain Internet services. More:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Tunneling"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Tunneling</a><em>protocol#Secure</em>Shell*tunneling</li>
+<li><a href="https://www.ssh.com/ssh/tunneling/example"target="_blank" rel="noopener">https://www.ssh.com/ssh/tunneling/example</a></li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Bootloader</p>
+<p>A piece of software which normally starts at the early stages of computer start-up process,
+after executing the BIOS, but <em>before</em> the operating system starts.
+Its purpose is to <em>load</em> the operating system (hence the name).
+Bootloader integrity check is important to avoid a &ldquo;boot attack&rdquo;:
+type of attack that replaces the original bootloader and installs a bootloader
+that can intercept passwords, including those used for hard drive encryption.
+More:</p>
+<ul>
+<li><a href="https://link.springer.com/chapter/10.1007/978-1-4302-6572-6"target="_blank" rel="noopener">https://link.springer.com/chapter/10.1007/978-1-4302-6572-6</a>*6 (very good explanation; you can read a chapter, or download the whole book there &ndash; thanks, Springer!)</li>
+<li><a href="https://en.wikipedia.org/wiki/Booting#Modern"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Booting#Modern</a><em>boot</em>loaders</li>
+<li><a href="https://engineering.fb.com/2016/01/29/security/hardware-and-firmware-attacks-defending-detecting-and-responding/"target="_blank" rel="noopener">https://engineering.fb.com/2016/01/29/security/hardware-and-firmware-attacks-defending-detecting-and-responding/</a></li>
+<li>Evil maid attack: <a href="https://en.wikipedia.org/wiki/Evil"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Evil</a><em>maid</em>attack</li>
+<li><a href="https://onlinelibrary.wiley.com/doi/full/10.1002/eng2.12032"target="_blank" rel="noopener">https://onlinelibrary.wiley.com/doi/full/10.1002/eng2.12032</a></li>
+</ul>
+<p>Semtex:: General-purpose plastic explosive.
+More:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Semtex"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Semtex</a></li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Hardware keylogger</p>
+<p>A device used to log all keystrokes on a computer which is used to capture passwords.
+More:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Hardware"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Hardware</a>*keylogger</li>
+<li><a href="https://en.wikipedia.org/wiki/Keystroke"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Keystroke</a>*logging</li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Catching password from key sounds</p>
+<p>Different keys on the keyboard produce slightly different sounds so the recorded acoustic pattern
+of you typing in your password can be used to guess it. That<code>'s why Masha does &quot;</code>medium-loud AAAAAH`&quot;
+when typing her password.
+More:</p>
+<ul>
+<li><a href="https://security.stackexchange.com/questions/23322/keyboard-sniffing-through-audio-recorded-typing-patterns"target="_blank" rel="noopener">https://security.stackexchange.com/questions/23322/keyboard-sniffing-through-audio-recorded-typing-patterns</a></li>
+<li><a href="https://www.davidsalomon.name/CompSec/auxiliary/KybdEmanation.pdf"target="_blank" rel="noopener">https://www.davidsalomon.name/CompSec/auxiliary/KybdEmanation.pdf</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Keystroke"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Keystroke</a>*logging</li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Faraday cage</p>
+<p>An enclosure that blocks electromagnetic fields.
+Could be a room, a cabinet, a bag.
+More:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Faraday"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Faraday</a>*cage</li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Tails</p>
+<p>A security-focused Linux distribution that aims at preserving privacy and anonymity.
+It usually loads from a live DVD or USB and provides Linux environment that is based on Tor network.
+Your browsing information is not stored anywhere unless you specifically instruct it to do so.
+<em>Tails</em> provides an emergency shutdown: when you pull the USB out of the slot, the system
+erases all computer memory and shuts itself down immediately.
+More:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Tails*%28operating*system%29"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Tails*(operating*system)</a></li>
+<li><a href="https://tails.boum.org/"target="_blank" rel="noopener">https://tails.boum.org/</a></li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>MIT Media Lab</p>
+<p>A research lab at MIT famous for its inventions and projects in areas of human-computer interaction,
+artistic visualization, musical devices, sociable robots, etc.
+More:</p>
+<ul>
+<li><a href="https://www.media.mit.edu/"target="_blank" rel="noopener">https://www.media.mit.edu/</a></li>
+<li><a href="https://en.wikipedia.org/wiki/MIT"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/MIT</a><em>Media</em>Lab</li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>USB Port Physical Lock</p>
+<p>There are several variants of such a device that physically blocks access to the USB port.
+Some of them have keys, some should be physically destroyed to get access to the port.
+Examples:</p>
+<ul>
+<li><a href="https://www.padjack.com/padjack-versions/usb-port-lock/"target="_blank" rel="noopener">https://www.padjack.com/padjack-versions/usb-port-lock/</a> (should be destroyed and resealed later)</li>
+<li><a href="https://connectivitycenter.com/product/smart-keeper-usb-port-lock-professional/"target="_blank" rel="noopener">https://connectivitycenter.com/product/smart-keeper-usb-port-lock-professional/</a> (used with a key)</li>
+<li><a href="https://lindy.com/en/technology/port-blockers/"target="_blank" rel="noopener">https://lindy.com/en/technology/port-blockers/</a> (with a key)</li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>EL wire</p>
+<p>Electroluminescent wire is a thin copper wire coated in a phosphor that produces light through electroluminescence when an alternating current is applied to it. More:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Electroluminescent"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Electroluminescent</a>*wire</li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Lidar</p>
+<p>&ldquo;Light radar&rdquo; &ndash; a device that used laser light to scan the area and measure distances to
+objects, walls, etc. It is also used as an acronym of &ldquo;light detection and ranging&rdquo;
+and &ldquo;laser imaging, detection, and ranging&rdquo;.
+In the book Masha uses a drone to get &ldquo;lidar outlines of all the human in the space&rdquo;.
+More:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Lidar"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Lidar</a></li>
+<li><a href="https://www.neonscience.org/resources/learning-hub/tutorials/lidar-basics"target="_blank" rel="noopener">https://www.neonscience.org/resources/learning-hub/tutorials/lidar-basics</a></li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Raspi Altair 8800</p>
+<p>Altair 8800 is one of the first personal computers which was introduced in 1974.
+For many people it has sentimental value &ndash; that&rsquo;s why some people design and sell
+Altair emulators that use modern technologies such as Arduino and Raspberry Pi.
+More:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Altair"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Altair</a>*8800</li>
+<li><a href="https://www.adwaterandstir.com/product/altair-8800-emulator-kit/"target="_blank" rel="noopener">https://www.adwaterandstir.com/product/altair-8800-emulator-kit/</a></li>
+<li><a href="https://github.com/dankar/altair8800"target="_blank" rel="noopener">https://github.com/dankar/altair8800</a></li>
+<li><a href="http://www.astrorat.com/altair8800/altair8800clonemeetrp.html"target="_blank" rel="noopener">http://www.astrorat.com/altair8800/altair8800clonemeetrp.html</a></li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Blinkenlights</p>
+<h2>Usually refers to the diagnostic lights on computer`&rsquo;s front panels (in the old days).
+The term derives from the famous text dated as far back as 1955.
++<span class="hx:absolute hx:-mt-20" id="heading"></span>
+    <a href="#heading" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h2>ACHTUNG!
+ALLES TURISTEN UND NONTEKNISCHEN LOOKENSPEEPERS!
+DAS KOMPUTERMASCHINE IST NICHT FÜR DER GEFINGERPOKEN UND MITTENGRABEN! ODERWISE IST EASY TO SCHNAPPEN DER SPRINGENWERK, BLOWENFUSEN UND POPPENCORKEN MIT SPITZENSPARKEN.
+IST NICHT FÜR GEWERKEN BEI DUMMKOPFEN. DER RUBBERNECKEN SIGHTSEEREN KEEPEN DAS COTTONPICKEN HÄNDER IN DAS POCKETS MUSS.
+ZO RELAXEN UND WATSCHEN DER BLINKENLICHTEN.<span class="hx:absolute hx:-mt-20" id="zo-relaxen-und-watschen-der-blinkenlichten"></span>
+    <a href="#zo-relaxen-und-watschen-der-blinkenlichten" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>More:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Blinkenlights"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Blinkenlights</a></li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Paranoid Android</p>
+<p>In the book it seems to be the Android-based OS for smartphones focused on security.
+The main feature of it is that you update it very often to make sure all known
+vulnerabilities are patched or at least there are no known exploits for them.
+Masha explains that you should always check the OS signatures to make sure
+you are actually installing the correct bits and not something created by
+the government hackers containing backdoors and loggers.
+Apparently there is such a project in real life, but it`&rsquo;s not specifically
+focused on security &ndash; it just uses the cool name.
+More:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Paranoid*Android*%28software%29"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Paranoid<em>Android</em>(software)</a></li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>IMSI-catcher</p>
+<p>A device that can <em>pretend</em> to be a cell phone base station and make all phones in the nearest proximity
+to connect to it (because its signal stronger than the real cell towers that are farther away).
+That way it will be able to collect all information about the connected phones such as IMSI
+(international mobile subscriber identity), etc. Also it will be able to intercept phones&rsquo; traffic,
+voice and data using &ldquo;man-in-the-middle&rdquo; attack.
+Devices can be purchased online, as well as anti-IMSI-catchers.
+You can build one yourself, if you want (see the link below).
+More:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/IMSI-catcher"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/IMSI-catcher</a></li>
+<li><a href="https://www.paladion.net/blogs/how-to-build-an-imsi-catcher-to-intercept-gsm-traffic"target="_blank" rel="noopener">https://www.paladion.net/blogs/how-to-build-an-imsi-catcher-to-intercept-gsm-traffic</a></li>
+<li><a href="https://www.vice.com/en/article/gy7qm9/how-i-made-imsi-catcher-cheap-amazon-github"target="_blank" rel="noopener">https://www.vice.com/en/article/gy7qm9/how-i-made-imsi-catcher-cheap-amazon-github</a></li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Dazzle mask</p>
+<p>A mask that allows you to trick facial-recognition software into thinking you are not human.
+They may use reflective tapes, infrared lights, lenses, etc.
+More:</p>
+<ul>
+<li><a href="https://www.businessinsider.com/clothes-accessories-that-outsmart-facial-recognition-tech-2019-10"target="_blank" rel="noopener">https://www.businessinsider.com/clothes-accessories-that-outsmart-facial-recognition-tech-2019-10</a></li>
+<li><a href="https://www.reflectacles.com/#home"target="_blank" rel="noopener">https://www.reflectacles.com/#home</a></li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Pastebin</p>
+<p>A storage site where people can post pieces of code and other text information.
+More:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Pastebin"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Pastebin</a></li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Regular expressions</p>
+<p>A (smart) way to search specific patterns or strings in text files.
+You can describe patterns like &ldquo;one to three numbers followed by a dash followed by several capital letters, no more than 8.&rdquo;
+More:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Regular"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Regular</a>*expression</li>
+<li><a href="https://regexr.com/"target="_blank" rel="noopener">https://regexr.com/</a></li>
+<li><a href="https://regexone.com/"target="_blank" rel="noopener">https://regexone.com/</a> (interactive tutorial)</li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Anonymouth</p>
+<p>Document anonymization tool written in Java. More:</p>
+<ul>
+<li><a href="https://github.com/psal/anonymouth"target="_blank" rel="noopener">https://github.com/psal/anonymouth</a></li>
+<li><a href="https://directory.fsf.org/wiki/Anonymouth"target="_blank" rel="noopener">https://directory.fsf.org/wiki/Anonymouth</a></li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Stylometry</p>
+<p>A method to study linguistic style to find out who the author of the document is.
+More:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Stylometry"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Stylometry</a></li>
+<li><a href="https://programminghistorian.org/en/lessons/introduction-to-stylometry-with-python"target="_blank" rel="noopener">https://programminghistorian.org/en/lessons/introduction-to-stylometry-with-python</a></li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>PGP</p>
+<p>Pretty Good Privacy, a cryptographic method used for encryption and digital signing documents, emails, etc.
+More:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Pretty"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Pretty</a><em>Good</em>Privacy</li>
+<li><a href="https://users.ece.cmu.edu/~adrian/630-f04/PGP-intro.html"target="_blank" rel="noopener">https://users.ece.cmu.edu/~adrian/630-f04/PGP-intro.html</a> (how it works)</li>
+<li><a href="https://www.openpgp.org/"target="_blank" rel="noopener">https://www.openpgp.org/</a></li>
+<li><a href="https://gnupg.org/"target="_blank" rel="noopener">https://gnupg.org/</a></li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Malware</p>
+<p>Malicious software: software intentionally designed to cause damage to computer systems.
+More:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Malware"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Malware</a></li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>NFC, Near-Field Communication</p>
+<p>A set of communication protocols for communication between two electronic devices
+over a distance of 4 cm. Used in various types of key cards, passes. etc.
+More:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Near-field"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Near-field</a>*communication</li>
+<li><a href="https://nfc-forum.org/"target="_blank" rel="noopener">https://nfc-forum.org/</a></li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Information Cascade</p>
+<p>A pattern of information flow when you can see how information or decision coming from
+one person triggers the series of decisions or information passes from several other persons.
+More:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Information"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Information</a>*cascade</li>
+<li><a href="https://arxiv.org/abs/2005.11041"target="_blank" rel="noopener">https://arxiv.org/abs/2005.11041</a></li>
+<li><a href="https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch16.pdf"target="_blank" rel="noopener">https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch16.pdf</a> (part of a book &ldquo;Networks, Crowds, and Markets&rdquo; <a href="https://www.cs.cornell.edu/home/kleinber/networks-book/"target="_blank" rel="noopener">https://www.cs.cornell.edu/home/kleinber/networks-book/</a>)</li>
+<li>Information Cascade Experiments <a href="https://wmpeople.wm.edu/asset/index/lrande/cascadehandbook"target="_blank" rel="noopener">https://wmpeople.wm.edu/asset/index/lrande/cascadehandbook</a></li>
+</ul>
+<p>Anti-Stingray::
+Tools to protect oneself from IMSI-catchers.
+More:</p>
+<ul>
+<li><a href="https://privacysos.org/blog/how-to-defeat-fbi-or-police-stingray-surveillance/"target="_blank" rel="noopener">https://privacysos.org/blog/how-to-defeat-fbi-or-police-stingray-surveillance/</a></li>
+<li><a href="https://www.firstpoint-mg.com/blog/top-7-imsi-catcher-detection-solutions-2020/"target="_blank" rel="noopener">https://www.firstpoint-mg.com/blog/top-7-imsi-catcher-detection-solutions-2020/</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Stingray"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Stingray</a><em>phone</em>tracker</li>
+<li><a href="https://theintercept.com/2020/07/31/protests-surveillance-stingrays-dirtboxes-phone-tracking/"target="_blank" rel="noopener">https://theintercept.com/2020/07/31/protests-surveillance-stingrays-dirtboxes-phone-tracking/</a></li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Asterisk</p>
+<p>An open source phone framework that can be used to build a Voice-over-IP or IP PBX system.
+Masha runs such a server on the cloud and uses it to route her calls.
+One of the examples: <a href="https://aws.amazon.com/marketplace/pp/Technology-Innovation-Lab-of-Texas-Asterisk-1770-A/B079Y7449R"target="_blank" rel="noopener">https://aws.amazon.com/marketplace/pp/Technology-Innovation-Lab-of-Texas-Asterisk-1770-A/B079Y7449R</a>
+More:</p>
+<ul>
+<li><a href="https://www.asterisk.org/"target="_blank" rel="noopener">https://www.asterisk.org/</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Asterisk*%28PBX%29"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Asterisk*(PBX)</a></li>
+<li><a href="https://www.voip-info.org/asterisk/"target="_blank" rel="noopener">https://www.voip-info.org/asterisk/</a></li>
+<li><a href="https://techexpert.tips/asterisk/asterisk-installation-cloud-aws-ec2/"target="_blank" rel="noopener">https://techexpert.tips/asterisk/asterisk-installation-cloud-aws-ec2/</a> (tutorial)</li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Signal</p>
+<p>A communication application which is considered to be the most secure for end-to-end
+encryption. Trusted and used by Edward Snowden, Jack Dorsey, Bruce Schneier.
+It uses the open-source Signal protocol.
+Works on iOS, Android, Linux, macOS, Windows
+More:</p>
+<ul>
+<li><a href="https://signal.org/en/"target="_blank" rel="noopener">https://signal.org/en/</a></li>
+<li><a href="https://github.com/signalapp"target="_blank" rel="noopener">https://github.com/signalapp</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Signal"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Signal</a>*Protocol</li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Binary Transparency</p>
+<p>A method that allows users to verify that the piece of software they use is exactly the same
+used by other users, i.e. it was not substituted by a compromised version.
+More:</p>
+<ul>
+<li><a href="https://wiki.mozilla.org/Security/Binary"target="_blank" rel="noopener">https://wiki.mozilla.org/Security/Binary</a>*Transparency</li>
+<li>Contour - a practical system for binary transparency: <a href="https://smeiklej.com/files/cbt18.pdf"target="_blank" rel="noopener">https://smeiklej.com/files/cbt18.pdf</a></li>
+<li><a href="http://diyhpl.us/wiki/transcripts/building-on-bitcoin/2018/binary-transparency/"target="_blank" rel="noopener">http://diyhpl.us/wiki/transcripts/building-on-bitcoin/2018/binary-transparency/</a></li>
+<li><a href="https://github.com/BrandonTang/binary-transparency"target="_blank" rel="noopener">https://github.com/BrandonTang/binary-transparency</a></li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Hashing</p>
+<p>Masha explains it pretty well in the book.
+More:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Hash"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Hash</a>*function</li>
+<li><a href="https://medium.com/tech-tales/what-is-hashing-6edba0ebfa67"target="_blank" rel="noopener">https://medium.com/tech-tales/what-is-hashing-6edba0ebfa67</a></li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Public-private key cryptography</p>
+<p>Again, Masha does a great job explaining the basics.
+More:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Public-key"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Public-key</a>*cryptography</li>
+<li><a href="https://ssd.eff.org/en/module/deep-dive-end-end-encryption-how-do-public-key-encryption-systems-work"target="_blank" rel="noopener">https://ssd.eff.org/en/module/deep-dive-end-end-encryption-how-do-public-key-encryption-systems-work</a></li>
+<li><a href="https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:online-data-security/xcae6f4a7ff015e7d:data-encryption-techniques/a/public-key-encryption"target="_blank" rel="noopener">https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:online-data-security/xcae6f4a7ff015e7d:data-encryption-techniques/a/public-key-encryption</a></li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>BadUSB</p>
+<p>It is a way to use the microcontroller embedded in a USB device to inject malware in your computer.
+The most dangerous thing about it is that all the work is done by that microcontroller,
+invisible to the target computer&rsquo;s CPU.
+More:</p>
+<ul>
+<li><a href="https://opensource.srlabs.de/projects/badusb"target="_blank" rel="noopener">https://opensource.srlabs.de/projects/badusb</a></li>
+<li><a href="https://hackaday.com/2014/10/05/badusb-means-were-all-screwed/"target="_blank" rel="noopener">https://hackaday.com/2014/10/05/badusb-means-were-all-screwed/</a> (there are links to the paper and video
+explaining how it works)</li>
+<li><a href="https://srlabs.de/wp-content/uploads/2014/11/SRLabs-BadUSB-Pacsec-v2.pdf"target="_blank" rel="noopener">https://srlabs.de/wp-content/uploads/2014/11/SRLabs-BadUSB-Pacsec-v2.pdf</a></li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Baseband phone security</p>
+<p>It was confirmed that the software that controls the baseband radio on smartphones can
+be compromised and can allow attackers to control other smartphone devices such as camera and microphone.
+More (some papers are a bit dated, but it&rsquo;s quite possible some vulnerabilities described in them
+still exist):</p>
+<ul>
+<li><a href="https://techcrunch.com/2019/11/08/android-baseband-flaws/"target="_blank" rel="noopener">https://techcrunch.com/2019/11/08/android-baseband-flaws/</a></li>
+<li><a href="https://www.ccdcoe.org/uploads/2018/10/Art-16-Attacking-the-Baseband-Modem-of-Breach-the-Users-Privacy-and-Network-Security.pdf"target="_blank" rel="noopener">https://www.ccdcoe.org/uploads/2018/10/Art-16-Attacking-the-Baseband-Modem-of-Breach-the-Users-Privacy-and-Network-Security.pdf</a> (2015)</li>
+<li><a href="https://smartech.gatech.edu/bitstream/handle/1853/43766/davis"target="_blank" rel="noopener">https://smartech.gatech.edu/bitstream/handle/1853/43766/davis</a><em>andrew</em>t<em>201205</em>ro.pdf (2012)</li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Man-in-the-middle attack</p>
+<p>This is the category of attacks where the attacker injects <em>something</em> in the transmission
+channel (voice, data, etc.) that can listen to the traffic and potentially alter the traffic.
+More:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Man-in-the-middle"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Man-in-the-middle</a>*attack</li>
+<li><a href="https://www.rapid7.com/fundamentals/man-in-the-middle-attacks/"target="_blank" rel="noopener">https://www.rapid7.com/fundamentals/man-in-the-middle-attacks/</a></li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Openstreetmap</p>
+<p>Wrongly called &ldquo;Openstreetmaps&rdquo; in the book. An open source alternative to Google Maps.
+More:</p>
+<ul>
+<li><a href="https://www.openstreetmap.org/"target="_blank" rel="noopener">https://www.openstreetmap.org/</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OpenStreetMap"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/OpenStreetMap</a></li>
+<li><a href="https://wiki.osmfoundation.org/wiki/Main"target="_blank" rel="noopener">https://wiki.osmfoundation.org/wiki/Main</a>*Page</li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Citizen Lab</p>
+<p>A laboratory based at University of Toronto which works on protecting human rights and privacy
+in cyberspace.
+More:</p>
+<ul>
+<li><a href="https://citizenlab.ca/"target="_blank" rel="noopener">https://citizenlab.ca/</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Citizen"target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Citizen</a>*Lab</li>
+<li><a href="https://twitter.com/citizenlab"target="_blank" rel="noopener">https://twitter.com/citizenlab</a></li>
+</ul>
+<h3><span class="hx:absolute hx:-mt-20" id=""></span>
+    <a href="#" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>[[chapter-2]]</p>
+
+        </div>
+        <div class="hx:mt-16"></div>
+        <div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+        href="/docs/chapters/introduction/"
+        title="Introduction"
+        class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
+      ><svg class="hx:inline hx:h-5 hx:shrink-0 hx:ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Introduction</a><a
+        href="/docs/chapters/chapter2/"
+        title="Chapter 2"
+        class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:ml-auto hx:ltr:pl-4 hx:ltr:text-right hx:rtl:mr-auto hx:rtl:pr-4 hx:rtl:text-left"
+      >Chapter 2<svg class="hx:inline hx:h-5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+        
+      </main>
+    </article>
+  </div>
+
+      <footer class="hextra-footer hx:bg-gray-100 hx:pb-[env(safe-area-inset-bottom)] hx:dark:bg-neutral-900 hx:print:bg-transparent"><div class="hextra-custom-footer hextra-max-footer-width hx:pl-[max(env(safe-area-inset-left),1.5rem)] hx:pr-[max(env(safe-area-inset-right),1.5rem)] hx:text-gray-600 hx:dark:text-gray-400"></div><div
+      class="hextra-max-footer-width hx:mx-auto hx:flex hx:justify-center hx:py-12 hx:pl-[max(env(safe-area-inset-left),1.5rem)] hx:pr-[max(env(safe-area-inset-right),1.5rem)] hx:text-gray-600 hx:dark:text-gray-400 hx:md:justify-start"
+    >
+      <div class="hx:flex hx:w-full hx:flex-col hx:items-center hx:sm:items-start"><div class="hx:font-semibold"><a class="hx:flex hx:text-sm hx:items-center hx:gap-1 hx:text-current" target="_blank" rel="noopener noreferrer" title="Hextra GitHub Homepage" href="https://github.com/imfing/hextra">
+    <span>Powered by Hextra<svg height=1em class="hx:inline-block hx:ltr:ml-1 hx:rtl:mr-1 hx:align-[-2.5px]" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="m 105.50024,22.224647 c -9.59169,-5.537563 -21.40871,-5.537563 -31.000093,0 L 39.054693,42.689119 C 29.463353,48.226675 23.55484,58.460531 23.55484,69.535642 v 40.928918 c 0,11.07542 5.908513,21.3092 15.499853,26.84652 l 35.445453,20.46446 c 9.591313,5.53732 21.408404,5.53732 31.000094,0 l 35.44507,-20.46446 c 9.59131,-5.53732 15.49985,-15.7711 15.49985,-26.84652 V 69.535642 c 0,-11.075111 -5.90854,-21.308967 -15.49985,-26.846523 z M 34.112797,85.737639 c -1.384445,2.397827 -1.384445,5.352099 0,7.749927 l 24.781554,42.922974 c 1.38437,2.39783 3.942853,3.87496 6.711592,3.87496 h 49.563107 c 2.76905,0 5.3273,-1.47713 6.71144,-3.87496 l 24.78194,-42.922974 c 1.38414,-2.397828 1.38414,-5.3521 0,-7.749927 L 121.88049,42.814746 c -1.38414,-2.397828 -3.94239,-3.874964 -6.71144,-3.874964 H 65.605944 c -2.768739,0 -5.327223,1.477059 -6.711592,3.874964 z" style="stroke-width:0.774993" /></svg></span>
+  </a></div><div class="hx:mt-6 hx:text-xs">© 2025 Hextra Project.</div></div>
+    </div></footer>
+    
+    <script defer src="/js/main.js" integrity=""></script>
+<script defer src="/js/flexsearch.9f5b5908f93ae86f1ecd4b043b799f580c2d1654e703dd9357d568ac41b2547a.js" integrity="sha256-n1tZCPk66G8ezUsEO3mfWAwtFlTnA92TV9VorEGyVHo=" crossorigin="anonymous"></script>
+        <script defer src="/en.search.js" integrity=""></script>
+  </body>
+</html>
