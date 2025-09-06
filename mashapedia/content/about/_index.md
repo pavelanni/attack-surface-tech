@@ -1,13 +1,14 @@
 ---
-title: About
+title: About Mashapedia
 weight: 3
 ---
 
-# About Mashapedia
-
 ## The Project
 
-This project is a comprehensive glossary of technologies mentioned in Cory Doctorow's book "Attack Surface". When reading the book, I was amazed by the amount of tech terms Doctorow was using throughout the story. While some terms like "Tor" might be familiar to tech-savvy readers, others like "IMSI-catcher" or "adversarial perturbation" might require further explanation.
+This project is a comprehensive glossary of technologies mentioned in Cory Doctorow's book _Attack Surface_.
+When reading the book, I was amazed by the amount of tech terms Doctorow was using throughout the story.
+While some terms like "Tor" might be familiar to tech-savvy readers, others like "IMSI-catcher"
+or "adversarial perturbation" might require further explanation.
 
 This collection aims to help readers understand these technologies better by providing:
 
@@ -18,7 +19,9 @@ This collection aims to help readers understand these technologies better by pro
 
 ## The Book
 
-"Attack Surface" is the third book in Cory Doctorow's Little Brother series. It follows Masha Maximow, a tech specialist who has worked for private military contractors and intelligence agencies. The book explores themes of:
+_Attack Surface_ is the third book in Cory Doctorow's _Little Brother_ series.
+It follows Masha Maximow, a tech specialist who has worked for private military contractors and intelligence agencies.
+The book explores themes of:
 
 - Digital surveillance and privacy
 - The ethics of technology in warfare
@@ -54,7 +57,6 @@ This documentation site is built with:
 - [Hugo](https://gohugo.io/) - Static site generator
 - [Hextra](https://imfing.github.io/hextra/) - Documentation theme
 - Original content in AsciiDoc format
-- Hosted on GitHub Pages (planned)
 
 ## License
 

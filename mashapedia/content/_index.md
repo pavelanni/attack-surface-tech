@@ -18,7 +18,7 @@ layout: hextra-home
 <div class="hx-mb-12">
 {{< hextra/hero-subtitle >}}
   A comprehensive glossary of technologies mentioned in&nbsp;<br class="sm:hx-block hx-hidden" />
-  Cory Doctorow's book "Attack Surface"
+  Cory Doctorow's book _Attack Surface_
 {{< /hextra/hero-subtitle >}}
 </div>
 
