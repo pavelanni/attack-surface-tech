@@ -6,6 +6,14 @@ theme: hextra
 params:
   description: A glossary of technologies mentioned in Cory Doctorow's book "Attack Surface"
 
+  # Open Graph / Social Media
+  images:
+  - /images/mashapedia-social.png
+  twitterCard: summary_large_image
+
+  social:
+    twitter: "@doctorow"
+
   navbar:
     displayTitle: true
     displayLogo: false
